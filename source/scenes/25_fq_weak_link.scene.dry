@@ -1,6 +1,6 @@
 title: Weak Link Checks
 subtitle: Identifying Vulnerabilities
-on-arrival: progress = 29
+on-arrival: progress = 29; knwl_weak_link = 1 if knwl_weak_link = 0; knwl_last = "Weak Link" if knwl_weak_link = 0
 go-to: social_weak_link
 
 Facilyn: The next checks help you find the vulnerability that could undo everything else.

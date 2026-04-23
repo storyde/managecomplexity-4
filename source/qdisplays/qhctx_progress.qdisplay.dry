@@ -1,0 +1,13 @@
+ 
+# hctx_progress
+
+(0..0) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>0 / 9</span></div><progress value="0" max="9">0</progress><div class="progress-track-status">No framework steps completed yet</div></div>
+(1..1) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>1 / 9</span></div><progress value="1" max="9">1</progress><div class="progress-track-status">Decision-makers defined</div></div>
+(2..2) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>2 / 9</span></div><progress value="2" max="9">2</progress><div class="progress-track-status">Physical resources defined</div></div>
+(3..3) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>3 / 9</span></div><progress value="3" max="9">3</progress><div class="progress-track-status">Human resources defined</div></div>
+(4..4) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>4 / 9</span></div><progress value="4" max="9">4</progress><div class="progress-track-status">Money defined</div></div>
+(5..5) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>5 / 9</span></div><progress value="5" max="9">5</progress><div class="progress-track-status">Statement of purpose handled</div></div>
+(6..6) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>6 / 9</span></div><progress value="6" max="9">6</progress><div class="progress-track-status">Quality of life completed</div></div>
+(7..7) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>7 / 9</span></div><progress value="7" max="9">7</progress><div class="progress-track-status">Future resource base for people defined</div></div>
+(8..8) <div class="progress-track"><div class="progress-track-head"><strong>Holistic Context</strong><span>8 / 9</span></div><progress value="8" max="9">8</progress><div class="progress-track-status">Future resource base for environment defined</div></div>
+(9..9) <div class="progress-track progress-track-complete"><div class="progress-track-head"><strong>Holistic Context</strong><span>9 / 9</span></div><progress value="9" max="9">9</progress><div class="progress-track-status">Holistic Context written</div></div>

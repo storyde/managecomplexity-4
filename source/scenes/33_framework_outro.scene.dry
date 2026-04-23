@@ -1,5 +1,6 @@
 title: Finalize my decision
-on-arrival: progress = 42
+on-arrival: progress = 42; achvm_last = "Framework Finished" if achievement_framework_finished = 0
+achievement: framework_finished
 tags: revisit_skips
 order: 21
 

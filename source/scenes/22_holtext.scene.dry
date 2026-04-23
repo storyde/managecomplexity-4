@@ -1,5 +1,5 @@
 title: Completed holistic context
-on-arrival: progress = 26; {!
+on-arrival: progress = 26; achvm_last = "Holistic Context Created" if achievement_holtext_created = 0; knwl_holtext = 1; knwl_last = "Holistic Context" if knwl_holtext = 0; {!
 if (!Q.holtext) {
     if (Q.player === "one") {
         Q.holtext = `I want ${Q.qol_economic} in a balanced life with ${Q.qol_balance}. My relationships will be grounded in ${Q.qol_relationships}. I thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. I find purpose in ${Q.qol_purpose}. I seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
@@ -18,6 +18,7 @@ All to be ensured, for many generations to come, on a foundation of ${Q.frb_envi
     }
 }
 !}
+achievement: holtext_created
 
 Facilyn: Excellent. You now have your holistic context: your quality of life and your future resource base — captured in simple phrases.
 

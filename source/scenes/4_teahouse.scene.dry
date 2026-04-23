@@ -1,5 +1,6 @@
 title: Enter the teahouse
-on-arrival: progress = 5
+on-arrival: progress = 5; achvm_last = "Tea Companion" if achievement_tea_companion = 0
+achievement: tea_companion
 tags: th_arrival
 new-page: true
 
@@ -188,7 +189,7 @@ Facilyn: But yes. We built a framework that helps manage complexity.
 
 @what_complexity
 title: What do you mean by "complexity"?
-on-arrival: progress = 6
+on-arrival: progress = 6; knwl_complexity = 1 if knwl_complexity = 0; knwl_last = "Complexity" if knwl_complexity = 0
 tags: better_way
 
 Me: What do you mean by "complexity"?

@@ -1,16 +1,80 @@
 title: Progress
+on-display: {!
+const hasValue = (value) => value !== 0 && value !== null && value !== undefined && String(value).trim() !== "";
+const progress = Number(Q.progress) || 0;
+const playerType = hasValue(Q.player) ? Q.player : 0;
+
+Q.jrny_progress =
+  progress >= 42 ? 4 :
+  progress >= 26 ? 3 :
+  progress >= 5 ? 2 :
+  progress >= 3 ? 1 : 0;
+
+let hctx = 0;
+if (hasValue(Q.decision_makers)) hctx++;
+if (hasValue(Q.rb_physical)) hctx++;
+if (hasValue(Q.rb_human)) hctx++;
+if (hasValue(Q.wum_money)) hctx++;
+if ((playerType !== 0 && playerType !== "org") || hasValue(Q.st_purpose)) hctx++;
+if (
+  hasValue(Q.qol_economic) &&
+  hasValue(Q.qol_balance) &&
+  hasValue(Q.qol_relationships) &&
+  hasValue(Q.qol_challenge) &&
+  hasValue(Q.qol_growth) &&
+  hasValue(Q.qol_purpose) &&
+  hasValue(Q.qol_aspiration) &&
+  hasValue(Q.qol_accomplish)
+) {
+  hctx++;
+}
+if (hasValue(Q.frb_people)) hctx++;
+if (hasValue(Q.frb_environment)) hctx++;
+if (hasValue(Q.holtext)) hctx++;
+Q.hctx_progress = Math.min(9, hctx);
+
+let fltr = 0;
+if (hasValue(Q.fltr_cause)) fltr++;
+if (hasValue(Q.wl_social) && hasValue(Q.wl_biological) && hasValue(Q.wl_financial)) fltr++;
+if (hasValue(Q.fltr_marginal)) fltr++;
+if (hasValue(Q.fltr_profit)) fltr++;
+if (hasValue(Q.em_source) && hasValue(Q.em_use)) fltr++;
+if (hasValue(Q.sus_behaviour) && hasValue(Q.sus_environment)) fltr++;
+if (hasValue(Q.fltr_gut)) fltr++;
+Q.fltr_progress = Math.min(7, fltr);
+
+Q.achvm_count =
+  (Q.achievement_first_landing ? 1 : 0) +
+  (Q.achievement_tea_companion ? 1 : 0) +
+  (Q.achievement_holtext_created ? 1 : 0) +
+  (Q.achievement_filter_navigator ? 1 : 0) +
+  (Q.achievement_framework_finished ? 1 : 0);
+!}
 
 # This scene contains information for the left sidebar.
 
-[? if fltr_result != "visited" : [+ progress : qprogress +] ?]
-
-[? if progress > 39 : [+ progress : qprogress +] ?]
-
-[? if fltr_result = "visited" and progress < 40 : **Finalize Filter Questions:**<br>Revisit skipped filters ?]
-
-<br>
-
 [? if decision_makers = 0 : *Interact for more.* ?]
+
+<h1>Progress</h1>
+
+{!<div class="progress-dashboard">!}
+[+ jrny_progress : qjrny_progress +]
+[+ hctx_progress : qhctx_progress +]
+[+ fltr_progress : qfltr_progress +]
+{!</div>!}
+
+[? if fltr_result = "visited" and progress < 42 : <p class="progress-note"><strong>Finalize Filter Questions:</strong><br>Revisit skipped filters or finalize your decision.</p> ?]
+[? if achvm_last != 0 : <p class="progress-latest progress-latest-achievement"><strong>Latest achievement:</strong> [+ achvm_last +]</p> ?]
+[? if knwl_last != 0 : <p class="progress-latest progress-latest-knowledge"><strong>Latest concept:</strong> [+ knwl_last +]</p> ?]
+[? if achvm_count > 0 : <p class="progress-badge-count"><strong>Badges earned:</strong> [+ achvm_count +] / 5</p> ?]
+
+{!<div class="progress-badges">!}
+[? if achievement_first_landing = 1 : <span class="progress-badge">First Landing</span> ?]
+[? if achievement_tea_companion = 1 : <span class="progress-badge">Tea Companion</span> ?]
+[? if achievement_holtext_created = 1 : <span class="progress-badge">Holistic Context Created</span> ?]
+[? if achievement_filter_navigator = 1 : <span class="progress-badge">Filter Navigator</span> ?]
+[? if achievement_framework_finished = 1 : <span class="progress-badge">Framework Finished</span> ?]
+{!</div>!}
 
 [? if decision_makers != 0 : <h1>Holistic Context:</h1> ?]
 
@@ -56,7 +120,7 @@ title: Progress
 [? if progress < 26 and complement != 0 : [+ complement +] ?]
 
 
-[? if progress < 26 and frb_people != 0 or frb_environment != 0 : <h2>Future Resource Base</h2> ?]
+[? if progress < 26 and (frb_people != 0 or frb_environment != 0) : <h2>Future Resource Base</h2> ?]
 
 [? if progress < 26 and frb_people != 0 : **Our behaviour:** [+ frb_people +] ?]
 

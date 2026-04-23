@@ -1,5 +1,6 @@
 title: Home
 subtitle: A practical introduction to Holistic Management
+on-arrival: home_visited = 1
 is-special: true
 new-page: true
 tags: root

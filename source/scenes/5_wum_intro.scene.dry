@@ -1,5 +1,5 @@
 title: Yes, please
-on-arrival: progress = 7
+on-arrival: progress = 7; knwl_whole = 1 if knwl_whole = 0; knwl_last = "Whole Under Management" if knwl_whole = 0
 tags: start_frmwrk
 
 Me: Yes, please.

@@ -1,5 +1,6 @@
 title: Harbour 
-on-arrival: progress = 3
+on-arrival: progress = 3; achvm_last = "First Landing" if achievement_first_landing = 0
+achievement: first_landing
 
 You reach the harbour.
 

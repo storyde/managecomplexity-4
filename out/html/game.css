@@ -1417,6 +1417,109 @@ details > :not(summary):last-child {
   color: var(--text-primary);
 }
 
+#progress .progress-dashboard {
+  display: grid;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+#progress .progress-track {
+  padding: var(--space-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.theme-dark #progress .progress-track {
+  background: rgba(26, 47, 61, 0.62);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+#progress .progress-track-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-sm);
+  color: var(--text-primary);
+}
+
+#progress .progress-track-head span {
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+}
+
+#progress .progress-track-status {
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-xs);
+  color: var(--text-secondary);
+}
+
+#progress .progress-track-complete {
+  border-color: rgba(27, 158, 75, 0.35);
+  box-shadow: 0 10px 26px rgba(27, 158, 75, 0.12);
+  animation: progressTrackComplete 0.7s ease-out 1;
+}
+
+.theme-dark #progress .progress-track-complete {
+  border-color: rgba(27, 158, 75, 0.45);
+  box-shadow: 0 12px 28px rgba(27, 158, 75, 0.18);
+}
+
+#progress .progress-note,
+#progress .progress-latest,
+#progress .progress-badge-count {
+  margin-bottom: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  background: rgba(var(--accent-sky-rgb), 0.08);
+}
+
+#progress .progress-latest-achievement {
+  border-left: 3px solid var(--accent-rust);
+}
+
+#progress .progress-latest-knowledge {
+  border-left: 3px solid var(--accent-sky);
+}
+
+#progress .progress-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+#progress .progress-badges:empty {
+  display: none;
+}
+
+#progress .progress-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 var(--space-md);
+  border-radius: 999px;
+  background: rgba(var(--accent-sky-rgb), 0.14);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+}
+
+@keyframes progressTrackComplete {
+  0% {
+    transform: translateY(3px);
+    opacity: 0.92;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Sidebar Overlay - Only dims the center area, not the sidebars */
 .sidebar-overlay {
   position: fixed;
