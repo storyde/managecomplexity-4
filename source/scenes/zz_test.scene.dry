@@ -1,0 +1,94 @@
+title: Test
+subtitle: Just a test choice
+order: 5
+is-special: true
+on-arrival: {!
+if (!Q.holtext) {
+    const qol_economic = Q["qol-economic"] || "";
+    const qol_balance = Q["qol-balance"] || "";
+    const qol_relationships = Q["qol-relationships"] || "";
+    const qol_challenge = Q["qol-challenge"] || "";
+    const qol_growth = Q["qol-growth"] || "";
+    const qol_purpose = Q["qol-purpose"] || "";
+    const qol_aspiration = Q["qol-aspiration"] || "";
+    const qol_accomplish = Q["qol-accomplish"] || "";
+    const complement = Q.complement || "";
+    const frb_people = Q["frb-people"] || "";
+    const frb_environment = Q["frb-environment"] || "";
+
+    if (Q.player === "one") {
+        Q.holtext = `I want ${qol_economic} in a balanced life with ${qol_balance}. My relationships will be grounded in ${qol_relationships}. I thrive on ${qol_challenge} and want to be free to ${qol_growth}. I find purpose in ${qol_purpose}. I seek to be ${qol_aspiration} and want to contribute to ${qol_accomplish}.
+${complement}
+
+I will act in ways that are ${frb_people}.
+
+All to be ensured, for many generations to come, on a foundation of ${frb_environment}.`;
+    } else if (Q.player === "group" || Q.player === "org") {
+        Q.holtext = `We want ${qol_economic} in balanced lives with ${qol_balance}. Our relationships will be grounded in ${qol_relationships}. We thrive on ${qol_challenge} and want to be free to ${qol_growth}. We find purpose in ${qol_purpose}. We seek to be ${qol_aspiration} and want to contribute to ${qol_accomplish}.
+${complement}
+
+We will act in ways that are ${frb_people}.
+
+All to be ensured, for many generations to come, on a foundation of ${frb_environment}.`;
+    }
+}
+!}
+new-page: true
+tags: root
+achievement: test_achievement2
+
+= Title
+
+Test: Achievement flag for this scene:
+
+achievement_test_achievement = [+ achievement_test_achievement +]
+[? if achievement_test_achievement = 1 : Achievement ist gesetzt ✅ ?]
+[? if achievement_test_achievement = 0 : Achievement ist NICHT gesetzt ❌ ?]
+
+
+game_achievement_test_achievement2 = [+ game_achievement_test_achievement2 +]
+[? if game_achievement_test_achievement2: Achievement ist gesetzt ✅ ?]
+[? if not game_achievement_test_achievement2: Achievement ist NICHT gesetzt ❌ ?]
+
+Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" style="white-space: pre-wrap;" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]{!</div>!}
+
+
+{!<textarea class="textarea" data-quality="test" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ test +]{!</textarea>!}
+
+Image: sailboat.jpg
+
+<h2>Test heading</h2>
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro'); return false;">Scene Outro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('5_wum_intro');">5_wum_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('13_qol_intro');">13_qol_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('20_frb_people');">20_frb_people</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('22_holtext');">22_holtext</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('23_fq_intro');">23_fq_intro</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('31_fq_results');">31_fq_results</a>!}
+
+In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro');">33_framework_outro</a>!}
+
+# TODO: hover-over
+
+{!<a href="#" onmouseover="this.innerHTML='Mouse is over';" onmouseout="this.innerHTML='Mouseover';">Mouseover</a>!}
+
+- @script_test
+
+@script_test
+title: I'd like to start the framework from the beginning
+game-over: false
+
+Me: I'd like to start the framework from the beginning.
+
+Page will reload in a few seconds.
+
+{!<meta http-equiv="refresh" content="20">!}
+
+- @backSpecialScene: Back

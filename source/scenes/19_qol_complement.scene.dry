@@ -1,0 +1,18 @@
+title: Complement
+on-arrival: progress = 23
+
+Facilyn: Good. We’ve put your quality of life into simple phrases.
+
+Facilyn: The key is that everyone involved can agree with them — and recognize themselves in them.
+
+[? if player = "one" : Paper: <h1>Quality of Life:</h1><br>**Economic well-being:** [+ qol-economic +] <br>**And:** [+ qol-balance +] <br>**Relationships:** [+ qol-relationships +] <br>**Challenge:** [+ qol-challenge +] <br>**Growth:** [+ qol-growth +] <br>**I am about:** [+ qol-purpose +] <br>**I want to be:** [+ qol-aspiration +] <br>**I ultimately want to accomplish:** [+ qol-accomplish +] ?]
+
+[? if player != "one" : Paper: <h1>Quality of Life:</h1><br>**Economic well-being:** [+ qol-economic +] <br>**And:** [+ qol-balance +] <br>**Relationships:** [+ qol-relationships +] <br>**Challenge:** [+ qol-challenge +] <br>**Growth:** [+ qol-growth +] <br>**We are about:** [+ qol-purpose +] <br>**We want to be:** [+ qol-aspiration +] <br>**We ultimately want to accomplish:** [+ qol-accomplish +] ?]
+
+Facilyn: If we’ve missed something that matters deeply to you, add it now.
+
+Facilyn: But don’t write down any specific solution. Just describe the kind of life you want.
+
+ {!<textarea class="textarea" data-quality="complement" placeholder="Add here anything you are missing." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+
+- @20_frb_people

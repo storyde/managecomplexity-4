@@ -1,0 +1,11 @@
+title: Reset achievements
+subtitle: Clears stored achievements 
+on-arrival: achievement_first_landing = 0; achievement_tea_companion = 0; achievement_holtext_created = 0; achievement_filter_navigator = 0; achievement_weak_link_spotter = 0; achievement_test_achievement2 = 0; achievement_test_achievement = 0
+is-special: true
+new-page: true
+
+= Achievements 
+
+Your achievements have been reset to 0 for this run.
+
+- @backSpecialScene: Back

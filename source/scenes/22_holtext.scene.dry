@@ -1,0 +1,28 @@
+title: Completed holistic context
+on-arrival: progress = 26
+
+Facilyn: Excellent. You now have your holistic context: your quality of life and your future resource base — captured in simple phrases.
+
+Facilyn: We can easily put them into full sentences.
+
+She fills in a few words, then hands you the Paper.
+
+Facilyn: Feel free to improve it and make it yours, using your own words. And make sure every decision-maker shares the same understanding of what each line means.
+
+Facilyn: When everyone has ownership, they can commit to it.
+
+[? if player = "one" : Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}I want [+ qol-economic +] in a balanced life with [+ qol-balance +]. My relationships will be grounded in [+ qol-relationships +]. I thrive on [+ qol-challenge +] and want to be free to [+ qol-growth +]. I find purpose in [+ qol-purpose +]. I seek to be [+ qol-aspiration +] and want to contribute to [+ qol-accomplish +]. <br>[+ complement +] <br><br>I will act in ways that are [+ frb-people +]. <br><br>All to be ensured, for many generations to come, on a foundation of [+ frb-environment +].</div> ?]
+
+[? if player = "group" : Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}We want [+ qol-economic +] in balanced lives with [+ qol-balance +]. Our relationships will be grounded in [+ qol-relationships +]. We thrive on [+ qol-challenge +] and want to be free to [+ qol-growth +]. We find purpose in [+ qol-purpose +]. We seek to be [+ qol-aspiration +] and want to contribute to [+ qol-accomplish +]. <br>[+ complement +] <br><br>We will act in ways that are [+ frb-people +]. <br><br>All to be ensured, for many generations to come, on a foundation of [+ frb-environment +].</div> ?]
+
+[? if player = "org" : Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}We want [+ qol-economic +] in balanced lives with [+ qol-balance +]. Our relationships will be grounded in [+ qol-relationships +]. We thrive on [+ qol-challenge +] and want to be free to [+ qol-growth +]. We find purpose in [+ qol-purpose +]. We seek to be [+ qol-aspiration +] and want to contribute to [+ qol-accomplish +]. <br>[+ complement +] <br><br>We will act in ways that are [+ frb-people +]. <br><br>All to be ensured, for many generations to come, on a foundation of [+ frb-environment +].</div> ?]
+
+Facilyn: This becomes your North Star. Not a goal you “finish,” but a guide for daily decisions in a complex world — like the compass on the ships leaving this harbour.
+
+Facilyn: Let’s place it in the left sidebar, so you can keep it in view.
+
+She places a new sheet of paper on the table.
+
+Facilyn: To use this holistic context, we’ll run decisions through seven testing questions. They filter out actions that look good today, but take you off course tomorrow.
+
+- #holtext_complete
