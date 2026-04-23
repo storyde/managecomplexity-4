@@ -5,9 +5,9 @@ Facilyn: Good. We’ve put your quality of life into simple phrases.
 
 Facilyn: The key is that everyone involved can agree with them — and recognize themselves in them.
 
-[? if player = "one" : Paper: <h1>Quality of Life:</h1><br>**Economic well-being:** [+ qol-economic +] <br>**And:** [+ qol-balance +] <br>**Relationships:** [+ qol-relationships +] <br>**Challenge:** [+ qol-challenge +] <br>**Growth:** [+ qol-growth +] <br>**I am about:** [+ qol-purpose +] <br>**I want to be:** [+ qol-aspiration +] <br>**I ultimately want to accomplish:** [+ qol-accomplish +] ?]
+[? if player = "one" : Paper: <h1>Quality of Life:</h1><br>**Economic well-being:** [+ qol_economic +] <br>**And:** [+ qol_balance +] <br>**Relationships:** [+ qol_relationships +] <br>**Challenge:** [+ qol_challenge +] <br>**Growth:** [+ qol_growth +] <br>**I am about:** [+ qol_purpose +] <br>**I want to be:** [+ qol_aspiration +] <br>**I ultimately want to accomplish:** [+ qol_accomplish +] ?]
 
-[? if player != "one" : Paper: <h1>Quality of Life:</h1><br>**Economic well-being:** [+ qol-economic +] <br>**And:** [+ qol-balance +] <br>**Relationships:** [+ qol-relationships +] <br>**Challenge:** [+ qol-challenge +] <br>**Growth:** [+ qol-growth +] <br>**We are about:** [+ qol-purpose +] <br>**We want to be:** [+ qol-aspiration +] <br>**We ultimately want to accomplish:** [+ qol-accomplish +] ?]
+[? if player != "one" : Paper: <h1>Quality of Life:</h1><br>**Economic well-being:** [+ qol_economic +] <br>**And:** [+ qol_balance +] <br>**Relationships:** [+ qol_relationships +] <br>**Challenge:** [+ qol_challenge +] <br>**Growth:** [+ qol_growth +] <br>**We are about:** [+ qol_purpose +] <br>**We want to be:** [+ qol_aspiration +] <br>**We ultimately want to accomplish:** [+ qol_accomplish +] ?]
 
 Facilyn: If we’ve missed something that matters deeply to you, add it now.
 

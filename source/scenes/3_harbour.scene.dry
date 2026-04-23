@@ -66,7 +66,7 @@ Then he leans back against his booth again.
 
 @ask_direction 
 title: Ask for the teahouse
-on-arrival: know-way = 1; progress = 4
+on-arrival: know_way = 1; progress = 4
 tags: vendor
 
 Me: Can you tell me how to get to the teahouse?
@@ -81,7 +81,7 @@ Between crates and moored boats, the child is still drawing in the dust.
 
 @child_drawing
 title: Go closer
-view-if: know-way = 1 
+view-if: know_way = 1 
 tags: quay
 
 It's only a few lines: a church. A school. A rocket.
@@ -95,7 +95,7 @@ Then a gust from the coming storm sweeps through the harbour. The lines smear in
 @way_teahouse
 title: Head on to the teahouse
 unavailable-subtitle: You don't know the way yet
-choose-if: know-way = 1 
+choose-if: know_way = 1 
 tags: harbour, quay
 
 You walk along the quay and reach the teahouse. 
@@ -109,7 +109,7 @@ A few steps from a window, a drone hovers, dropping crumbs to a swarm of pigeons
 @drone_pickup 
 title: Help the drone
 max-visits: 1
-on-arrival: helped-drone = 1
+on-arrival: helped_drone = 1
 tags: th_arrival
 
 You crouch and pick it up.
@@ -120,9 +120,9 @@ A plastic string is tangled up in one of the rotors.
 
 @drone_string 
 title: Remove the string
-view-if: helped-drone = 1
+view-if: helped_drone = 1
 max-visits: 1
-on-arrival: helped-drone = 2
+on-arrival: helped_drone = 2
 tags: th_arrival
 
 You remove the string, press the rotor back into place, and trigger the drone to reboot.

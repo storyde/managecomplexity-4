@@ -27,7 +27,7 @@ By the window, two friends argue gently about whether the rain is “starting”
 
 @qolc_future_generations
 title: Long-term stewardship that carries real responsibility
-on-arrival: qol-challenge = "long-term stewardship that carries real responsibility"
+on-arrival: qol_challenge = "long-term stewardship that carries real responsibility"
 go-to: qolg_growth
 tags: challenge_aspects
 
@@ -35,7 +35,7 @@ Me: Long-term stewardship that carries real responsibility
 
 @qolc_curious_life
 title: Work that keeps curiosity alive and rewards patience and craft
-on-arrival: qol-challenge = "work that keeps curiosity alive and rewards patience and craft"
+on-arrival: qol_challenge = "work that keeps curiosity alive and rewards patience and craft"
 go-to: qolg_growth
 tags: challenge_aspects
 
@@ -46,7 +46,7 @@ Me: Work that keeps curiosity alive and rewards patience and craft
 @qolc_ind_growth
 title: Patience, practice and growing into deeper capability
 view-if: player = "one"
-on-arrival: qol-challenge = "patience, practice and growing into deeper capability"
+on-arrival: qol_challenge = "patience, practice and growing into deeper capability"
 go-to: qolg_growth
 tags: challenge_aspects
 
@@ -57,7 +57,7 @@ Me: Patience, practice and growing into deeper capability
 @qolc_experimentation_space
 title: Experimentation, shared learning and listening to nature's wisdom
 view-if: player = "group"
-on-arrival: qol-challenge = "experimentation, shared learning and listening to nature's wisdom"
+on-arrival: qol_challenge = "experimentation, shared learning and listening to nature's wisdom"
 go-to: qolg_growth
 tags: challenge_aspects
 
@@ -68,7 +68,7 @@ Me: Experimentation, shared learning and listening to nature's wisdom
 @qolc_clarity_creation
 title: Bringing clarity and direction where confusion once reigned
 view-if: player = "org"
-on-arrival: qol-challenge = "bringing clarity and direction where confusion once reigned"
+on-arrival: qol_challenge = "bringing clarity and direction where confusion once reigned"
 go-to: qolg_growth
 tags: challenge_aspects
 
@@ -77,7 +77,7 @@ Me: Bringing clarity and direction where confusion once reigned
 @qolc_freedom_flow
 title: Autonomy, responsibility and the charge of creative flow
 view-if: player = "org"
-on-arrival: qol-challenge = "autonomy, responsibility and the charge of creative flow"
+on-arrival: qol_challenge = "autonomy, responsibility and the charge of creative flow"
 go-to: qolg_growth
 tags: challenge_aspects
 
@@ -90,7 +90,7 @@ tags: challenge_aspects
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="qol-challenge" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="qol_challenge" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @qolc_custom_answer: Save
 
@@ -98,7 +98,7 @@ Me: Custom answer
 title: Save
 go-to: qolg_growth
 
-Me: [+ qol-challenge +]
+Me: [+ qol_challenge +]
 
 # Growth
 
@@ -130,7 +130,7 @@ Facilyn: Think about what helps you feel fulfilled. What lets you grow, as a per
 
 @qolg_learning
 title: Keep learning, exploring and widening horizons
-on-arrival: qol-growth = "keep learning, exploring and widening horizons"
+on-arrival: qol_growth = "keep learning, exploring and widening horizons"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -138,7 +138,7 @@ Me: Keep learning, exploring and widening horizons
 
 @qolg_traditions
 title: Carry shared traditions forward and celebrate them well
-on-arrival: qol-growth = "carry shared traditions forward and celebrate them well"
+on-arrival: qol_growth = "carry shared traditions forward and celebrate them well"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -146,7 +146,7 @@ Me: Carry shared traditions forward and celebrate them well
 
 @qolg_balance
 title: Find our rhythm between work, life and the living world
-on-arrival: qol-growth = "find our rhythm between work, life and the living world"
+on-arrival: qol_growth = "find our rhythm between work, life and the living world"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -157,7 +157,7 @@ Me: Find our rhythm between work, life and the living world
 @qolg_spiritual
 title: Practice spiritual or religious beliefs that give guidance and meaning
 view-if: player = "one"
-on-arrival: qol-growth = "practice spiritual or religious beliefs that give guidance and meaning"
+on-arrival: qol_growth = "practice spiritual or religious beliefs that give guidance and meaning"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -166,7 +166,7 @@ Me: Practice spiritual or religious beliefs that give guidance and meaning
 @qolg_resilience
 title: Build inner peace and emotional resilience
 view-if: player = "one"
-on-arrival: qol-growth = "build inner peace and emotional resilience"
+on-arrival: qol_growth = "build inner peace and emotional resilience"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -177,7 +177,7 @@ Me: Build inner peace and emotional resilience
 @qolg_integrity
 title: Live by conviction and act with integrity
 view-if: player = "group"
-on-arrival: qol-growth = "live by conviction and act with integrity"
+on-arrival: qol_growth = "live by conviction and act with integrity"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -186,7 +186,7 @@ Me: Live by conviction and act with integrity
 @qolg_connection
 title: Deepen trust and belonging within community
 view-if: player = "group"
-on-arrival: qol-growth = "deepen trust and belonging within community"
+on-arrival: qol_growth = "deepen trust and belonging within community"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -195,7 +195,7 @@ Me: Deepen trust and belonging within community
 @qolg_mentorship
 title: Share hard-won wisdom and mentor one another
 view-if: player = "group"
-on-arrival: qol-growth = "share hard-won wisdom and mentor one another"
+on-arrival: qol_growth = "share hard-won wisdom and mentor one another"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -206,7 +206,7 @@ Me: Share hard-won wisdom and mentor one another
 @qolg_evolution
 title: Let collective purpose deepen in service of something larger
 view-if: player = "org"
-on-arrival: qol-growth = "let collective purpose deepen in service of something larger"
+on-arrival: qol_growth = "let collective purpose deepen in service of something larger"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -215,7 +215,7 @@ Me: Let collective purpose deepen in service of something larger
 @qolg_innovation
 title: Build a culture that keeps learning, inventing and getting better
 view-if: player = "org"
-on-arrival: qol-growth = "build a culture that keeps learning, inventing and getting better"
+on-arrival: qol_growth = "build a culture that keeps learning, inventing and getting better"
 go-to: 17_qol_purpose
 tags: growth_aspects
 
@@ -228,7 +228,7 @@ tags: growth_aspects
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="qol-growth" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="qol_growth" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @qolg_custom_answer: Save
 
@@ -236,4 +236,4 @@ Me: Custom answer
 title: Save
 go-to: 17_qol_purpose
 
-Me: [+ qol-growth +]
+Me: [+ qol_growth +]

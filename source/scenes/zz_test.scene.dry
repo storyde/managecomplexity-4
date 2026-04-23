@@ -4,38 +4,26 @@ order: 5
 is-special: true
 on-arrival: {!
 if (!Q.holtext) {
-    const qol_economic = Q["qol-economic"] || "";
-    const qol_balance = Q["qol-balance"] || "";
-    const qol_relationships = Q["qol-relationships"] || "";
-    const qol_challenge = Q["qol-challenge"] || "";
-    const qol_growth = Q["qol-growth"] || "";
-    const qol_purpose = Q["qol-purpose"] || "";
-    const qol_aspiration = Q["qol-aspiration"] || "";
-    const qol_accomplish = Q["qol-accomplish"] || "";
-    const complement = Q.complement || "";
-    const frb_people = Q["frb-people"] || "";
-    const frb_environment = Q["frb-environment"] || "";
-
     if (Q.player === "one") {
-        Q.holtext = `I want ${qol_economic} in a balanced life with ${qol_balance}. My relationships will be grounded in ${qol_relationships}. I thrive on ${qol_challenge} and want to be free to ${qol_growth}. I find purpose in ${qol_purpose}. I seek to be ${qol_aspiration} and want to contribute to ${qol_accomplish}.
-${complement}
+        Q.holtext = `I want ${Q.qol_economic} in a balanced life with ${Q.qol_balance}. My relationships will be grounded in ${Q.qol_relationships}. I thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. I find purpose in ${Q.qol_purpose}. I seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
+${Q.complement || ""}
 
-I will act in ways that are ${frb_people}.
+I will act in ways that are ${Q.frb_people}.
 
-All to be ensured, for many generations to come, on a foundation of ${frb_environment}.`;
+All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
     } else if (Q.player === "group" || Q.player === "org") {
-        Q.holtext = `We want ${qol_economic} in balanced lives with ${qol_balance}. Our relationships will be grounded in ${qol_relationships}. We thrive on ${qol_challenge} and want to be free to ${qol_growth}. We find purpose in ${qol_purpose}. We seek to be ${qol_aspiration} and want to contribute to ${qol_accomplish}.
-${complement}
+        Q.holtext = `We want ${Q.qol_economic} in balanced lives with ${Q.qol_balance}. Our relationships will be grounded in ${Q.qol_relationships}. We thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. We find purpose in ${Q.qol_purpose}. We seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
+${Q.complement || ""}
 
-We will act in ways that are ${frb_people}.
+We will act in ways that are ${Q.frb_people}.
 
-All to be ensured, for many generations to come, on a foundation of ${frb_environment}.`;
+All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
     }
 }
 !}
 new-page: true
 tags: root
-achievement: test_achievement2
+achievement: test_achievement
 
 = Title
 
@@ -44,11 +32,6 @@ Test: Achievement flag for this scene:
 achievement_test_achievement = [+ achievement_test_achievement +]
 [? if achievement_test_achievement = 1 : Achievement ist gesetzt ✅ ?]
 [? if achievement_test_achievement = 0 : Achievement ist NICHT gesetzt ❌ ?]
-
-
-game_achievement_test_achievement2 = [+ game_achievement_test_achievement2 +]
-[? if game_achievement_test_achievement2: Achievement ist gesetzt ✅ ?]
-[? if not game_achievement_test_achievement2: Achievement ist NICHT gesetzt ❌ ?]
 
 Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" style="white-space: pre-wrap;" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]{!</div>!}
 

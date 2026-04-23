@@ -52,8 +52,8 @@ tags: tag1, tag2, tag3
 ### Multi-line Properties
 
 ```
-choose-if: sunny > 1 and last-rain < 2 or
-   cares-about-weather = 0
+choose-if: sunny > 1 and last_rain < 2 or
+   cares_about_weather = 0
 ```
 
 ### Content Separation
@@ -118,14 +118,9 @@ Add this scene to the choices by giving it the tag tag_name
 #### Navigation Properties
 
 * `go-to: scene1; scene2 if condition` - Automatic navigation
-
-* `go-to-ref: variable-name` - Navigate to scene stored in variable
+* `go-to-ref: variable_name` - Navigate to scene stored in variable
 
 * `go-sub: subscene` - Call subscene
-
-* `go-sub-start: subscene` - Start subscene
-
-* `go-sub-end` - End subscene
 
 #### Visit Control
 
@@ -135,11 +130,11 @@ Add this scene to the choices by giving it the tag tag_name
 
 #### Event Handlers
 
-* `on-arrival: variable = value; other-var = 2` - Often used to set quality-variables
+* `on-arrival: variable = value; other_var = 2` - Often used to set quality variables
 
-* `on-departure: cleanup-code` - Executes when leaving this scene 
+* `on-departure: cleanup_code` - Executes when leaving this scene 
 
-* `on-display: display-code` - Executes when scene content is displayed/redisplayed 
+* `on-display: display_code` - Executes when scene content is displayed/redisplayed 
 
 #### Organization
 
@@ -289,8 +284,8 @@ Choice properties like `view-if`, `choose-if`, `order`, `priority`, and `frequen
 ### Quality Display
 
 ```
-[+ quality-name +] - Display quality-variable value
-[+ quality-name : qdisplay-name +] - Display with custom format
+[+ quality_name +] - Display quality variable value
+[+ quality_name : qdisplay_name +] - Display with custom format
 ```
 
 ### Hidden Text
@@ -331,22 +326,22 @@ choose-if: {! return ((Q['a'] || 0) === (Q['b'] || 0)); !}
 ```
 {! 
   // JavaScript code here
-  Q['calculated-value'] = Q['base'] * Q['multiplier'];
+  Q['calculated_value'] = Q['base'] * Q['multiplier'];
 !}
 ```
 
 ### Quality Access
 
-* `Q['variable-name']` - Access/set quality values
+* `Q['variable_name']` - Access/set quality values
 
-* `Q.variableName` - Alternative syntax with camelCase
+* `Q.variable_name` - Alternative syntax when the name is a valid JavaScript identifier
 
 ## Quality Files (.quality.dry)
 
 ### Basic Structure
 
 ```
-name: quality-name
+name: quality_name
 initial: 5
 min: 0
 max: 100
@@ -356,7 +351,7 @@ Description of this quality.
 
 ### Properties
 
-* `name: quality-name` - Required
+* `name: quality_name` - Required
 
 * `initial: 0` - Starting value
 
@@ -364,11 +359,11 @@ Description of this quality.
 
 * `max: 100` - Maximum value
 
-* `signal: signal-name` - Signal identifier
+* `signal: signal_name` - Signal identifier
 
 * `is-valid: condition` - Validation rule
 
-* `default-display: qdisplay-name` - Default display format
+* `default-display: qdisplay_name` - Default display format
 
 ## QDisplay Files (.qdisplay.dry)
 
@@ -421,7 +416,7 @@ first-scene: starting_scene
 
 ### Variables
 
-* `variable-name` - Quality value
+* `variable_name` - Quality value
 
 * `@scene_id` - Scene visit count (requires count-visits-max)
 
@@ -429,7 +424,7 @@ first-scene: starting_scene
 
 **Naming Convention for Quality Variables**
 To make quality variables easily distinguishable from scene names and tag names in your code:
-- Use hyphens (-) for quality names: `player-health`, `magic-power`
+- Use snake_case for quality names: `player_health`, `magic_power`
 - Use underscores (_) for scene names: `forest_entrance`, `castle_gate`
 - Use underscores (_) for tag names: `the_forest`, `the_castle`
 
@@ -439,8 +434,8 @@ This consistent naming pattern helps prevent confusion and makes code more reada
 
 ```
 view-if: health > 0 and stamina >= 10
-choose-if: has-key = 1 or lockpick-skill > 5
-go-to: victory_scene if score-quality >= 100; defeat_scene if health-quality <= 0
+choose-if: has_key = 1 or lockpick_skill > 5
+go-to: victory_scene if score_quality >= 100; defeat_scene if health_quality <= 0
 ```
 
 ### Priority and Frequency Details

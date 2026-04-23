@@ -13,7 +13,7 @@ Facilyn: Which aspects matter most to you?
 
 @qolew_basic_needs_fulfilled
 title: Nourishing food, clean water, safe shelter, warm clothing, dependable care and a deep sense of safety
-on-arrival: qol-economic = "nourishing food, clean water, safe shelter, warm clothing, dependable care and a deep sense of safety"
+on-arrival: qol_economic = "nourishing food, clean water, safe shelter, warm clothing, dependable care and a deep sense of safety"
 go-to: qolewb_balance
 tags: economic_aspects
 
@@ -21,7 +21,7 @@ Me: Nourishing food, clean water, safe shelter, warm clothing, dependable care a
 
 @qolew_comfortable_surroundings
 title: A comfortable home, dependable health care and enough money for daily needs without constant strain
-on-arrival: qol-economic = "a comfortable home, dependable health care and enough money for daily needs without constant strain"
+on-arrival: qol_economic = "a comfortable home, dependable health care and enough money for daily needs without constant strain"
 go-to: qolewb_balance
 tags: economic_aspects
 
@@ -29,7 +29,7 @@ Me: A comfortable home, dependable health care and enough money for daily needs 
 
 @qolew_health_and_vitality
 title: Robust health, personal safety and the means to meet essential needs without scraping by
-on-arrival: qol-economic = "robust health, personal safety and the means to meet essential needs without scraping by"
+on-arrival: qol_economic = "robust health, personal safety and the means to meet essential needs without scraping by"
 go-to: qolewb_balance
 tags: economic_aspects
 
@@ -42,7 +42,7 @@ tags: economic_aspects
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="qol-economic" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="qol_economic" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @qolew_custom_answer: Save
 
@@ -50,7 +50,7 @@ Me: Custom answer
 title: Save
 go-to: qolewb_balance
 
-Me: [+ qol-economic +]
+Me: [+ qol_economic +]
 
 # Balance
 
@@ -84,7 +84,7 @@ Facilyn: Name what money makes possible. Freedom? Time? The ability to help some
 
 @qolewb_education_community
 title: Time for family, friends and community, with learning woven into everyday life
-on-arrival: qol-balance = "time for family, friends and community, with learning woven into everyday life"
+on-arrival: qol_balance = "time for family, friends and community, with learning woven into everyday life"
 go-to: 15_qol_relationships
 tags: balance_aspects
 
@@ -92,7 +92,7 @@ Me: Time for family, friends and community, with learning woven into everyday li
 
 @qolewb_balance_leisure
 title: Room for rest, leisure and time with family and friends
-on-arrival: qol-balance = "room for rest, leisure and time with family and friends"
+on-arrival: qol_balance = "room for rest, leisure and time with family and friends"
 go-to: 15_qol_relationships
 tags: balance_aspects
 
@@ -102,7 +102,7 @@ Me: Room for rest, leisure and time with family and friends
 
 @qolewb_family_friends
 title: Time with family and friends, chances to keep learning and space for culture and play
-on-arrival: qol-balance = "time with family and friends, chances to keep learning and space for culture and play"
+on-arrival: qol_balance = "time with family and friends, chances to keep learning and space for culture and play"
 go-to: 15_qol_relationships
 tags: balance_aspects
 
@@ -111,7 +111,7 @@ Me: Time with family and friends, chances to keep learning and space for culture
 @qolew_travel_and_experience
 title: The means for travel and discovery, with food, shelter, health and security well covered
 view-if: player = "one"
-on-arrival: qol-economic = "the means for travel and discovery, with food, shelter, health and security well covered"
+on-arrival: qol_economic = "the means for travel and discovery, with food, shelter, health and security well covered"
 go-to: 15_qol_relationships
 tags: balance_aspects
 
@@ -119,7 +119,7 @@ Me: The means for travel and discovery, with food, shelter, health and security 
 
 @qolewb_cultural_pursuits
 title: Room for art, culture and creative life, held up by learning and time with loved ones
-on-arrival: qol-balance = "room for art, culture and creative life, held up by learning and time with loved ones"
+on-arrival: qol_balance = "room for art, culture and creative life, held up by learning and time with loved ones"
 go-to: 15_qol_relationships
 tags: balance_aspects
 
@@ -130,7 +130,7 @@ Me: Room for art, culture and creative life, held up by learning and time with l
 @qolewb_community_wellbeing
 title: Community wellbeing, with time to show up for one another and room for culture
 view-if: player = "group"
-on-arrival: qol-balance = "community wellbeing, with time to show up for one another and room for culture"
+on-arrival: qol_balance = "community wellbeing, with time to show up for one another and room for culture"
 go-to: 15_qol_relationships
 tags: balance_aspects
 
@@ -141,7 +141,7 @@ Me: Community wellbeing, with time to show up for one another and room for cultu
 @qolewb_employee_wellbeing
 title: Member wellbeing, with time to learn, contribute, connect and have a life beyond work
 view-if: player = "org"
-on-arrival: qol-balance = "member wellbeing, with time to learn, contribute, connect and have a life beyond work"
+on-arrival: qol_balance = "member wellbeing, with time to learn, contribute, connect and have a life beyond work"
 go-to: 15_qol_relationships
 tags: balance_aspects
 
@@ -154,7 +154,7 @@ tags: balance_aspects
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="qol-balance" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="qol_balance" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @qolewb_custom_answer: Save
 
@@ -162,4 +162,4 @@ Me: Custom answer
 title: Save
 go-to: 15_qol_relationships
 
-Me: [+ qol-balance +]
+Me: [+ qol_balance +]

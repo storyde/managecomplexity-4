@@ -8,7 +8,7 @@ Facilyn: If you skipped any checks, you can revisit them now. Otherwise, you can
 
 @revisit_cause
 title: Revisit Cause and Effect Check
-view-if: fltr-cause = "Skipped"
+view-if: fltr_cause = "Skipped"
 tags: revisit_skips
 
 Me: Revisit Cause and Effect Check.
@@ -19,7 +19,7 @@ Facilyn: "Does this action address the root cause of the problem?"
 
 @revisit_weak_link
 title: Revisit the Weak Link Checks
-view-if: wl-social = "Skipped" or wl-biological = "Skipped" or wl-financial = "Skipped"
+view-if: wl_social = "Skipped" or wl_biological = "Skipped" or wl_financial = "Skipped"
 tags: revisit_skips
 
 Me: Revisit the Weak Link Checks.
@@ -30,7 +30,7 @@ Facilyn: Which type of weak link would you like to check?
 
 @revisit_marginal
 title: Revisit Marginal Reaction Check
-view-if: fltr-marginal = "Skipped"
+view-if: fltr_marginal = "Skipped"
 tags: revisit_skips
 
 Me: Revisit Marginal Reaction Check.
@@ -41,7 +41,7 @@ Facilyn: "Which action will provide the greatest return toward the goal for each
 
 @revisit_gross_profit
 title: Revisit Gross Profit Analysis
-view-if: fltr-profit = "Skipped"
+view-if: fltr_profit = "Skipped"
 tags: revisit_skips
 
 Me: Revisit Gross Profit Analysis.
@@ -52,7 +52,7 @@ Facilyn: "Which enterprises contribute the most to covering the overheads of the
 
 @revisit_em_source
 title: Revisit Energy/Money Source
-view-if: em-source = "Skipped"
+view-if: em_source = "Skipped"
 tags: revisit_skips
 
 Me: Revisit energy/money source.
@@ -63,7 +63,7 @@ Facilyn: "Is the energy or money to be used in this action derived from the most
 
 @revisit_em_use
 title: Revisit Energy/Money use
-view-if: em-use = "Skipped"
+view-if: em_use = "Skipped"
 tags: revisit_skips
 
 Me: Revisit energy/money use.
@@ -74,7 +74,7 @@ Facilyn: "Will the way in which the energy or money is used be in line with our 
 
 @revisit_sustainability_social
 title: Revisit the social sustainability check
-view-if: sus-behaviour = "Skipped"
+view-if: sus_behaviour = "Skipped"
 tags: revisit_skips
 
 Me: Revisit the social Sustainability Check.
@@ -87,7 +87,7 @@ Facilyn: Will your **Behavior** shape trust and relationships?
 
 @revisit_sustainability_environment
 title: Revisit the environmental sustainability check
-view-if: sus-environment = "Skipped"
+view-if: sus_environment = "Skipped"
 tags: revisit_skips
 
 Me: Revisit the environmental Sustainability Check.
@@ -100,7 +100,7 @@ Facilyn: Will your action lead toward or away from the future landscape describe
 
 @revisit_gut_feel
 title: Revisit Gut Feel Check
-view-if: fltr-gut = "Skipped"
+view-if: fltr_gut = "Skipped"
 tags: revisit_skips
 
 Me: Revisit Gut Feel Check.

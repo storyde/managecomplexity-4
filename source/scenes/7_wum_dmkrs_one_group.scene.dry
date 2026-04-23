@@ -45,7 +45,7 @@ Facilyn: Exclude a real stakeholder, and you end up negotiating with a fire hydr
 @dmkrs_me
 title: Just me
 view-if: player = "one"
-on-arrival: decision-makers = "Me"
+on-arrival: decision_makers = "Me"
 go-to: 9_wum_rb_physical
 tags: decision_makers
 
@@ -56,7 +56,7 @@ Facilyn: Perfect. Then we treat you as the only decision-maker.
 @dmkrs_include_more
 title: Include more people
 view-if: player = "one"
-on-arrival: decision-makers = "Me and people I live or decide with"; player = "group"
+on-arrival: decision_makers = "Me and people I live or decide with"; player = "group"
 go-to: 9_wum_rb_physical
 tags: decision_makers
 
@@ -84,7 +84,7 @@ Facilyn: Try to be inclusive rather than exclusive.
 title: Group members 
 subtitle: and the people with veto power
 view-if: player = "group"
-on-arrival: decision-makers = "Group members and others with veto power"
+on-arrival: decision_makers = "Group members and others with veto power"
 go-to: 9_wum_rb_physical
 tags: decision_makers
 
@@ -95,7 +95,7 @@ Facilyn: Good. That gives us the decision makers for your whole under management
 @dmkrs_group_no_veto
 title: Just us
 view-if: player = "group"
-on-arrival: decision-makers = "Us"
+on-arrival: decision_makers = "Us"
 go-to: 9_wum_rb_physical
 tags: decision_makers
 
@@ -111,7 +111,7 @@ tags: decision_makers
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="decision-makers" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="decision_makers" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @dmkrs_custom_answer
 
@@ -119,4 +119,4 @@ Me: Custom answer
 title: Save
 go-to: 9_wum_rb_physical
 
-Me: [+ decision-makers +]
+Me: [+ decision_makers +]

@@ -2,87 +2,87 @@ title: Progress
 
 # This scene contains information for the left sidebar.
 
-[? if fltr-result != "visited" : [+ progress : qprogress +] ?]
+[? if fltr_result != "visited" : [+ progress : qprogress +] ?]
 
 [? if progress > 39 : [+ progress : qprogress +] ?]
 
-[? if fltr-result = "visited" and progress < 40 : **Finalize Filter Questions:**<br>Revisit skipped filters ?]
+[? if fltr_result = "visited" and progress < 40 : **Finalize Filter Questions:**<br>Revisit skipped filters ?]
 
 <br>
 
-[? if decision-makers = 0 : *Interact for more.* ?]
+[? if decision_makers = 0 : *Interact for more.* ?]
 
-[? if decision-makers != 0 : <h1>Holistic Context:</h1> ?]
+[? if decision_makers != 0 : <h1>Holistic Context:</h1> ?]
 
 [? if progress > 25 : <div style="white-space: pre-wrap;">[+ holtext +]</div> ?]
 
-[? if progress < 26 and decision-makers != 0 : <h2>Whole Under Management</h2> ?]
+[? if progress < 26 and decision_makers != 0 : <h2>Whole Under Management</h2> ?]
 
-[? if progress < 26 and decision-makers != 0 : **Decision makers:** [+ decision-makers +] ?]
+[? if progress < 26 and decision_makers != 0 : **Decision makers:** [+ decision_makers +] ?]
 
-[? if progress < 26 and rb-physical != 0 : **Physical resources:** [+ rb-physical +] ?]
+[? if progress < 26 and rb_physical != 0 : **Physical resources:** [+ rb_physical +] ?]
 
-[? if progress < 26 and rb-human != 0 : **Social resources:** [+ rb-human +] ?]
+[? if progress < 26 and rb_human != 0 : **Social resources:** [+ rb_human +] ?]
 
-[? if progress < 26 and wum-money != 0 : **Monetary resources:** [+ wum-money +] ?]
+[? if progress < 26 and wum_money != 0 : **Monetary resources:** [+ wum_money +] ?]
 
-[? if progress < 26 and player = "org" and st-purpose != 0 : **Statement of Purpose:** [+ st-purpose +] ?]
+[? if progress < 26 and player = "org" and st_purpose != 0 : **Statement of Purpose:** [+ st_purpose +] ?]
 
 
-[? if progress < 26 and qol-economic != 0 : <h2>Quality of Life</h2> ?]
+[? if progress < 26 and qol_economic != 0 : <h2>Quality of Life</h2> ?]
 
-[? if progress < 26 and qol-economic != 0 : **Economic well-being:** [+ qol-economic +] ?]
+[? if progress < 26 and qol_economic != 0 : **Economic well-being:** [+ qol_economic +] ?]
 
-[? if progress < 26 and qol-balance != 0 : **And:** [+ qol-balance +] ?]
+[? if progress < 26 and qol_balance != 0 : **And:** [+ qol_balance +] ?]
 
-[? if progress < 26 and qol-relationships != 0 : **Relationships:** [+ qol-relationships +] ?]
+[? if progress < 26 and qol_relationships != 0 : **Relationships:** [+ qol_relationships +] ?]
 
-[? if progress < 26 and qol-challenge != 0 : **Challenge:** [+ qol-challenge +] ?]
+[? if progress < 26 and qol_challenge != 0 : **Challenge:** [+ qol_challenge +] ?]
 
-[? if progress < 26 and qol-growth != 0 : **Growth:** [+ qol-growth +] ?]
+[? if progress < 26 and qol_growth != 0 : **Growth:** [+ qol_growth +] ?]
 
-[? if progress < 26 and qol-purpose != 0 and player = "one" : **I am about:** [+ qol-purpose +] ?]
+[? if progress < 26 and qol_purpose != 0 and player = "one" : **I am about:** [+ qol_purpose +] ?]
 
-[? if progress < 26 and qol-purpose != 0 and player != "one" : **We are about:** [+ qol-purpose +] ?]
+[? if progress < 26 and qol_purpose != 0 and player != "one" : **We are about:** [+ qol_purpose +] ?]
 
-[? if progress < 26 and qol-aspiration != 0 and player = "one" : **I want to be:** [+ qol-aspiration +] ?]
+[? if progress < 26 and qol_aspiration != 0 and player = "one" : **I want to be:** [+ qol_aspiration +] ?]
 
-[? if progress < 26 and qol-aspiration != 0 and player != "one" :** We want to be:** [+ qol-aspiration +] ?]
+[? if progress < 26 and qol_aspiration != 0 and player != "one" :** We want to be:** [+ qol_aspiration +] ?]
 
-[? if progress < 26 and qol-accomplish != 0 and player = "one" : **I ultimately want to accomplish:** [+ qol-accomplish +] ?]
+[? if progress < 26 and qol_accomplish != 0 and player = "one" : **I ultimately want to accomplish:** [+ qol_accomplish +] ?]
 
-[? if progress < 26 and qol-accomplish != 0 and player != "one" : **We ultimately want to accomplish:** [+ qol-accomplish +] ?]
+[? if progress < 26 and qol_accomplish != 0 and player != "one" : **We ultimately want to accomplish:** [+ qol_accomplish +] ?]
 
 [? if progress < 26 and complement != 0 : [+ complement +] ?]
 
 
-[? if progress < 26 and frb-people != 0 or frb-environment != 0 : <h2>Future Resource Base</h2> ?]
+[? if progress < 26 and frb_people != 0 or frb_environment != 0 : <h2>Future Resource Base</h2> ?]
 
-[? if progress < 26 and frb-people != 0 : **Our behaviour:** [+ frb-people +] ?]
+[? if progress < 26 and frb_people != 0 : **Our behaviour:** [+ frb_people +] ?]
 
-[? if progress < 26 and frb-environment != 0 : **Environment:** [+ frb-environment +] ?]
+[? if progress < 26 and frb_environment != 0 : **Environment:** [+ frb_environment +] ?]
 
 
-[? if fltr-cause != 0 : <h2>Filter Questions: </h2> ?]
+[? if fltr_cause != 0 : <h2>Filter Questions: </h2> ?]
 
-[? if fltr-cause != 0 : **Cause and Effect:** [+ fltr-cause +] ?]
+[? if fltr_cause != 0 : **Cause and Effect:** [+ fltr_cause +] ?]
 
-[? if wl-social != 0 : **Social Weak Link:** [+ wl-social +] ?]
+[? if wl_social != 0 : **Social Weak Link:** [+ wl_social +] ?]
 
-[? if wl-biological != 0 : **Biological Weak Link:** [+ wl-biological +] ?]
+[? if wl_biological != 0 : **Biological Weak Link:** [+ wl_biological +] ?]
 
-[? if wl-financial != 0 : **Financial Weak Link:** [+ wl-financial +] ?]
+[? if wl_financial != 0 : **Financial Weak Link:** [+ wl_financial +] ?]
 
-[? if fltr-marginal != 0 : **Marginal Reaction:** [+ fltr-marginal +] ?]
+[? if fltr_marginal != 0 : **Marginal Reaction:** [+ fltr_marginal +] ?]
 
-[? if fltr-profit != 0 : **Gross Profit:** [+ fltr-profit +] ?]
+[? if fltr_profit != 0 : **Gross Profit:** [+ fltr_profit +] ?]
 
-[? if em-source != 0 : **Energy/Money Source:** [+ em-source +] ?]
+[? if em_source != 0 : **Energy/Money Source:** [+ em_source +] ?]
 
-[? if em-use != 0 : **Energy/Money Use:** [+ em-use +] ?]
+[? if em_use != 0 : **Energy/Money Use:** [+ em_use +] ?]
 
-[? if sus-behaviour != 0 : **Sustainability - Behaviour:** [+ sus-behaviour +] ?]
+[? if sus_behaviour != 0 : **Sustainability - Behaviour:** [+ sus_behaviour +] ?]
 
-[? if sus-environment != 0 : **Sustainability - Environment:** [+ sus-environment +] ?]
+[? if sus_environment != 0 : **Sustainability - Environment:** [+ sus_environment +] ?]
 
-[? if fltr-gut != 0 : **Gut Feel:** [+ fltr-gut +] ?]
+[? if fltr_gut != 0 : **Gut Feel:** [+ fltr_gut +] ?]

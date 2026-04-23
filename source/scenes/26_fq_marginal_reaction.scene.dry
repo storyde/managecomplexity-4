@@ -25,16 +25,16 @@ A cargo robot pauses beside a stack of containers, apparently reassessing the co
 
 @fqmr_pass
 title: It provides the highest return on investment
-on-arrival: fltr-marginal = "Passed"
-go-to: 27_fq_gross_profit; jumpScene if fltr-result = "visited"
+on-arrival: fltr_marginal = "Passed"
+go-to: 27_fq_gross_profit; jumpScene if fltr_result = "visited"
 tags: marginal_reaction
 
 Me: It provides the highest return on investment.
 
 @fqmr_fail
 title: It does not provide the highest return on investment
-on-arrival: fltr-marginal = "Failed"
-go-to: 27_fq_gross_profit; jumpScene if fltr-result = "visited"
+on-arrival: fltr_marginal = "Failed"
+go-to: 27_fq_gross_profit; jumpScene if fltr_result = "visited"
 tags: marginal_reaction
 
 Me: It does not provide the highest return on investment.
@@ -43,8 +43,8 @@ Facilyn: Fair. You might reconsider, or find a way to improve the return. Someti
 
 @fqmr_skip
 title: Not sure, let's move on
-on-arrival: fltr-marginal = "Skipped"
-go-to: 27_fq_gross_profit; jumpScene if fltr-result = "visited"
+on-arrival: fltr_marginal = "Skipped"
+go-to: 27_fq_gross_profit; jumpScene if fltr_result = "visited"
 tags: marginal_reaction
 
 Me: Not sure, let's move on.

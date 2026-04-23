@@ -197,11 +197,11 @@ Facilyn: Let’s start simple.
 
 She looks toward the window.
 
-[? if helped-drone = 0 : Facilyn: This drone is down since you arrived. Its hardware is complicated. ?]
+[? if helped_drone = 0 : Facilyn: This drone is down since you arrived. Its hardware is complicated. ?]
 
-[? if helped-drone = 1 : Facilyn: This drone you left struggling, its hardware is complicated. ?]
+[? if helped_drone = 1 : Facilyn: This drone you left struggling, its hardware is complicated. ?]
 
-[? if helped-drone = 2 : Facilyn: This drone you helped when arriving, its hardware is complicated. ?]
+[? if helped_drone = 2 : Facilyn: This drone you helped when arriving, its hardware is complicated. ?]
 
 Facilyn: Many parts, clear connections. If something breaks, we can isolate it, repair it, restart.
 

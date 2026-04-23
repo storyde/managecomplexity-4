@@ -27,7 +27,7 @@ She turns the cup in her hands, watching the last swirl of steam fade.
 @qolp_ind_learning
 title: Learning, growing and staying open to what life can teach
 view-if: player = "one"
-on-arrival: qol-purpose = "learning, growing and staying open to what life can teach"
+on-arrival: qol_purpose = "learning, growing and staying open to what life can teach"
 go-to: 18_qol_contribution
 tags: qol_purpose
 
@@ -36,7 +36,7 @@ Me: Learning, growing and staying open to what life can teach
 @qolp_ind_health
 title: Caring for health, vitality and participation
 view-if: player = "one"
-on-arrival: qol-purpose = "caring for health, vitality and participation"
+on-arrival: qol_purpose = "caring for health, vitality and participation"
 go-to: 18_qol_contribution
 tags: qol_purpose
 
@@ -45,7 +45,7 @@ Me: Caring for health, vitality and participation
 @qolp_ind_creativity
 title: Creativity, invention and meaningful expression
 view-if: player = "one"
-on-arrival: qol-purpose = "creativity, invention and meaningful expression"
+on-arrival: qol_purpose = "creativity, invention and meaningful expression"
 go-to: 18_qol_contribution
 tags: qol_purpose
 
@@ -56,7 +56,7 @@ Me: Creativity, invention and meaningful expression
 @qolp_grp_community
 title: Service, connection and showing up for community
 view-if: player = "group"
-on-arrival: qol-purpose = "service, connection and showing up for community"
+on-arrival: qol_purpose = "service, connection and showing up for community"
 go-to: 18_qol_contribution
 tags: qol_purpose
 
@@ -65,7 +65,7 @@ Me: Service, connection and showing up for community
 @qolp_grp_sustainability
 title: Caring for land and building something that lasts
 view-if: player = "group"
-on-arrival: qol-purpose = "caring for land and building something that lasts"
+on-arrival: qol_purpose = "caring for land and building something that lasts"
 go-to: 18_qol_contribution
 tags: qol_purpose
 
@@ -74,7 +74,7 @@ Me: Caring for land and building something that lasts
 @qolp_grp_support
 title: Mutual care, solidarity and standing by one another
 view-if: player = "group"
-on-arrival: qol-purpose = "mutual care, solidarity and standing by one another"
+on-arrival: qol_purpose = "mutual care, solidarity and standing by one another"
 go-to: 18_qol_contribution
 tags: qol_purpose
 
@@ -87,7 +87,7 @@ tags: qol_purpose
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="qol-purpose" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="qol_purpose" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @qolp_custom_answer
 
@@ -95,7 +95,7 @@ Me: Custom answer
 title: Save
 go-to: 18_qol_contribution
 
-Me: [+ qol-purpose +]
+Me: [+ qol_purpose +]
 
 # Purpose - Organisation - Statement of Purpose
 
@@ -104,7 +104,7 @@ title: Organisational statement of purpose
 
 Facilyn: If you're working within an organisation, your Statement of Purpose most likely already answers this question: 
 
-{!<textarea class="textarea" data-quality="qol-purpose" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ st-purpose +]{!</textarea>!}
+{!<textarea class="textarea" data-quality="qol_purpose" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ st_purpose +]{!</textarea>!}
 
 - @qolp_org_custom_answer
 
@@ -112,6 +112,6 @@ Facilyn: If you're working within an organisation, your Statement of Purpose mos
 title: Save
 go-to: 18_qol_contribution
 
-Me: [+ qol-purpose +]
+Me: [+ qol_purpose +]
 
 Facilyn: The next two questions help you find personal meaning in that larger purpose. 

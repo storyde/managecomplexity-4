@@ -32,7 +32,7 @@ Out in the harbour, a forklift idles beside a pallet of supplies while its drive
 
 @frbp_honest_transparent
 title: Honest, attentive and respectful
-on-arrival: frb-people = "honest, attentive and respectful"
+on-arrival: frb_people = "honest, attentive and respectful"
 go-to: 21_frb_environment
 tags: behavior_aspects
 
@@ -40,7 +40,7 @@ Me: Honest, attentive and respectful
 
 @frbp_collaborative_supportive
 title: Collaborative, fair and generous
-on-arrival: frb-people = "collaborative, fair and generous"
+on-arrival: frb_people = "collaborative, fair and generous"
 go-to: 21_frb_environment
 tags: behavior_aspects
 
@@ -48,7 +48,7 @@ Me: Collaborative, fair and generous
 
 @frbp_professional_innovative
 title: Steady, skilful and dependable
-on-arrival: frb-people = "steady, skilful and dependable"
+on-arrival: frb_people = "steady, skilful and dependable"
 go-to: 21_frb_environment
 tags: behavior_aspects
 
@@ -56,7 +56,7 @@ Me: Steady, skilful and dependable
 
 @frbp_ethical_responsible
 title: Principled, responsible and consistent
-on-arrival: frb-people = "principled, responsible and consistent"
+on-arrival: frb_people = "principled, responsible and consistent"
 go-to: 21_frb_environment
 tags: behavior_aspects
 
@@ -64,7 +64,7 @@ Me: Principled, responsible and consistent
 
 @frbp_empathetic_trustworthy
 title: Empathetic, prepared and transparent
-on-arrival: frb-people = "empathetic, prepared and transparent"
+on-arrival: frb_people = "empathetic, prepared and transparent"
 go-to: 21_frb_environment
 tags: behavior_aspects
 
@@ -72,7 +72,7 @@ Me: Empathetic, prepared and transparent
 
 @frbp_adaptive_proactive
 title: Adaptable, practical and open-minded
-on-arrival: frb-people = "adaptable, practical and open-minded"
+on-arrival: frb_people = "adaptable, practical and open-minded"
 go-to: 21_frb_environment
 tags: behavior_aspects
 
@@ -85,7 +85,7 @@ tags: behavior_aspects
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="frb-people" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="frb_people" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @frbp_custom_answer: Save
 
@@ -93,4 +93,4 @@ Me: Custom answer
 title: Save
 go-to: 21_frb_environment
 
-Me: [+ frb-people +]
+Me: [+ frb_people +]

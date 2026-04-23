@@ -35,7 +35,7 @@ Outside, a dock clerk walks past with a clipboard, counting mooring posts like t
 @rbph_ind_rural
 title: Rural home, land, vehicle and tools
 view-if: player = "one"
-on-arrival: rb-physical = "Rural home, land, vehicle and tools"
+on-arrival: rb_physical = "Rural home, land, vehicle and tools"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -44,7 +44,7 @@ Me: Rural home, land, vehicle and tools
 @rbph_ind_urban
 title: City apartment, bicycle and digital equipment
 view-if: player = "one"
-on-arrival: rb-physical = "City apartment, bicycle and digital equipment"
+on-arrival: rb_physical = "City apartment, bicycle and digital equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -53,7 +53,7 @@ Me: City apartment, bicycle and digital equipment
 @rbph_ind_nomad
 title: Mobile home and portable gear
 view-if: player = "one"
-on-arrival: rb-physical = "Mobile home and portable gear"
+on-arrival: rb_physical = "Mobile home and portable gear"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -64,7 +64,7 @@ Me: Mobile home and portable gear
 @rbph_grp_commune
 title: Shared land, housing and community facilities
 view-if: player = "group"
-on-arrival: rb-physical = "Shared land, housing and community facilities"
+on-arrival: rb_physical = "Shared land, housing and community facilities"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -73,7 +73,7 @@ Me: Shared land, housing and community facilities
 @rbph_grp_family_biz
 title: Family home, business premises and inventory
 view-if: player = "group"
-on-arrival: rb-physical = "Family home, business premises and inventory"
+on-arrival: rb_physical = "Family home, business premises and inventory"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -82,7 +82,7 @@ Me: Family home, business premises and inventory
 @rbph_grp_urban_col
 title: Shared apartment and creative workspace
 view-if: player = "group"
-on-arrival: rb-physical = "Shared apartment and creative workspace"
+on-arrival: rb_physical = "Shared apartment and creative workspace"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -93,7 +93,7 @@ Me: Shared apartment and creative workspace
 @rbph_agr_farm
 title: Farmland and agricultural equipment
 view-if: sector = "agriculture"
-on-arrival: rb-physical = "Farmland and agricultural equipment"
+on-arrival: rb_physical = "Farmland and agricultural equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -102,7 +102,7 @@ Me: Farmland and agricultural equipment
 @rbph_agr_coop
 title: Cooperative facilities and grain storage
 view-if: sector = "agriculture"
-on-arrival: rb-physical = "Cooperative facilities and grain storage"
+on-arrival: rb_physical = "Cooperative facilities and grain storage"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -111,7 +111,7 @@ Me: Cooperative facilities and grain storage
 @rbph_agr_ranch
 title: Ranch land, wildlife, livestock and facilities
 view-if: sector = "agriculture"
-on-arrival: rb-physical = "Ranch land, wildlife, livestock and facilities"
+on-arrival: rb_physical = "Ranch land, wildlife, livestock and facilities"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -122,7 +122,7 @@ Me: Ranch land, wildlife, livestock and facilities
 @rbph_bus_store
 title: Store buildings and retail equipment
 view-if: sector = "business"
-on-arrival: rb-physical = "Store buildings and retail equipment"
+on-arrival: rb_physical = "Store buildings and retail equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -131,7 +131,7 @@ Me: Store buildings and retail equipment
 @rbph_bus_insurance
 title: Office buildings and information technology
 view-if: sector = "business"
-on-arrival: rb-physical = "Office buildings and information technology"
+on-arrival: rb_physical = "Office buildings and information technology"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -140,7 +140,7 @@ Me: Office buildings and information technology
 @rbph_bus_hospitality
 title: Hotel buildings and guest amenities
 view-if: sector = "business"
-on-arrival: rb-physical = "Hotel buildings and guest amenities"
+on-arrival: rb_physical = "Hotel buildings and guest amenities"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -149,7 +149,7 @@ Me: Hotel buildings and guest amenities
 @rbph_bus_company
 title: Office premises and operational assets
 view-if: sector = "business"
-on-arrival: rb-physical = "Office premises and operational assets"
+on-arrival: rb_physical = "Office premises and operational assets"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -160,7 +160,7 @@ Me: Office premises and operational assets
 @rbph_cul_arts
 title: Arts venues and cultural equipment
 view-if: sector = "culture"
-on-arrival: rb-physical = "Arts venues and cultural equipment"
+on-arrival: rb_physical = "Arts venues and cultural equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -169,7 +169,7 @@ Me: Arts venues and cultural equipment
 @rbph_cul_heritage
 title: Heritage buildings and preservation equipment
 view-if: sector = "culture"
-on-arrival: rb-physical = "Heritage buildings and preservation equipment"
+on-arrival: rb_physical = "Heritage buildings and preservation equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -178,7 +178,7 @@ Me: Heritage buildings and preservation equipment
 @rbph_cul_newsroom
 title: Media facilities and broadcasting equipment
 view-if: sector = "culture"
-on-arrival: rb-physical = "Media facilities and broadcasting equipment"
+on-arrival: rb_physical = "Media facilities and broadcasting equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -189,7 +189,7 @@ Me: Media facilities and broadcasting equipment
 @rbph_edu_kindergarten
 title: Kindergarten buildings and playground equipment
 view-if: sector = "education"
-on-arrival: rb-physical = "Kindergarten buildings and playground equipment"
+on-arrival: rb_physical = "Kindergarten buildings and playground equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -198,7 +198,7 @@ Me: Kindergarten buildings and playground equipment
 @rbph_edu_school
 title: School buildings and educational equipment
 view-if: sector = "education"
-on-arrival: rb-physical = "School buildings and educational equipment"
+on-arrival: rb_physical = "School buildings and educational equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -207,7 +207,7 @@ Me: School buildings and educational equipment
 @rbph_edu_university
 title: University campus and research facilities
 view-if: sector = "education"
-on-arrival: rb-physical = "University campus and research facilities"
+on-arrival: rb_physical = "University campus and research facilities"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -218,7 +218,7 @@ Me: University campus and research facilities
 @rbph_ind_factory
 title: Factory buildings and production machinery
 view-if: sector = "industry"
-on-arrival: rb-physical = "Factory buildings and production machinery"
+on-arrival: rb_physical = "Factory buildings and production machinery"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -227,7 +227,7 @@ Me: Factory buildings and production machinery
 @rbph_ind_construction
 title: Construction equipment and building materials
 view-if: sector = "industry"
-on-arrival: rb-physical = "Construction equipment and building materials"
+on-arrival: rb_physical = "Construction equipment and building materials"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -236,7 +236,7 @@ Me: Construction equipment and building materials
 @rbph_ind_logging
 title: Logging equipment and processing facilities
 view-if: sector = "industry"
-on-arrival: rb-physical = "Logging equipment and processing facilities"
+on-arrival: rb_physical = "Logging equipment and processing facilities"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -247,7 +247,7 @@ Me: Logging equipment and processing facilities
 @rbph_nonprofit_service
 title: Service facilities and community centres
 view-if: sector = "nonprofit"
-on-arrival: rb-physical = "Service facilities and community centres"
+on-arrival: rb_physical = "Service facilities and community centres"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -256,7 +256,7 @@ Me: Service facilities and community centres
 @rbph_nonprofit_advocacy
 title: Office facilities and campaign materials
 view-if: sector = "nonprofit"
-on-arrival: rb-physical = "Office facilities and campaign materials"
+on-arrival: rb_physical = "Office facilities and campaign materials"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -265,7 +265,7 @@ Me: Office facilities and campaign materials
 @rbph_nonprofit_climate
 title: Research facilities and conservation equipment
 view-if: sector = "nonprofit"
-on-arrival: rb-physical = "Research facilities and conservation equipment"
+on-arrival: rb_physical = "Research facilities and conservation equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -276,7 +276,7 @@ Me: Research facilities and conservation equipment
 @rbph_pub_transport
 title: Public transport fleet and infrastructure
 view-if: sector = "publicservice"
-on-arrival: rb-physical = "Public transport fleet and infrastructure"
+on-arrival: rb_physical = "Public transport fleet and infrastructure"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -285,7 +285,7 @@ Me: Public transport fleet and infrastructure
 @rbph_pub_health
 title: Hospital buildings and medical equipment
 view-if: sector = "publicservice"
-on-arrival: rb-physical = "Hospital buildings and medical equipment"
+on-arrival: rb_physical = "Hospital buildings and medical equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -294,7 +294,7 @@ Me: Hospital buildings and medical equipment
 @rbph_pub_service
 title: Government buildings and public infrastructure
 view-if: sector = "publicservice"
-on-arrival: rb-physical = "Government buildings and public infrastructure"
+on-arrival: rb_physical = "Government buildings and public infrastructure"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -303,7 +303,7 @@ Me: Government buildings and public infrastructure
 @rbph_pub_parks
 title: Protected lands and conservation equipment
 view-if: sector = "publicservice"
-on-arrival: rb-physical = "Protected lands and conservation equipment"
+on-arrival: rb_physical = "Protected lands and conservation equipment"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -314,7 +314,7 @@ Me: Protected lands and conservation equipment
 @rbph_pol_policy
 title: Government buildings and national assets
 view-if: sector = "policymaking"
-on-arrival: rb-physical = "Government buildings and national assets"
+on-arrival: rb_physical = "Government buildings and national assets"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -323,7 +323,7 @@ Me: Government buildings and national assets
 @rbph_pol_city
 title: City hall and municipal facilities
 view-if: sector = "policymaking"
-on-arrival: rb-physical = "City hall and municipal facilities"
+on-arrival: rb_physical = "City hall and municipal facilities"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -332,7 +332,7 @@ Me: City hall and municipal facilities
 @rbph_pol_intl
 title: Embassies and diplomatic facilities
 view-if: sector = "policymaking"
-on-arrival: rb-physical = "Embassies and diplomatic facilities"
+on-arrival: rb_physical = "Embassies and diplomatic facilities"
 go-to: 10_wum_rb_human
 tags: physical_rcs
 
@@ -345,7 +345,7 @@ tags: physical_rcs
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="rb-physical" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="rb_physical" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
 - @rbph_custom_answer
 
@@ -353,4 +353,4 @@ Me: Custom answer
 title: Save
 go-to: 10_wum_rb_human
 
-Me: [+ rb-physical +]
+Me: [+ rb_physical +]
