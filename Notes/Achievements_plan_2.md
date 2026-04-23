@@ -52,7 +52,7 @@ This project already uses qualities directly in scenes through `on-arrival`, `vi
 Recommendation:
 
 - Add `.quality.dry` files only if necessary
-- Use qdisplay files for the progress bars
+- Use qdisplay files for the progress bars and for example the `hctx_progress` milestones
 - keep naming consistent with the current project style
 
 Current project style uses snake_case quality names such as:
@@ -111,7 +111,7 @@ This preserves the useful current sidebar while improving motivation at the top.
 
 Quality:
 
-- `jrny-progress`
+- `jrny_progress`
 
 Scale:
 
@@ -139,7 +139,7 @@ Why this scale:
 
 Quality:
 
-- `hctx-progress`
+- `hctx_progress`
 
 Scale:
 
@@ -178,7 +178,7 @@ Note on Holistic Management accuracy:
 
 Quality:
 
-- `fltr-progress`
+- `fltr_progress`
 
 Scale:
 
@@ -211,7 +211,7 @@ Do not build a fourth visible knowledge track in v1.
 
 Instead, add:
 
-- `knwl-last`
+- `knwl_last`
 
 Purpose:
 
@@ -228,12 +228,12 @@ Recommended one-time concept unlocks:
 
 Recommended helper qualities:
 
-- `knwl-last`
-- `knwl-complexity`
-- `knwl-whole`
-- `knwl-holtext`
-- `knwl-filters`
-- `knwl-weak-link`
+- `knwl_last`
+- `knwl_complexity`
+- `knwl_whole`
+- `knwl_holtext`
+- `knwl_filters`
+- `knwl_weak_link`
 
 This is enough for v1. Do not build a larger concept flag set unless later testing shows a real need.
 
@@ -285,11 +285,14 @@ Purpose:
 
 Unlock when:
 
-- `fltr-progress` reaches `7`
+- the player revisits at least one skipped filter question after seeing the results
+- implement by awarding in the revisit flow (not on the results scene)
+
+achievement: filter_navigator if fltr_result = "visited"
 
 Purpose:
 
-- rewards completion of the full decision-check method
+- rewards navigating the method by circling back to skipped checks (a real part of using the framework)
 
 ### `framework_finished`
 
@@ -305,17 +308,38 @@ Purpose:
 
 Use a very small helper layer for sidebar display:
 
-- `achvm-last`
-- `achvm-count`
-- `knwl-last`
+- `achvm_last`
+- `achvm_count`
+- `knwl_last`
+- `knwl_complexity`
+- `knwl_whole`
+- `knwl_holtext`
+- `knwl_filters`
+- `knwl_weak_link`
 
 Recommended meanings:
 
-- `achvm-last`: latest unlocked achievement label
-- `achvm-count`: count of earned achievements
-- `knwl-last`: latest unlocked concept label
+- `achvm_last`: latest unlocked achievement label
+- `achvm_count`: count of earned achievements (helper for display only; badges remain `achievement_*`)
+- `knwl_last`: latest unlocked concept label
 
 Do not add `achvm-icon` in v1. Text is enough.
+
+## Types + Defaults
+
+Keep types consistent so conditions stay simple and reliable.
+
+- Progress tracks: numbers
+  - `jrny_progress`: `0..4`
+  - `hctx_progress`: `0..9`
+  - `fltr_progress`: `0..7`
+- Latest lines: `0` (unset) or string
+  - `achvm_last`: `0` or `"First Landing"` etc.
+  - `knwl_last`: `0` or `"Complexity"` etc.
+- Knowledge flags: numbers
+  - `knwl_*`: `0` (not unlocked) or `1` (unlocked)
+- Filter answers: `0` (unset) or string
+  - `fltr_*`, `wl_*`, `em_*`, `sus_*`: `0` or `"Passed"|"Failed"|"Skipped"`
 
 ## Minimal Ruleset (No Big Guard System)
 
@@ -329,16 +353,27 @@ This is simpler, avoids double-counting, and automatically treats `Skipped` as v
 
 Update `source/scenes/root.scene.dry`.
 
-Add `on-arrival` initialization for all new helper qualities.
+Add `on-arrival` initialization for all new helper qualities, but only once per run.
+
+Minimal one-time guard:
+
+- add `home_visited` (0/1)
+- in `source/scenes/1_home.scene.dry`: `on-arrival: home_visited = 1`
+- in `source/scenes/root.scene.dry`: wrap the whole initialization assignment so it only runs if `home_visited = 0`
 
 Recommended initial values:
 
-- `jrny-progress = 0`
-- `htx-progress = 0`
-- `fltr-progress = 0`
-- `achvm-count = 0`
-- `achvm-last = 0`
-- `knwl-last = 0`
+- `jrny_progress = 0`
+- `hctx_progress = 0`
+- `fltr_progress = 0`
+- `achvm_count = 0`
+- `achvm_last = 0`
+- `knwl_last = 0`
+- `knwl_complexity = 0`
+- `knwl_whole = 0`
+- `knwl_holtext = 0`
+- `knwl_filters = 0`
+- `knwl_weak_link = 0`
 
 No other guard qualities are required for v1.
 
@@ -350,19 +385,19 @@ This section is the implementation-ready minimal mapping.
 
 Add an `on-display` block at the top of `source/scenes/progress.scene.dry` that sets:
 
-- `jrny-progress` from `progress` thresholds
-- `hctx-progress` from whether key framework qualities are filled in
-- `fltr-progress` from whether each conceptual check has any recorded answer (including `Skipped`)
+- `jrny_progress` from `progress` thresholds
+- `hctx_progress` from whether key framework qualities are filled in
+- `fltr_progress` from whether each conceptual check has any recorded answer (including `Skipped`)
 
 ### Journey computation
 
 Use the existing `progress` pacing number:
 
-- `jrny-progress = 0` if `progress < 3`
-- `jrny-progress = 1` if `progress >= 3`
-- `jrny-progress = 2` if `progress >= 5`
-- `jrny-progress = 3` if `progress >= 26`
-- `jrny-progress = 4` if `progress >= 42`
+- `jrny_progress = 0` if `progress < 3`
+- `jrny_progress = 1` if `progress >= 3`
+- `jrny_progress = 2` if `progress >= 5`
+- `jrny_progress = 3` if `progress >= 26`
+- `jrny_progress = 4` if `progress >= 42`
 
 This works even if the player revisits later scenes, because it always reflects the furthest milestone reached.
 
@@ -370,31 +405,31 @@ This works even if the player revisits later scenes, because it always reflects 
 
 Compute by counting completed framework parts (presence checks, not “quality of answer”):
 
-- decision-makers: `decision-makers != 0`
-- physical resources: `rb-physical != 0`
-- human resources: `rb-human != 0`
-- money: `wum-money != 0`
-- statement of purpose: count as complete if `player != "org"` OR `st-purpose != 0`
-- quality of life complete: use the most reliable existing flag/condition in the current script (e.g. `qol-statement-complete = 1` if present, otherwise check the required `qol-*` fields)
-- FRB people: `frb-people != 0`
-- FRB environment: `frb-environment != 0`
+- decision-makers: `decision_makers != 0`
+- physical resources: `rb_physical != 0`
+- human resources: `rb_human != 0`
+- money: `wum_money != 0`
+- statement of purpose: count as complete if `player != "org"` OR `st_purpose != 0`
+- quality of life complete: check that the 8 `qol_*` text fields are all non-zero
+- FRB people: `frb_people != 0`
+- FRB environment: `frb_environment != 0`
 - holtext written: `holtext != 0`
 
-Set `hctx-progress` to that count, capped to `9`.
+Set `hctx_progress` to that count, capped to `9`.
 
 ### Decision Checks computation (0..7), no skip penalty
 
 Each conceptual check counts as complete if its stored answer quality is not `0`. `Skipped` counts as complete.
 
-- Cause and Effect: `fltr-cause != 0`
-- Weak Link cluster: `wl-social != 0` AND `wl-biological != 0` AND `wl-financial != 0`
-- Marginal Reaction: `fltr-marginal != 0`
-- Gross Profit: `fltr-profit != 0`
-- Source and Use cluster: `em-source != 0` AND `em-use != 0`
-- Sustainability cluster: `sus-behaviour != 0` AND `sus-environment != 0`
-- Gut Feel: `fltr-gut != 0`
+- Cause and Effect: `fltr_cause != 0`
+- Weak Link cluster: `wl_social != 0` AND `wl_biological != 0` AND `wl_financial != 0`
+- Marginal Reaction: `fltr_marginal != 0`
+- Gross Profit: `fltr_profit != 0`
+- Source and Use cluster: `em_source != 0` AND `em_use != 0`
+- Sustainability cluster: `sus_behaviour != 0` AND `sus_environment != 0`
+- Gut Feel: `fltr_gut != 0`
 
-Set `fltr-progress` to the number of completed conceptual checks, capped to `7`.
+Set `fltr_progress` to the number of completed conceptual checks, capped to `7`.
 
 This automatically ignores revisit double-counting and treats `Skipped` as valid completion.
 
@@ -405,14 +440,27 @@ These are badges, so use persistent `achievement: ...` and let `reset_achievemen
 - `3_harbour.scene.dry`: `achievement: first_landing`
 - `4_teahouse.scene.dry`: `achievement: tea_companion`
 - `22_holtext.scene.dry`: `achievement: holtext_created`
-- `31_fq_result.scene.dry`: `achievement: filter_navigator`
+- `32_fq_revisit.scene.dry`: award `filter_navigator` when the player chooses any “Revisit …” option (put `achievement: filter_navigator if fltr_result = "visited"` on the filter scenes; the achievement is persistent so it effectively only unlocks once)
 - `33_framework_outro.scene.dry`: `achievement: framework_finished`
+
+Also set the “latest” and count helper qualities in the same scenes (do not wait for `achievement_*` to appear on the same scene):
+
+- `achvm_last = "First Landing"` etc.
+- `achvm_count` either:
+  - computed in `progress.scene.dry` (recommended, minimal JS in one place), or
+  - incremented alongside the achievement unlock (only safe if the awarding scene cannot be revisited; use `max-visits: 1` if needed)
 
 ## 3) Minimal “latest knowledge” line (optional but recommended)
 
-Keep the existing minimal `knwl-last` idea, but do not build a large unlock system.
+Keep the existing minimal `knwl_last` idea, but do not build a large unlock system.
 
-Use 3 to 5 one-time flags (`knwl-complexity`, `knwl-whole`, `knwl-holtext`, `knwl-filters`, `knwl-weak-link`) to update `knwl-last` only the first time each concept is introduced.
+Use 3 to 5 one-time flags (`knwl_complexity`, `knwl_whole`, `knwl_holtext`, `knwl_filters`, `knwl_weak_link`) to update `knwl_last` only the first time each concept is introduced.
+
+Implementation note (keep it Dendry-first):
+
+- Use one consistent pattern everywhere (gate on the concept flag itself):
+  - `on-arrival: knwl_<concept> = 1 if knwl_<concept> = 0; knwl_last = "<Label>" if knwl_<concept> = 0`
+- Optional extra safety: also make the specific “teaching node” scene/subscene `max-visits: 1` where appropriate.
 
 ## 4. Knowledge signal hooks
 
@@ -442,6 +490,10 @@ Unlock:
 
 - `Seven Checks`
 
+Note:
+
+- this scene is reached before `31_fq_result.scene.dry` sets `fltr_result = "visited"`, so it is safe to set `knwl_filters` here without any `fltr_result` conditional
+
 ### `source/scenes/25_fq_weak_link.scene.dry`
 
 Unlock:
@@ -450,15 +502,15 @@ Unlock:
 
 Rule:
 
-- each concept only updates `knwl-last` once, the first time it is taught
+- each concept only updates `knwl_last` once, the first time it is taught
 
 ## Qdisplay Plan
 
 Replace the single all-purpose qdisplay with 3 focused qdisplays:
 
-- `source/qdisplays/qjrny-progress.qdisplay.dry`
-- `source/qdisplays/qhctx-progress.qdisplay.dry`
-- `source/qdisplays/qfltr-progress.qdisplay.dry`
+- `source/qdisplays/qjrny_progress.qdisplay.dry`
+- `source/qdisplays/qhctx_progress.qdisplay.dry`
+- `source/qdisplays/qfltr_progress.qdisplay.dry`
 
 Each qdisplay should render:
 
@@ -481,18 +533,18 @@ Refactor only the top block. Keep the existing lower recap sections.
 Recommended order:
 
 1. `Progress` heading
-2. `[+ jrny-progress : qjrny-progress +]`
-3. `[+ hctx-progress : qhctx-progress +]`
-4. `[+ fltr-progress : qfltr-progress +]`
-5. latest achievement line if `achvm-last != 0`
-6. latest concept line if `knwl-last != 0`
+2. `[+ jrny_progress : qjrny_progress +]`
+3. `[+ hctx_progress : qhctx_progress +]`
+4. `[+ fltr_progress : qfltr_progress +]`
+5. latest achievement line if `achvm_last != 0`
+6. latest concept line if `knwl_last != 0`
 7. earned badges list driven by `achievement_*`
 8. existing Holistic Context and filter recap
 
 Recommended text:
 
-- `Latest achievement: [+ achvm-last +]`
-- `Latest concept: [+ knwl-last +]`
+- `Latest achievement: [+ achvm_last +]`
+- `Latest concept: [+ knwl_last +]`
 
 Badge rendering should be conditional, for example:
 
@@ -531,13 +583,13 @@ Update:
 
 It should also clear:
 
-- `achvm-last`
-- `achvm-count`
-- `knwl-last`
+- `achvm_last`
+- `achvm_count`
+- `knwl_last`
+- `knwl_complexity`, `knwl_whole`, `knwl_holtext`, `knwl_filters`, `knwl_weak_link`
+- `home_visited`
+and any other new helper qualities added for v1.
 
-and all new guard qualities.
-
-This keeps the test/reset flow reliable.
 
 ## Implementation Order
 
@@ -557,7 +609,7 @@ This keeps the test/reset flow reliable.
 ### Phase 3
 
 - add the achievement properties
-- add `achvm-last`, `achvm-count`, and `knwl-last` updates
+- add `achvm_last`, `achvm_count`, and `knwl_last` updates
 - update reset scene
 
 ### Phase 4
@@ -571,11 +623,12 @@ The feature is done when all of the following are true:
 
 - a fresh run shows all 3 new tracks at zero
 - the Journey track reflects the furthest milestone reached (based on `progress`)
-- the Holistic Context track reaches `9` for both org and non-org paths
+- the Holistic Context track reaches `9` for both org and non-org paths when all required fields are filled; otherwise it stays below `9` (so the player can see something is missing)
 - the Decision Checks track reaches `7` once each conceptual check has any stored answer (including `Skipped`)
 - skipped sub-checks count as valid completion and do not block track progress
 - revisiting scenes never duplicates track progress (tracks are computed, not incremented)
 - achievements appear in the sidebar through `achievement_*` conditions
+- `filter_navigator` unlocks when the player revisits at least one skipped filter after results
 - the latest achievement line and latest concept line update correctly
 - the left sidebar remains readable on desktop and mobile
 

@@ -1,5 +1,23 @@
 title: Completed holistic context
-on-arrival: progress = 26
+on-arrival: progress = 26; {!
+if (!Q.holtext) {
+    if (Q.player === "one") {
+        Q.holtext = `I want ${Q.qol_economic} in a balanced life with ${Q.qol_balance}. My relationships will be grounded in ${Q.qol_relationships}. I thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. I find purpose in ${Q.qol_purpose}. I seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
+${Q.complement || ""}
+
+I will act in ways that are ${Q.frb_people}.
+
+All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
+    } else if (Q.player === "group" || Q.player === "org") {
+        Q.holtext = `We want ${Q.qol_economic} in balanced lives with ${Q.qol_balance}. Our relationships will be grounded in ${Q.qol_relationships}. We thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. We find purpose in ${Q.qol_purpose}. We seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
+${Q.complement || ""}
+
+We will act in ways that are ${Q.frb_people}.
+
+All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
+    }
+}
+!}
 
 Facilyn: Excellent. You now have your holistic context: your quality of life and your future resource base — captured in simple phrases.
 
@@ -10,6 +28,8 @@ She fills in a few words, then hands you the Paper.
 Facilyn: Feel free to improve it and make it yours, using your own words. And make sure every decision-maker shares the same understanding of what each line means.
 
 Facilyn: When everyone has ownership, they can commit to it.
+
+<div style="white-space: pre-wrap;">[+ holtext +]</div>
 
 [? if player = "one" : Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}I want [+ qol_economic +] in a balanced life with [+ qol_balance +]. My relationships will be grounded in [+ qol_relationships +]. I thrive on [+ qol_challenge +] and want to be free to [+ qol_growth +]. I find purpose in [+ qol_purpose +]. I seek to be [+ qol_aspiration +] and want to contribute to [+ qol_accomplish +]. <br>[+ complement +] <br><br>I will act in ways that are [+ frb_people +]. <br><br>All to be ensured, for many generations to come, on a foundation of [+ frb_environment +].</div> ?]
 

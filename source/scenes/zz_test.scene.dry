@@ -2,30 +2,14 @@ title: Test
 subtitle: Just a test choice
 order: 5
 is-special: true
-on-arrival: {!
-if (!Q.holtext) {
-    if (Q.player === "one") {
-        Q.holtext = `I want ${Q.qol_economic} in a balanced life with ${Q.qol_balance}. My relationships will be grounded in ${Q.qol_relationships}. I thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. I find purpose in ${Q.qol_purpose}. I seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
-${Q.complement || ""}
-
-I will act in ways that are ${Q.frb_people}.
-
-All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
-    } else if (Q.player === "group" || Q.player === "org") {
-        Q.holtext = `We want ${Q.qol_economic} in balanced lives with ${Q.qol_balance}. Our relationships will be grounded in ${Q.qol_relationships}. We thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. We find purpose in ${Q.qol_purpose}. We seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
-${Q.complement || ""}
-
-We will act in ways that are ${Q.frb_people}.
-
-All to be ensured, for many generations to come, on a foundation of ${Q.frb_environment}.`;
-    }
-}
-!}
+on-arrival: knwl_filters = 1 if fltr_result != "visited"
 new-page: true
 tags: root
 achievement: test_achievement
 
 = Title
+
+[+ knwl_filters +]
 
 Test: Achievement flag for this scene:
 
