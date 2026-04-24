@@ -1,6 +1,6 @@
 title: Relationships
 subtitle: How We Connect With Others
-on-arrival: progress = 17
+on-arrival: hctx_progress = 7 if hctx_progress < 7
 
 Facilyn: Next: Relationships. 
 

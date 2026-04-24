@@ -1,5 +1,5 @@
 title: Marginal reaction
-on-arrival: progress = 33
+on-arrival: fltr_progress = 3 if fltr_progress < 3
 
 Facilyn: The marginal reaction check helps you use time, money, and energy well — especially when you’re choosing between options that already passed the other checks.
 
@@ -9,6 +9,7 @@ Facilyn: "Which action will provide the greatest return toward the goal for each
 
 @fqmr_explanation
 title: I need help understanding this check
+on-arrival: knwl_marginal_reaction = 1; knwl_last = "Marginal Reaction" if knwl_marginal_reaction = 0
 max-visits: 1
 order: 21
 tags: marginal_reaction

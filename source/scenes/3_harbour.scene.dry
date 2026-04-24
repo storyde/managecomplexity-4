@@ -1,8 +1,6 @@
 title: Harbour 
-on-arrival: progress = 3; achvm_last = "First Landing" if achievement_first_landing = 0
+on-arrival: achvm_last = "First Landing" if achievement_first_landing = 0; achvm_count += 1 if achievement_first_landing = 0
 achievement: first_landing
-
-You reach the harbour.
 
 A delivery drone circles above the water, tilting for a better selfie angle.  
 
@@ -67,7 +65,7 @@ Then he leans back against his booth again.
 
 @ask_direction 
 title: Ask for the teahouse
-on-arrival: know_way = 1; progress = 4
+on-arrival: know_way = 1; jrny_progress = 2 if jrny_progress < 2
 tags: vendor
 
 Me: Can you tell me how to get to the teahouse?

@@ -1,5 +1,5 @@
 title: Challenge and Growth
-on-arrival: progress = 18
+on-arrival: hctx_progress = 8 if hctx_progress < 8
 
 Facilyn: Now — what calls for your creativity? 
 
@@ -104,7 +104,6 @@ Me: [+ qol_challenge +]
 
 @qolg_growth
 title: Growth
-on-arrival: progress = 19
 
 Facilyn: Perfect. 
 

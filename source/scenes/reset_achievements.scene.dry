@@ -1,6 +1,6 @@
 title: Reset achievements
 subtitle: Clears stored achievements 
-on-arrival: achievement_first_landing = 0; achievement_tea_companion = 0; achievement_holtext_created = 0; achievement_filter_navigator = 0; achievement_framework_finished = 0; achievement_weak_link_spotter = 0; achievement_test_achievement = 0; jrny_progress = 0; hctx_progress = 0; fltr_progress = 0; achvm_count = 0; achvm_last = 0; knwl_last = 0; knwl_complexity = 0; knwl_whole = 0; knwl_holtext = 0; knwl_filters = 0; knwl_weak_link = 0; home_visited = 0
+on-arrival: achievement_first_landing = 0; achievement_tea_companion = 0; achievement_holtext_created = 0; achievement_filter_navigator = 0; achievement_framework_finished = 0; achievement_weak_link_spotter = 0; achievement_test_achievement = 0; achvm_count = 0; achvm_last = 0
 is-special: true
 new-page: true
 

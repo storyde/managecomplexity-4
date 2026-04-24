@@ -5,7 +5,7 @@ is-special: true
 on-arrival: knwl_filters = 1 if fltr_result != "visited"
 new-page: true
 tags: root
-achievement: test_achievement
+achievement: test_achievement if fltr_result != "visited"
 
 = Title
 

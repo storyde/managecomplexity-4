@@ -1,5 +1,5 @@
 title: Monetary Resources
-on-arrival: progress = 12
+on-arrival: hctx_progress = 3 if hctx_progress < 3
 
 Facilyn: The last category is money.
  

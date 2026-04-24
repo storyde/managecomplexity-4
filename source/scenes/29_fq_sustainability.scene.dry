@@ -1,6 +1,6 @@
 title: Sustainability Check
 subtitle: Long-term Thinking
-on-arrival: progress = 37
+on-arrival: fltr_progress = 5 if fltr_progress < 5
 
 Facilyn: The sustainability check looks at long-term social and environmental consequences.
 
@@ -14,6 +14,7 @@ Facilyn: First: the social dimension — how your **Behaviour** shapes trust and
 
 @fqsus_behavior_explanation
 title: I need help understanding this check
+on-arrival: knwl_sustainability = 1; knwl_last = "Sustainability" if knwl_sustainability = 0
 max-visits: 1
 order: 21
 tags: sus_behavior
@@ -58,7 +59,6 @@ Facilyn: Be careful. This check almost always applies.
 
 @fqsus_environment_intro
 title: Environment filter
-on-arrival: progress = 38
 
 Facilyn: Now, the **Environment**. Will this action lead toward or away from the future landscape in your holistic context?
 

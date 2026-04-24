@@ -1,6 +1,6 @@
 title: Cause and Effect Check
 subtitle: Addressing Root Causes
-on-arrival: progress = 28
+on-arrival: fltr_progress = 1 if fltr_progress < 1
 
 Facilyn: The first check helps you avoid treating symptoms while the real cause keeps doing its work.
 
@@ -10,6 +10,7 @@ Facilyn: It asks: "Does this action address the root cause of the problem?"
 
 @fqce_explanation
 title: I need help distinguishing cause from symptom
+on-arrival: knwl_cause_effect = 1; knwl_last = "Cause and Effect" if knwl_cause_effect = 0
 max-visits: 1
 order: 21
 tags: cause_effect

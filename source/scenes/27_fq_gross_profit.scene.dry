@@ -1,6 +1,7 @@
 title: Gross Profit Analysis Check
 subtitle: Enterprise Selection
-on-arrival: progress = 34
+on-arrival: fltr_progress = 4 if fltr_progress < 4
+
 
 Facilyn: The gross profit analysis check helps you focus on the work that brings in the most, relative to its extra costs.
 
@@ -10,6 +11,7 @@ Facilyn: "Which enterprises contribute the most to covering the overheads of the
 
 @fqgp_explanation
 title: I need help understanding this check
+on-arrival: knwl_gross_profit = 1; knwl_last = "Gross Profit" if knwl_gross_profit = 0
 max-visits: 1
 order: 21
 tags: gross_profit

@@ -1,6 +1,6 @@
 title: Statement of Purpose
 subtitle: Defining what our organisation provides
-on-arrival: progress = 13
+on-arrival: hctx_progress = 4 if hctx_progress < 4
 
 Facilyn: Next, we need your organisation’s Statement of Purpose.
 
@@ -10,6 +10,7 @@ Facilyn: In plain words—what is your organisation here to do?
 
 @stmp_explanation
 title: I am not sure what a Statement of Purpose is.
+on-arrival: knwl_holtext_org = 1 if knwl_holtext_org = 0; knwl_last = "Holistic Context for Organisations" if knwl_holtext_org = 0
 max-visits: 1
 order: 21
 tags: st_purpose

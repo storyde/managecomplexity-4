@@ -1,3 +1,2 @@
 title: Manage Complexity
-on-arrival: jrny_progress = 0 if home_visited != 1; hctx_progress = 0 if home_visited != 1; fltr_progress = 0 if home_visited != 1; achvm_count = 0 if home_visited != 1; achvm_last = 0 if home_visited != 1; knwl_last = 0 if home_visited != 1; knwl_complexity = 0 if home_visited != 1; knwl_whole = 0 if home_visited != 1; knwl_holtext = 0 if home_visited != 1; knwl_filters = 0 if home_visited != 1; knwl_weak_link = 0 if home_visited != 1; home_visited = 0 if home_visited != 1
 go-to: 1_home

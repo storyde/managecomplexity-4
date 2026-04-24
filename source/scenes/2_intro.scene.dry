@@ -1,6 +1,6 @@
-﻿title: Start 
+title: Start 
 order: 1
-on-arrival: progress = 2
+on-display: jrny_progress = "1" if jrny_progress < 1
 new-page: true
 tags: root
 

@@ -173,17 +173,17 @@ These scenes should set `jrny_progress` directly:
 
 - `source/scenes/3_harbour.scene.dry`
   - set `jrny_progress = 1 if jrny_progress < 1`
-- `source/scenes/4_teahouse.scene.dry`
+- the `know_way` branch in `source/scenes/3_harbour.scene.dry`
   - set `jrny_progress = 2 if jrny_progress < 2`
-- `source/scenes/22_holtext.scene.dry`
+- `source/scenes/4_teahouse.scene.dry`
   - set `jrny_progress = 3 if jrny_progress < 3`
-- `source/scenes/33_framework_outro.scene.dry`
+- `source/scenes/5_wum_intro.scene.dry`
   - set `jrny_progress = 4 if jrny_progress < 4`
 
 The following old journey-only `progress` bumps should simply be removed, with no new replacement:
 
 - `source/scenes/2_intro.scene.dry`
-- the `know_way` branch in `source/scenes/3_harbour.scene.dry`
+- `source/scenes/6_wum_sector.scene.dry`
 - `source/scenes/32_fq_revisit.scene.dry`
 
 `source/scenes/31_fq_result.scene.dry` should keep `fltr_result = "visited"` but should stop assigning `progress = 40`.
@@ -335,8 +335,7 @@ Recommended first-teach locations: prefer explicit explanation subscenes where t
   - `knwl_whole`
 - `source/scenes/7_wum_dmkrs_one_group.scene.dry` -> `@dmkrs_explanation`
   - `knwl_decision_makers`
-  - best explicit explanation hook for the non-org path
-  - `source/scenes/8_wum_dmkrs_org.scene.dry` currently has no matching explanation subscene, so org path may need a parallel explanation added or the hook moved to the opening scene text there
+  - explicit explanation hook for the non-org path is not needed, since the same @dmkrs_explanation scene will be displayed regardles if player is one, group or org. the scene has no view-if property for exactly this reason
 - `source/scenes/9_wum_rb_physical.scene.dry` -> `@rbph_explanation`
   - `knwl_resource_base`
   - this is the first explicit resource-base explanation; `10_wum_rb_human.scene.dry` and `11_wum_money.scene.dry` also explain later sub-parts, but they are not the first teach
@@ -350,7 +349,7 @@ Recommended first-teach locations: prefer explicit explanation subscenes where t
   - `knwl_filters`
 - `source/scenes/24_fq_cause_effect.scene.dry` -> `@fqce_fail`
   - `knwl_filter_failure`
-  - there is no dedicated explanation subscene for filter failure as a general concept; the first clear teach moment is the first explicit failed-filter outcome
+  - hook this failure filter in all the explicit failed-filter outcome subscenes
 - `source/scenes/24_fq_cause_effect.scene.dry` -> `@fqce_explanation`
   - `knwl_cause_effect`
 - `source/scenes/25_fq_weak_link.scene.dry` -> `@fqwl_explanation`
@@ -514,18 +513,19 @@ They do not block the migration unless the wording should change for clarity.
 
 ## Reset Plan
 
-Update `source/scenes/reset_achievements.scene.dry` so it clears all new helper state:
+Update `source/scenes/reset_achievements.scene.dry` so it resets only the achievement-related state that survives a browser refresh.
 
-- `jrny_progress`
-- `hctx_progress`
-- `fltr_progress`
+Do not use it as a full story-state reset.
+
+The rest of the authored run state will be cleared by refreshing the browser, so the reset scene only needs to clear the persistent achievement sidebar helpers and achievement flags:
+
 - `achvm_count`
 - `achvm_last`
-- `knwl_last`
-- every new `knwl_*` flag
-- `home_visited`
+- achievement flags such as `achievement_first_landing`, `achievement_tea_companion`, `achievement_holtext_created`, `achievement_filter_navigator`, and `achievement_framework_finished`
 
-`progress` should no longer be part of reset logic once it is fully removed from the authored story.
+Any non-achievement state that currently gets reset there should be removed unless it is proven to persist across browser refreshes.
+
+`progress`, `jrny_progress`, `hctx_progress`, `fltr_progress`, `knwl_*`, `home_visited`, and authored content qualities should not need explicit reset there if browser refresh already clears them.
 
 ## Implementation Order
 

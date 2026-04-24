@@ -1,6 +1,6 @@
 title: Physical Resources
 subtitle: Major Physical Assets Available to You
-on-arrival: progress = 10
+on-arrival: hctx_progress = 1 if hctx_progress < 1
 
 [? if player != "one" : Facilyn: This framework works best when everyone you just named is in the room. Normally, this is the moment you’d call them over. ?]
 
@@ -16,6 +16,7 @@ Facilyn: Now we list your major physical resources — the assets you can use to
 
 @rbph_explanation
 title: Why identify physical resources?
+on-arrival: knwl_resource_base = 1 if knwl_resource_base = 0; knwl_last = "Resource Base" if knwl_resource_base = 0
 max-visits: 1
 order: 21
 tags: physical_rcs

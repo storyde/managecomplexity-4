@@ -1,65 +1,10 @@
 title: Progress
-on-arrival: {!
-const hasValue = (value) => value !== 0 && value !== null && value !== undefined && String(value).trim() !== "";
-const progress = Number(Q.progress) || 0;
-const playerType = hasValue(Q.player) ? Q.player : 0;
-
-Q.jrny_progress =
-  progress >= 42 ? 4 :
-  progress >= 26 ? 3 :
-  progress >= 5 ? 2 :
-  progress >= 3 ? 1 : 0;
-
-let hctx = 0;
-if (hasValue(Q.decision_makers)) hctx++;
-if (hasValue(Q.rb_physical)) hctx++;
-if (hasValue(Q.rb_human)) hctx++;
-if (hasValue(Q.wum_money)) hctx++;
-if ((playerType !== 0 && playerType !== "org") || hasValue(Q.st_purpose)) hctx++;
-if (
-  hasValue(Q.qol_economic) &&
-  hasValue(Q.qol_balance) &&
-  hasValue(Q.qol_relationships) &&
-  hasValue(Q.qol_challenge) &&
-  hasValue(Q.qol_growth) &&
-  hasValue(Q.qol_purpose) &&
-  hasValue(Q.qol_aspiration) &&
-  hasValue(Q.qol_accomplish)
-) {
-  hctx++;
-}
-if (hasValue(Q.frb_people)) hctx++;
-if (hasValue(Q.frb_environment)) hctx++;
-if (hasValue(Q.holtext)) hctx++;
-Q.hctx_progress = Math.min(9, hctx);
-
-let fltr = 0;
-if (hasValue(Q.fltr_cause)) fltr++;
-if (hasValue(Q.wl_social) && hasValue(Q.wl_biological) && hasValue(Q.wl_financial)) fltr++;
-if (hasValue(Q.fltr_marginal)) fltr++;
-if (hasValue(Q.fltr_profit)) fltr++;
-if (hasValue(Q.em_source) && hasValue(Q.em_use)) fltr++;
-if (hasValue(Q.sus_behaviour) && hasValue(Q.sus_environment)) fltr++;
-if (hasValue(Q.fltr_gut)) fltr++;
-Q.fltr_progress = Math.min(7, fltr);
-
-Q.achvm_count =
-  (Q.achievement_first_landing ? 1 : 0) +
-  (Q.achievement_tea_companion ? 1 : 0) +
-  (Q.achievement_holtext_created ? 1 : 0) +
-  (Q.achievement_filter_navigator ? 1 : 0) +
-  (Q.achievement_framework_finished ? 1 : 0);
-!}
 
 # This scene contains information for the left sidebar.
 
-{!<div class="progress-dashboard">!}
-[+ jrny_progress : qjrny_progress +]
-[+ hctx_progress : qhctx_progress +]
-[+ fltr_progress : qfltr_progress +]
-{!</div>!}
+<div class="progress-dashboard"> [? if display_jrny = 1 : [+ jrny_progress : qjrny_progress +] ?] [? if display_hctx = 1 : [+ hctx_progress : qhctx_progress +] ?] [? if display_fltr = 1 : [+ fltr_progress : qfltr_progress +] ?] </div>
 
-[? if fltr_result = "visited" and progress < 42 : <p class="progress-note"><strong>Finalize Filter Questions:</strong><br>Revisit skipped filters or finalize your decision.</p> ?]
+[? if fltr_result = "visited" and achievement_framework_finished = 0 : <p class="progress-note"><strong>Finalize Filter Questions:</strong><br>Revisit skipped filters or finalize your decision.</p> ?]
 [? if achvm_last != 0 : <p class="progress-latest progress-latest-achievement"><strong>Latest achievement:</strong> [+ achvm_last +]</p> ?]
 [? if knwl_last != 0 : <p class="progress-latest progress-latest-knowledge"><strong>Latest concept:</strong> [+ knwl_last +]</p> ?]
 [? if achvm_count > 0 : <p class="progress-badge-count"><strong>Badges earned:</strong> [+ achvm_count +] / 5</p> ?]
@@ -73,55 +18,32 @@ Q.achvm_count =
 {!</div>!}
 
 [? if holtext != 0 : <h1>Holistic Context:</h1> ?]
+[? if holtext != 0 : <div style="white-space: pre-wrap;">[+ holtext +]</div> ?]
 
-[? if progress > 25 : <div style="white-space: pre-wrap;">[+ holtext +]</div> ?]
+[? if holtext = 0 and decision_makers != 0 : <h2>Whole Under Management</h2> ?]
+[? if holtext = 0 and decision_makers != 0 : **Decision makers:** [+ decision_makers +] ?]
+[? if holtext = 0 and rb_physical != 0 : **Physical resources:** [+ rb_physical +] ?]
+[? if holtext = 0 and rb_human != 0 : **Social resources:** [+ rb_human +] ?]
+[? if holtext = 0 and wum_money != 0 : **Monetary resources:** [+ wum_money +] ?]
+[? if holtext = 0 and player = "org" and st_purpose != 0 : **Statement of Purpose:** [+ st_purpose +] ?]
 
-[? if progress < 26 and decision_makers != 0 : <h2>Whole Under Management</h2> ?]
+[? if holtext = 0 and qol_economic != 0 : <h2>Quality of Life</h2> ?]
+[? if holtext = 0 and qol_economic != 0 : **Economic well-being:** [+ qol_economic +] ?]
+[? if holtext = 0 and qol_balance != 0 : **And:** [+ qol_balance +] ?]
+[? if holtext = 0 and qol_relationships != 0 : **Relationships:** [+ qol_relationships +] ?]
+[? if holtext = 0 and qol_challenge != 0 : **Challenge:** [+ qol_challenge +] ?]
+[? if holtext = 0 and qol_growth != 0 : **Growth:** [+ qol_growth +] ?]
+[? if holtext = 0 and qol_purpose != 0 and player = "one" : **I am about:** [+ qol_purpose +] ?]
+[? if holtext = 0 and qol_purpose != 0 and player != "one" : **We are about:** [+ qol_purpose +] ?]
+[? if holtext = 0 and qol_aspiration != 0 and player = "one" : **I want to be:** [+ qol_aspiration +] ?]
+[? if holtext = 0 and qol_aspiration != 0 and player != "one" : **We want to be:** [+ qol_aspiration +] ?]
+[? if holtext = 0 and qol_accomplish != 0 and player = "one" : **I ultimately want to accomplish:** [+ qol_accomplish +] ?]
+[? if holtext = 0 and qol_accomplish != 0 and player != "one" : **We ultimately want to accomplish:** [+ qol_accomplish +] ?]
+[? if holtext = 0 and complement != 0 : [+ complement +] ?]
 
-[? if progress < 26 and decision_makers != 0 : **Decision makers:** [+ decision_makers +] ?]
-
-[? if progress < 26 and rb_physical != 0 : **Physical resources:** [+ rb_physical +] ?]
-
-[? if progress < 26 and rb_human != 0 : **Social resources:** [+ rb_human +] ?]
-
-[? if progress < 26 and wum_money != 0 : **Monetary resources:** [+ wum_money +] ?]
-
-[? if progress < 26 and player = "org" and st_purpose != 0 : **Statement of Purpose:** [+ st_purpose +] ?]
-
-
-[? if progress < 26 and qol_economic != 0 : <h2>Quality of Life</h2> ?]
-
-[? if progress < 26 and qol_economic != 0 : **Economic well-being:** [+ qol_economic +] ?]
-
-[? if progress < 26 and qol_balance != 0 : **And:** [+ qol_balance +] ?]
-
-[? if progress < 26 and qol_relationships != 0 : **Relationships:** [+ qol_relationships +] ?]
-
-[? if progress < 26 and qol_challenge != 0 : **Challenge:** [+ qol_challenge +] ?]
-
-[? if progress < 26 and qol_growth != 0 : **Growth:** [+ qol_growth +] ?]
-
-[? if progress < 26 and qol_purpose != 0 and player = "one" : **I am about:** [+ qol_purpose +] ?]
-
-[? if progress < 26 and qol_purpose != 0 and player != "one" : **We are about:** [+ qol_purpose +] ?]
-
-[? if progress < 26 and qol_aspiration != 0 and player = "one" : **I want to be:** [+ qol_aspiration +] ?]
-
-[? if progress < 26 and qol_aspiration != 0 and player != "one" :** We want to be:** [+ qol_aspiration +] ?]
-
-[? if progress < 26 and qol_accomplish != 0 and player = "one" : **I ultimately want to accomplish:** [+ qol_accomplish +] ?]
-
-[? if progress < 26 and qol_accomplish != 0 and player != "one" : **We ultimately want to accomplish:** [+ qol_accomplish +] ?]
-
-[? if progress < 26 and complement != 0 : [+ complement +] ?]
-
-
-[? if progress < 26 and (frb_people != 0 or frb_environment != 0) : <h2>Future Resource Base</h2> ?]
-
-[? if progress < 26 and frb_people != 0 : **Our behaviour:** [+ frb_people +] ?]
-
-[? if progress < 26 and frb_environment != 0 : **Environment:** [+ frb_environment +] ?]
-
+[? if holtext = 0 and (frb_people != 0 or frb_environment != 0) : <h2>Future Resource Base</h2> ?]
+[? if holtext = 0 and frb_people != 0 : **Our behaviour:** [+ frb_people +] ?]
+[? if holtext = 0 and frb_environment != 0 : **Environment:** [+ frb_environment +] ?]
 
 [? if fltr_cause != 0 : <h2>Filter Questions: </h2> ?]
 
@@ -143,6 +65,6 @@ Q.achvm_count =
 
 [? if sus_behaviour != 0 : **Sustainability - Behaviour:** [+ sus_behaviour +] ?]
 
-[? if sus_environment != 0 : **Sustainability - Environment:** [+ sus_environment +] ?]
+[? if sus_environment != 0 : **Sustainability - Environment:** [+ us_environment +] ?]
 
 [? if fltr_gut != 0 : **Gut Feel:** [+ fltr_gut +] ?]

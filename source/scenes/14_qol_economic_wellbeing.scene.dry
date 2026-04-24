@@ -1,5 +1,4 @@
 title: Alright
-on-arrival: progress = 15
 tags: qol_intro
 new-page: true
 
@@ -56,7 +55,7 @@ Me: [+ qol_economic +]
 
 @qolewb_balance
 title: Balance
-on-arrival: progress = 16
+on-arrival: hctx_progress = 6 if hctx_progress < 6
 
 Facilyn: Great.
 

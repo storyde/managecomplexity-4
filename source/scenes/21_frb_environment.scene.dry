@@ -1,6 +1,6 @@
 title: Future Resource Base - Environment
 subtitle: Our Future Landscape
-on-arrival: progress = 25
+on-arrival: hctx_progress = 12 if hctx_progress < 12
 
 Facilyn: The second element is land — the environment — even if your connection to it feels indirect.
 

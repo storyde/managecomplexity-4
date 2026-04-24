@@ -1,6 +1,6 @@
 title: Continue
 subtitle: Describe your future resource base
-on-arrival: progress = 24
+on-arrival: hctx_progress = 11 if hctx_progress < 11
 
 Me: [+ complement +]
 

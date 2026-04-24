@@ -1,5 +1,6 @@
 title: Complement
-on-arrival: progress = 23
+on-arrival: hctx_progress = 9 if hctx_progress < 9
+on-display: hctx_progress = 10 if hctx_progress < 10
 
 Facilyn: Good. We’ve put your quality of life into simple phrases.
 

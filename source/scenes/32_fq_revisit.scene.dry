@@ -1,5 +1,4 @@
 title: Revisit Filter Questions
-on-arrival: progress = 41
 set-jump: 31_fq_result
 
 Facilyn: If you skipped any checks, you can revisit them now. Otherwise, you can finalize your decision.
@@ -8,7 +7,7 @@ Facilyn: If you skipped any checks, you can revisit them now. Otherwise, you can
 
 @revisit_cause
 title: Revisit Cause and Effect Check
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: fltr_cause = "Skipped"
 tags: revisit_skips
@@ -21,7 +20,7 @@ Facilyn: "Does this action address the root cause of the problem?"
 
 @revisit_weak_link
 title: Revisit the Weak Link Checks
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: wl_social = "Skipped" or wl_biological = "Skipped" or wl_financial = "Skipped"
 tags: revisit_skips
@@ -34,7 +33,7 @@ Facilyn: Which type of weak link would you like to check?
 
 @revisit_marginal
 title: Revisit Marginal Reaction Check
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: fltr_marginal = "Skipped"
 tags: revisit_skips
@@ -47,7 +46,7 @@ Facilyn: "Which action will provide the greatest return toward the goal for each
 
 @revisit_gross_profit
 title: Revisit Gross Profit Analysis
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: fltr_profit = "Skipped"
 tags: revisit_skips
@@ -60,7 +59,7 @@ Facilyn: "Which enterprises contribute the most to covering the overheads of the
 
 @revisit_em_source
 title: Revisit Energy/Money Source
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: em_source = "Skipped"
 tags: revisit_skips
@@ -73,7 +72,7 @@ Facilyn: "Is the energy or money to be used in this action derived from the most
 
 @revisit_em_use
 title: Revisit Energy/Money use
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: em_use = "Skipped"
 tags: revisit_skips
@@ -86,7 +85,7 @@ Facilyn: "Will the way in which the energy or money is used be in line with our 
 
 @revisit_sustainability_social
 title: Revisit the social sustainability check
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: sus_behaviour = "Skipped"
 tags: revisit_skips
@@ -101,7 +100,7 @@ Facilyn: Will your **Behavior** shape trust and relationships?
 
 @revisit_sustainability_environment
 title: Revisit the environmental sustainability check
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: sus_environment = "Skipped"
 tags: revisit_skips
@@ -116,7 +115,7 @@ Facilyn: Will your action lead toward or away from the future landscape describe
 
 @revisit_gut_feel
 title: Revisit Gut Feel Check
-on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0
+on-arrival: achvm_last = "Filter Navigator" if achievement_filter_navigator = 0; achvm_count += 1 if achievement_filter_navigator = 0
 achievement: filter_navigator
 view-if: fltr_gut = "Skipped"
 tags: revisit_skips

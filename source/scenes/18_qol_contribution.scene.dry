@@ -1,5 +1,5 @@
 title: Contribution
-on-arrival: progress = 21
+on-arrival: hctx_progress = 9 if hctx_progress < 9
 
 Facilyn: What do you want to be?
 
@@ -103,7 +103,6 @@ Me: [+ qol_aspiration +]
 
 @qolac_accomplish
 title: What do we ultimately want to accomplish?
-on-arrival: progress = 22
 
 Facilyn: Great. 
 

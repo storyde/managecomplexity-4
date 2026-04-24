@@ -1,6 +1,5 @@
 title: Got it
 view-if: player = "one"
-on-arrival: progress = 9
 tags: whole_u_mgmt
 new-page: true
 
@@ -16,6 +15,7 @@ Facilyn: Or should we expand the “whole” — include anyone you live with, d
 
 @dmkrs_explanation
 title: Why involve everyone?
+on-arrival: knwl_decision_makers = 1 if knwl_decision_makers = 0; knwl_last = "Decision Makers" if knwl_decision_makers = 0
 max-visits: 1
 order: 21
 tags: decision_makers
@@ -69,7 +69,6 @@ Facilyn: Great. We’ll treat all of you together as the decision-makers in your
 @wum_dmkrs_group
 title: Got it
 view-if: player = "group"
-on-arrival: progress = 9
 tags: whole_u_mgmt
 
 Me: Got it.

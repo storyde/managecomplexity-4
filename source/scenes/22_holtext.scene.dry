@@ -1,5 +1,5 @@
 title: Completed holistic context
-on-arrival: progress = 26; achvm_last = "Holistic Context Created" if achievement_holtext_created = 0; knwl_holtext = 1; knwl_last = "Holistic Context" if knwl_holtext = 0; {!
+on-arrival: hctx_progress = 13 if hctx_progress < 13; achvm_last = "Holistic Context Created" if achievement_holtext_created = 0; achvm_count += 1 if achievement_holtext_created = 0; knwl_holtext = 1; knwl_last = "Holistic Context" if knwl_holtext = 0; {!
 if (!Q.holtext) {
     if (Q.player === "one") {
         Q.holtext = `I want ${Q.qol_economic} in a balanced life with ${Q.qol_balance}. My relationships will be grounded in ${Q.qol_relationships}. I thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. I find purpose in ${Q.qol_purpose}. I seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.
@@ -31,12 +31,6 @@ Facilyn: Feel free to improve it and make it yours, using your own words. And ma
 Facilyn: When everyone has ownership, they can commit to it.
 
 <div style="white-space: pre-wrap;">[+ holtext +]</div>
-
-[? if player = "one" : Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}I want [+ qol_economic +] in a balanced life with [+ qol_balance +]. My relationships will be grounded in [+ qol_relationships +]. I thrive on [+ qol_challenge +] and want to be free to [+ qol_growth +]. I find purpose in [+ qol_purpose +]. I seek to be [+ qol_aspiration +] and want to contribute to [+ qol_accomplish +]. <br>[+ complement +] <br><br>I will act in ways that are [+ frb_people +]. <br><br>All to be ensured, for many generations to come, on a foundation of [+ frb_environment +].</div> ?]
-
-[? if player = "group" : Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}We want [+ qol_economic +] in balanced lives with [+ qol_balance +]. Our relationships will be grounded in [+ qol_relationships +]. We thrive on [+ qol_challenge +] and want to be free to [+ qol_growth +]. We find purpose in [+ qol_purpose +]. We seek to be [+ qol_aspiration +] and want to contribute to [+ qol_accomplish +]. <br>[+ complement +] <br><br>We will act in ways that are [+ frb_people +]. <br><br>All to be ensured, for many generations to come, on a foundation of [+ frb_environment +].</div> ?]
-
-[? if player = "org" : Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}We want [+ qol_economic +] in balanced lives with [+ qol_balance +]. Our relationships will be grounded in [+ qol_relationships +]. We thrive on [+ qol_challenge +] and want to be free to [+ qol_growth +]. We find purpose in [+ qol_purpose +]. We seek to be [+ qol_aspiration +] and want to contribute to [+ qol_accomplish +]. <br>[+ complement +] <br><br>We will act in ways that are [+ frb_people +]. <br><br>All to be ensured, for many generations to come, on a foundation of [+ frb_environment +].</div> ?]
 
 Facilyn: This becomes your North Star. Not a goal you “finish,” but a guide for daily decisions in a complex world — like the compass on the ships leaving this harbour.
 

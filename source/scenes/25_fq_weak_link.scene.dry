@@ -1,6 +1,6 @@
 title: Weak Link Checks
 subtitle: Identifying Vulnerabilities
-on-arrival: progress = 29; knwl_weak_link = 1 if knwl_weak_link = 0; knwl_last = "Weak Link" if knwl_weak_link = 0
+on-arrival: fltr_progress = 2 if fltr_progress < 2
 go-to: social_weak_link
 
 Facilyn: The next checks help you find the vulnerability that could undo everything else.
@@ -9,7 +9,6 @@ Facilyn: A chain is only as strong as its weakest link. The same goes for decisi
 
 @social_weak_link
 title: Social Weak Link — Relationships
-on-arrival: progress = 30
 
 Facilyn: The social weak link check helps you spot conflict early:
 
@@ -19,7 +18,6 @@ Facilyn: "Could this action, due to prevailing attitudes or beliefs, create a we
 
 @biological_weak_link
 title: Biological Weak Link — Organisms
-on-arrival: progress = 31
 
 Facilyn: The biological weak link check looks for the greatest vulnerability when you’re dealing with plant or animal populations:
 
@@ -29,7 +27,6 @@ Facilyn: "Does this action address the weakest point in the life cycle of this o
 
 @financial_weak_link
 title: Financial Weak Link — Production
-on-arrival: progress = 32
 
 Facilyn: The financial weak link check looks at three areas of production: <br>resource conversion, <br>product conversion, <br>and marketing (or money conversion). 
 
@@ -39,6 +36,7 @@ Facilyn: It asks:"Does this action address the weakest link in the chain of prod
 
 @fqwl_explanation
 title: I need more clarification on weak links
+on-arrival: knwl_weak_link = 1 if knwl_weak_link = 0; knwl_last = "Weak Link" if knwl_weak_link = 0
 max-visits: 1
 order: 21
 tags: weak_links
