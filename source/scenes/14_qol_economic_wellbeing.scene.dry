@@ -55,7 +55,6 @@ Me: [+ qol_economic +]
 
 @qolewb_balance
 title: Balance
-on-arrival: hctx_progress = 6 if hctx_progress < 6
 
 Facilyn: Great.
 

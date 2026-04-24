@@ -1,6 +1,5 @@
 title: Enter the teahouse
 on-arrival: jrny_progress = 3 if jrny_progress < 3;  
-achievement: tea_companion
 tags: th_arrival
 new-page: true
 
@@ -60,7 +59,8 @@ She gestures to the seats across from her.
 
 @what_up_to
 title: What have you been up to?
-on-arrival: jrny_progress = 3 if jrny_progress < 3;  
+on-arrival: achvm_last = "Tea companion" if achievement_tea_companion = 0
+achievement: tea_companion
 max-visits: 1
 tags: what_up_to
 

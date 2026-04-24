@@ -1,6 +1,6 @@
 title: Cause and Effect Check
 subtitle: Addressing Root Causes
-on-arrival: fltr_progress = 1 if fltr_progress < 1
+on-arrival: display_fltr = 1; knwl_filters = 1; knwl_last = "Seven Checks" if knwl_filters = 0
 
 Facilyn: The first check helps you avoid treating symptoms while the real cause keeps doing its work.
 

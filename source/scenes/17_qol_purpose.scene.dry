@@ -1,5 +1,5 @@
 title: Purpose
-on-arrival: hctx_progress = 9 if hctx_progress < 9
+on-arrival: hctx_progress = 8 if hctx_progress < 8
 go-to: qolp_organisation if player = "org" 
 
 Facilyn: The next question is about your purpose: What are you about?

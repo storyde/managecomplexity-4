@@ -23,7 +23,7 @@ Please report bugs 🐞 or issues here: <a href="https://github.com/manage-compl
 
 [? if knwl_filters = 1 : <details><summary>Filter questions</summary><p>They are the seven context checks that help you test any action against your holistic context, so you avoid solutions that look good today but create problems tomorrow.</p></details> ?]
 
-[? if knwl_filter_failure = 1 or sus_behaviour = "Failed" : <details><summary>When an action fails a check</summary><p>It does not automatically mean "never do it". It means you have learned where the risk is. You can modify the action, choose a different action, or proceed knowing what you must monitor and control.</p></details> ?]
+[? if knwl_filters = 1 : <details><summary>When an action fails a check</summary><p>It does not automatically mean "never do it". It means you have learned where the risk is. You can modify the action, choose a different action, or proceed knowing what you must monitor and control.</p></details> ?]
 
 [? if knwl_cause_effect = 1 : <details><summary>Cause and effect</summary><p>Does this action address the root cause of the problem?</p></details> ?]
 

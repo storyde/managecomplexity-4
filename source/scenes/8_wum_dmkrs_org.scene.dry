@@ -1,4 +1,5 @@
 title: Define decision-makers
+on-arrival: jrny_progress = 4 if jrny_progress < 4
 
 Facilyn: Nice.
 

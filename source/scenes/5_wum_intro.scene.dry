@@ -1,5 +1,5 @@
 title: Yes, please
-on-display: jrny_progress = 4 if jrny_progress < 4
+on-departure: display_hctx = 1
 tags: start_frmwrk
 
 Me: Yes, please.
@@ -36,7 +36,7 @@ Facilyn: We define the whole you’re actually managing.
 
 @wum_explanation
 title: Why do we define the "whole"?
-on-display: knwl_whole = 1 if knwl_whole = 0; knwl_last = "Whole Under Management" if knwl_whole = 0
+on-display: knwl_whole = 1; knwl_last = "Whole Under Management" if knwl_whole = 0
 max-visits: 1
 order: 21
 tags: whole_u_mgmt

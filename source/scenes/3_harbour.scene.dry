@@ -1,6 +1,4 @@
 title: Harbour 
-on-arrival: achvm_last = "First Landing" if achievement_first_landing = 0; achvm_count += 1 if achievement_first_landing = 0
-achievement: first_landing
 
 A delivery drone circles above the water, tilting for a better selfie angle.  
 

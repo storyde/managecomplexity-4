@@ -1,6 +1,6 @@
 title: Quality of Life
 subtitle: How You Want Your Life to Be
-on-display: hctx_progress = 5 if hctx_progress < 5
+on-arrival: hctx_progress = 5 if hctx_progress < 5 and player = "org"; hctx_progress = 4 if hctx_progress < 4
 
 Facilyn: Good
 

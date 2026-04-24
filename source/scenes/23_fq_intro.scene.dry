@@ -1,5 +1,5 @@
 title: Continue to the Seven Context Checks
-on-arrival: hctx_progress = 14 if hctx_progress < 14
+on-departure: display_fltr = 1
 tags: holtext_complete
 new-page: true
 
@@ -13,7 +13,6 @@ Facilyn: What kind of decision would you like to work through?
 
 @xmpl_explanation
 title: I am not sure
-on-arrival: knwl_filters = 1 if knwl_filters = 0; knwl_last = "Seven Checks" if knwl_filters = 0
 max-visits: 1
 order: 21
 tags: example_types

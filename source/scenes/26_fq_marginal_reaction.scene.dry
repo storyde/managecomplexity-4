@@ -1,5 +1,5 @@
 title: Marginal reaction
-on-arrival: fltr_progress = 3 if fltr_progress < 3
+on-arrival: fltr_progress = 2 if fltr_progress < 2
 
 Facilyn: The marginal reaction check helps you use time, money, and energy well — especially when you’re choosing between options that already passed the other checks.
 

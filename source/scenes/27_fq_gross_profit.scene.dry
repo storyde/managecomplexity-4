@@ -1,6 +1,6 @@
 title: Gross Profit Analysis Check
 subtitle: Enterprise Selection
-on-arrival: fltr_progress = 4 if fltr_progress < 4
+on-arrival: fltr_progress = 3 if fltr_progress < 3
 
 
 Facilyn: The gross profit analysis check helps you focus on the work that brings in the most, relative to its extra costs.
