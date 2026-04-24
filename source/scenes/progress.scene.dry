@@ -1,5 +1,5 @@
 title: Progress
-on-display: {!
+on-arrival: {!
 const hasValue = (value) => value !== 0 && value !== null && value !== undefined && String(value).trim() !== "";
 const progress = Number(Q.progress) || 0;
 const playerType = hasValue(Q.player) ? Q.player : 0;
@@ -53,10 +53,6 @@ Q.achvm_count =
 
 # This scene contains information for the left sidebar.
 
-[? if decision_makers = 0 : *Interact for more.* ?]
-
-<h1>Progress</h1>
-
 {!<div class="progress-dashboard">!}
 [+ jrny_progress : qjrny_progress +]
 [+ hctx_progress : qhctx_progress +]
@@ -76,7 +72,7 @@ Q.achvm_count =
 [? if achievement_framework_finished = 1 : <span class="progress-badge">Framework Finished</span> ?]
 {!</div>!}
 
-[? if decision_makers != 0 : <h1>Holistic Context:</h1> ?]
+[? if holtext != 0 : <h1>Holistic Context:</h1> ?]
 
 [? if progress > 25 : <div style="white-space: pre-wrap;">[+ holtext +]</div> ?]
 
