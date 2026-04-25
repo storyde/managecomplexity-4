@@ -47,7 +47,7 @@ tags: root
       <img
         class="article-hero-img"
         src="assets/imgs/bug.jpg"
-        alt="A harbour under construction."
+        alt="A colorful bug."
         loading="lazy"
         decoding="async"
         width="1200"
