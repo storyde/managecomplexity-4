@@ -5,10 +5,8 @@ title: Progress
 <div class="progress-dashboard"> [? if display_jrny = 1 : [+ jrny_progress : qjrny_progress +] ?] [? if display_hctx = 1 : [+ hctx_progress : qhctx_progress +] ?] [? if display_fltr = 1 : [+ fltr_progress : qfltr_progress +] ?] </div>
 
 [? if fltr_result = "visited" and achievement_framework_finished = 0 : <p class="progress-note"><strong>Finalize Filter Questions:</strong><br>Revisit skipped filters or finalize your decision.</p> ?]
-[? if achvm_last != 0 : <p class="progress-latest progress-latest-achievement"><strong>Latest achievement:</strong> [+ achvm_last +]</p> ?]
 [? if knwl_last != 0 : <p class="progress-latest progress-latest-knowledge"><strong>Latest concept:</strong> [+ knwl_last +]</p> ?]
-[? if achvm_count > 0 : <p class="progress-badge-count"><strong>Badges earned:</strong> [+ achvm_count +] / 5</p> ?]
-
+[? if achvm_last != 0 : <p class="progress-latest progress-latest-achievement"><strong>Latest achievement:</strong> [+ achvm_last +]</p> ?]
 {!<div class="progress-badges">!}
 [? if achievement_first_landing = 1 : <span class="progress-badge">First Landing</span> ?]
 [? if achievement_tea_companion = 1 : <span class="progress-badge">Tea Companion</span> ?]

@@ -46,14 +46,14 @@ tags: root
     <figure class="article-hero-media" aria-label="Atmospheric image">
       <img
         class="article-hero-img"
-        src="assets/imgs/fog-ship.jpg"
-        alt="A ship fading into fog at a quiet harbor, suggesting uncertainty and navigation."
+        src="assets/imgs/bug.jpg"
+        alt="A harbour under construction."
         loading="lazy"
         decoding="async"
         width="1200"
         height="800"
       >
-      <figcaption class="article-hero-caption">A calm harbor is still a system. The question is: are you steering it on purpose?</figcaption>
+      <figcaption class="article-hero-caption">🚧 This story is still under development. 🛠️ Please report bugs 🐞 or issues here: Issues</figcaption>
     </figure>
   </div>
 
@@ -68,8 +68,8 @@ tags: root
           <button class="article-link-btn" type="button" disabled aria-label="English (current)">
             English (current)
           </button>
-          <button class="article-link-btn" type="button" disabled aria-label="Deutsch (coming soon)">
-            Deutsch (coming soon)
+          <button class="article-link-btn" type="button" disabled aria-label="German (coming soon)">
+            German (coming soon)
           </button>
         </div>
       </div>
@@ -94,7 +94,7 @@ tags: root
       <div class="article-grid article-grid--compact">
         <div class="article-card" id="home-join-group" aria-labelledby="home-join-group-title">
           <h3 id="home-join-group-title">Join an event</h3>
-          <p>Join a learning event, or start one with friends, colleagues, or neighbors.</p>
+          <p>Join a learning event. Or start one with friends, colleagues, or neighbors.</p>
           <div class="article-actions article-actions-compact">
             <button class="article-link-btn" type="button" onclick="dendryUI.dendryEngine.goToScene('learning_events');" aria-label="Open learning events">
               Learning events
@@ -141,7 +141,7 @@ tags: root
       <div class="article-callout" role="note" aria-labelledby="home-funding-title">
         <h3 id="home-funding-title">Donations</h3>
         <p>
-          If you want to support this project, every donation helps and goes a long way.
+          If you want to support this project, consider donating.
         </p>
         <div class="article-actions article-actions-compact">
           <button class="article-link-btn" type="button" disabled aria-label="Donate (coming soon)">

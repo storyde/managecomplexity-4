@@ -2,7 +2,7 @@ title: Test
 subtitle: Just a test choice
 order: 5
 is-special: true
-on-arrival: knwl_filters = 1 if fltr_result != "visited"
+on-arrival: knwl_filters = 1 if fltr_result != "visited"; knwl_last = "test knowledge last"
 new-page: true
 tags: root
 achievement: test_achievement if fltr_result != "visited"
@@ -11,16 +11,19 @@ achievement: test_achievement if fltr_result != "visited"
 
 [+ knwl_filters +]
 
+[+ knwl_last +]
+
+
 Test: Achievement flag for this scene:
 
 achievement_test_achievement = [+ achievement_test_achievement +]
 [? if achievement_test_achievement = 1 : Achievement ist gesetzt ✅ ?]
 [? if achievement_test_achievement = 0 : Achievement ist NICHT gesetzt ❌ ?]
 
-Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" style="white-space: pre-wrap;" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]{!</div>!}
+Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" style="white-space: pre-wrap;" oninput ="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]{!</div>!}
 
 
-{!<textarea class="textarea" data-quality="test" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ test +]{!</textarea>!}
+{!<textarea class="textarea" data-quality="test" placeholder="Write your custom answer." onchange="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ test +]{!</textarea>!}
 
 Image: sailboat.jpg
 
@@ -41,21 +44,5 @@ In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('23_fq_intr
 In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('31_fq_results');">31_fq_results</a>!}
 
 In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro');">33_framework_outro</a>!}
-
-# TODO: hover-over
-
-{!<a href="#" onmouseover="this.innerHTML='Mouse is over';" onmouseout="this.innerHTML='Mouseover';">Mouseover</a>!}
-
-- @script_test
-
-@script_test
-title: I'd like to start the framework from the beginning
-game-over: false
-
-Me: I'd like to start the framework from the beginning.
-
-Page will reload in a few seconds.
-
-{!<meta http-equiv="refresh" content="20">!}
 
 - @backSpecialScene: Back

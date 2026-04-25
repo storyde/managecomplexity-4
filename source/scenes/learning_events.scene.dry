@@ -14,7 +14,7 @@ tags: root
       </p>
 
       <div class="article-actions">
-        <button class="article-btn article-btn-primary" type="button" onclick="dendryUI.dendryEngine.goToScene('home');" aria-label="Back to the homepage">
+        <button class="article-btn article-btn-primary" type="button" onclick="dendryUI.dendryEngine.goToScene('1_home');" aria-label="Back to the homepage">
           Back to home
         </button>
       </div>

@@ -1,6 +1,6 @@
 title: Start 
 order: 1
-on-display: jrny_progress = "1" if jrny_progress < 1; achvm_last = "First Landing" if achievement_first_landing = 0; achvm_count += 1 if achievement_first_landing = 0
+on-display: jrny_progress = "1" if jrny_progress < 1; achvm_last = "First Landing" if achievement_first_landing = 0
 achievement: first_landing
 new-page: true
 tags: root
