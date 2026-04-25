@@ -2,7 +2,7 @@ title: Info
 
 # This scene contains information for the right sidebar. 
 
-**🚧 This story is still under development.**
+**🚧 This story is still under development.** <br>
 Please report bugs 🐞 or issues here: <a href="https://github.com/manage-complexity/en/issues" target="_blank">Issues</a>
 
 [? if knwl_complexity = 1 or knwl_whole = 1 or knwl_decision_makers = 1 or knwl_resource_base = 1 or knwl_holtext = 1 or knwl_holtext_org = 1 or knwl_filters = 1 or knwl_filter_failure = 1 or knwl_cause_effect = 1 or knwl_weak_link = 1 or knwl_marginal_reaction = 1 or knwl_gross_profit = 1 or knwl_source_use = 1 or knwl_sustainability = 1 or knwl_gut_feel = 1 or knwl_gut_feel_last = 1 : <h1>Knowledge</h1> ?]
