@@ -2,15 +2,15 @@ title: Test
 subtitle: Just a test choice
 order: 5
 is-special: true
-on-arrival: knwl_last = "Resource Base" if knwl_resource_base = 0; knwl_resource_base = 1
+on-arrival: info_last = "Resource Base" if info_resource_base = 0; info_resource_base = 1
 new-page: true
 tags: root
 
 = Title
 
-[+ knwl_resource_base +]
+[+ info_resource_base +]
 
-[+ knwl_last +]
+[+ info_last +]
 
 Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" style="white-space: pre-wrap;" oninput ="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]{!</div>!}
 

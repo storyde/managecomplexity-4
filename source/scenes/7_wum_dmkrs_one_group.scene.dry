@@ -16,7 +16,7 @@ Facilyn: Or should we expand the “whole” — include anyone you live with, d
 
 @dmkrs_explanation
 title: Why involve everyone?
-on-display: knwl_last = "Decision Makers" if knwl_decision_makers = 0; knwl_decision_makers = 1
+on-display: info_last = "Decision Makers" if info_decision_makers = 0; info_decision_makers = 1
 max-visits: 1
 order: 21
 tags: decision_makers

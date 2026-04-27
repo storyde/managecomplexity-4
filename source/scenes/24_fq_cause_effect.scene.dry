@@ -1,6 +1,6 @@
 title: Cause and Effect Check
 subtitle: Addressing Root Causes
-on-arrival: display_fltr = 1; knwl_last = "Seven Checks" if knwl_filters = 0; knwl_filters = 1
+on-arrival: display_fltr = 1; info_last = "Seven Checks" if info_filters = 0; info_filters = 1
 
 Facilyn: The first check helps you avoid treating symptoms while the real cause keeps doing its work.
 
@@ -10,7 +10,7 @@ Facilyn: It asks: "Does this action address the root cause of the problem?"
 
 @fqce_explanation
 title: I need help distinguishing cause from symptom
-on-display: knwl_last = "Cause and Effect" if knwl_cause_effect = 0; knwl_cause_effect = 1
+on-display: info_last = "Cause and Effect" if info_cause_effect = 0; info_cause_effect = 1
 max-visits: 1
 order: 21
 tags: cause_effect

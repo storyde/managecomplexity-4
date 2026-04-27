@@ -1,5 +1,5 @@
 title: Completed holistic context
-on-arrival: hctx_progress = 13 if hctx_progress < 13; knwl_last = "Holistic Context" if knwl_holtext = 0; knwl_holtext = 1; {!
+on-arrival: hctx_progress = 13 if hctx_progress < 13; info_last = "Holistic Context" if info_holtext = 0; info_holtext = 1; {!
 if (!Q.holtext) {
     if (Q.player === "one") {
         Q.holtext = `I want ${Q.qol_economic} in a balanced life with ${Q.qol_balance}. My relationships will be grounded in ${Q.qol_relationships}. I thrive on ${Q.qol_challenge} and want to be free to ${Q.qol_growth}. I find purpose in ${Q.qol_purpose}. I seek to be ${Q.qol_aspiration} and want to contribute to ${Q.qol_accomplish}.

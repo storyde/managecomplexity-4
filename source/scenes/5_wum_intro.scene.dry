@@ -36,7 +36,7 @@ Facilyn: We define the whole you’re actually managing.
 
 @wum_explanation
 title: Why do we define the "whole"?
-on-arrival: knwl_last = "Whole Under Management" if knwl_whole = 0; knwl_whole = 1
+on-arrival: info_last = "Whole Under Management" if info_whole = 0; info_whole = 1
 max-visits: 1
 order: 21
 tags: whole_u_mgmt

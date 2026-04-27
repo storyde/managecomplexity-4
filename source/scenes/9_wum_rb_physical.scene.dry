@@ -16,7 +16,7 @@ Facilyn: Now we list your major physical resources — the assets you can use to
 
 @rbph_explanation
 title: Why identify physical resources?
-on-display: knwl_last = "Resource Base" if knwl_resource_base = 0; knwl_resource_base = 1
+on-display: info_last = "Resource Base" if info_resource_base = 0; info_resource_base = 1
 max-visits: 1
 order: 21
 tags: physical_rcs

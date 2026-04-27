@@ -36,7 +36,7 @@ Facilyn: It asks:"Does this action address the weakest link in the chain of prod
 
 @fqwl_explanation
 title: I need more clarification on weak links
-on-display: knwl_last = "Weak Link" if knwl_weak_link = 0; knwl_weak_link = 1
+on-display: info_last = "Weak Link" if info_weak_link = 0; info_weak_link = 1
 max-visits: 1
 order: 21
 tags: weak_links
