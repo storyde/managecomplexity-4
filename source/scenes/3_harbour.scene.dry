@@ -38,6 +38,7 @@ The water tastes of metal, but it eases your throat.
 
 @ask_policrisis  
 title: What does "polycrisis" mean?
+on-arrival: knwl_last = "Polycrisis" if knwl_polycrisis = 0; knwl_polycrisis = 1
 tags: vendor
 max-visits: 1
 
