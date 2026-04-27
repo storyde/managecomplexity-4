@@ -34,6 +34,7 @@
   --accent-sky: #2f7ed8;
   --accent-navy: #244e7f;
   --accent-rust: #9a1228;
+  --accent-gold: #d6a100;
 
   /* --- Semantic Colors --- */
   --success-green: #1b9e4b;
@@ -142,6 +143,8 @@
   --accent-sky: #78b0f5;
   --accent-navy: #5f90cf;
   --accent-rust: #e47e90;
+  --accent-gold: #f4c11c;
+
 
   /* --- Semantic Colors --- */
   --success-green: #1b9e4b;
@@ -1477,7 +1480,7 @@ details > :not(summary):last-child {
 }
 
 #progress .progress-latest-achievement {
-  border-left: 3px solid var(--accent-rust);
+  border-left: 3px solid var(--accent-gold);
 }
 
 #progress .progress-latest-knowledge {

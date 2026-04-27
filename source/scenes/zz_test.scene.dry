@@ -2,23 +2,15 @@ title: Test
 subtitle: Just a test choice
 order: 5
 is-special: true
-on-arrival: knwl_filters = 1 if fltr_result != "visited"; knwl_last = "test knowledge last"
+on-arrival: knwl_last = "Resource Base" if knwl_resource_base = 0; knwl_resource_base = 1
 new-page: true
 tags: root
-achievement: test_achievement if fltr_result != "visited"
 
 = Title
 
-[+ knwl_filters +]
+[+ knwl_resource_base +]
 
 [+ knwl_last +]
-
-
-Test: Achievement flag for this scene:
-
-achievement_test_achievement = [+ achievement_test_achievement +]
-[? if achievement_test_achievement = 1 : Achievement ist gesetzt ✅ ?]
-[? if achievement_test_achievement = 0 : Achievement ist NICHT gesetzt ❌ ?]
 
 Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" style="white-space: pre-wrap;" oninput ="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]{!</div>!}
 

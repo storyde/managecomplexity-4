@@ -37,9 +37,6 @@ tags: root
         <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('zz_test');" aria-label="View test">
           Test
         </button>
-        <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('reset_achievements');" aria-label="Reset your achievements">
-          Reset achievements
-        </button>
       </div>
     </div>
 
@@ -53,7 +50,7 @@ tags: root
         width="1200"
         height="800"
       >
-      <figcaption class="article-hero-caption"><strong>🚧 This story is still under development.</strong><br> Please report bugs 🐞 or issues here: <a href="https://github.com/manage-complexity/en/issues" target="_blank">Issues</a></figcaption>
+      <figcaption class="article-hero-caption"><strong>🚧 This story is still under development.</strong><br> Please give us <a href="#home-feedback">feedback</a> on the bugs 🐞 you found.</figcaption>
     </figure>
   </div>
 
@@ -76,9 +73,9 @@ tags: root
     </div>
 
     <div class="article-card" id="home-about" aria-labelledby="home-about-title">
-      <h2 id="home-about-title">Complexity is wonderful</h2>
+      <h2 id="home-about-title">Complexity is wild</h2>
       <p>
-        Don’t aim for control — aim for alignment.
+        So don’t aim for control — aim for alignment.
       </p>
       <p>
         This project is an interactive introduction to a new management framework: navigating complexity with a shared holistic context.
@@ -158,8 +155,8 @@ tags: root
         <p>No. The story is designed as a guided introduction. Use the Tutorial and the Info panel as your reference while you play.</p>
       </details>
       <details>
-        <summary>Is this meant for individuals or organizations?</summary>
-        <p>Both. The framework scales from personal decisions to teams and organizations, as long as the “whole” is defined clearly.</p>
+        <summary>Is this meant for individuals or organisations?</summary>
+        <p>Both. The framework scales from personal decisions to teams and organisations, as long as the “whole” is defined clearly.</p>
       </details>
       <div class="article-actions article-actions-compact">
         <a class="article-link-btn" href="#home-top" aria-label="Back to the top of the homepage">
