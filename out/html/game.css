@@ -2248,6 +2248,82 @@ ul.choices li:focus-visible {
   padding: 0;
 }
 
+#content .article-rotating-headline {
+  --headline-words: 5;
+  --headline-slot: 3s;
+  --headline-duration: calc(var(--headline-words) * var(--headline-slot));
+  --headline-word-width: 9.5ch;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 0.28em;
+  width: 100%;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+#content .article-rotating-wordbox {
+  position: relative;
+  display: inline-grid;
+  flex: 0 0 var(--headline-word-width);
+  width: var(--headline-word-width);
+  min-height: 1.15em;
+  overflow: hidden;
+  justify-items: start;
+  text-align: left;
+}
+
+#content .article-rotating-word {
+  grid-area: 1 / 1;
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(135deg, #dc2626 0%, #ea580c 22%, #ca8a04 42%, #0f766e 64%, #2563eb 82%, #7c3aed 100%);
+  background-size: 140% 140%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.22), 0 0 18px rgba(37, 99, 235, 0.08);
+  will-change: width;
+  animation-name: homeHeadlineWord;
+  animation-duration: var(--headline-duration);
+  animation-timing-function: steps(10, end);
+  animation-iteration-count: infinite;
+}
+
+.theme-dark #content .article-rotating-word {
+  background: linear-gradient(135deg, #fb7185 0%, #fb923c 22%, #facc15 42%, #2dd4bf 64%, #60a5fa 82%, #a78bfa 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(96, 165, 250, 0.16);
+}
+
+#content .article-rotating-word:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#content .article-rotating-word:nth-child(2) {
+  animation-delay: calc(1 * var(--headline-slot));
+}
+
+#content .article-rotating-word:nth-child(3) {
+  animation-delay: calc(2 * var(--headline-slot));
+}
+
+#content .article-rotating-word:nth-child(4) {
+  animation-delay: calc(3 * var(--headline-slot));
+}
+
+#content .article-rotating-word:nth-child(5) {
+  animation-delay: calc(4 * var(--headline-slot));
+}
+
 #content .article-card-wide {
   grid-column: 1 / -1;
 }
@@ -2370,6 +2446,24 @@ ul.choices li:focus-visible {
   }
 }
 
+@keyframes homeHeadlineWord {
+  0% {
+    width: 0;
+  }
+  7% {
+    width: 100%;
+  }
+  11% {
+    width: 100%;
+  }
+  18% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
 @media (max-width: 768px) {
   #content .article-hero {
     grid-template-columns: 1fr;
@@ -2388,6 +2482,11 @@ ul.choices li:focus-visible {
     text-align: center;
   }
 
+  #content .article-rotating-headline {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
   #content .article-actions {
     flex-direction: column;
     width: 100%;
@@ -2400,5 +2499,26 @@ ul.choices li:focus-visible {
 
   #content .article-nav-list {
     justify-content: center;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #content .article-rotating-wordbox {
+    width: auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  #content .article-rotating-word {
+    position: static;
+    width: auto;
+    overflow: visible;
+    animation: none;
+    text-shadow: none;
+  }
+
+  #content .article-rotating-word:not(:first-child) {
+    display: none;
   }
 }

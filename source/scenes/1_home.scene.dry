@@ -73,7 +73,17 @@ tags: root
     </div>
 
     <div class="article-card" id="home-about" aria-labelledby="home-about-title">
-      <h2 id="home-about-title">Complexity is wild</h2>
+      <h2 id="home-about-title" class="article-rotating-headline">
+        <span class="article-rotating-prefix">Complexity is</span>
+        <span class="article-rotating-wordbox" aria-hidden="true">
+          <span class="article-rotating-word">wild</span>
+          <span class="article-rotating-word">alive</span>
+          <span class="article-rotating-word">emergent</span>
+          <span class="article-rotating-word">dynamic</span>
+          <span class="article-rotating-word">fluid</span>
+        </span>
+        <span class="sr-only"> wild</span>
+      </h2>
       <p>
         Let’s aim for alignment.
       </p>
