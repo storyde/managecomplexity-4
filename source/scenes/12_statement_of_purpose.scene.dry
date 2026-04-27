@@ -10,7 +10,7 @@ Facilyn: In plain words—what is your organisation here to do?
 
 @stmp_explanation
 title: I am not sure what a Statement of Purpose is.
-on-arrival: knwl_holtext_org = 1; knwl_last = "Holistic Context for Organisations" if knwl_holtext_org = 0
+on-display: knwl_last = "Holistic Context for Organisations" if knwl_holtext_org = 0; knwl_holtext_org = 1
 max-visits: 1
 order: 21
 tags: st_purpose

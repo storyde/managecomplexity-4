@@ -14,7 +14,7 @@ Facilyn: First: the social dimension — how your **Behaviour** shapes trust and
 
 @fqsus_behavior_explanation
 title: I need help understanding this check
-on-arrival: knwl_sustainability = 1; knwl_last = "Sustainability" if knwl_sustainability = 0
+on-display: knwl_last = "Sustainability" if knwl_sustainability = 0; knwl_sustainability = 1
 max-visits: 1
 order: 21
 tags: sus_behavior

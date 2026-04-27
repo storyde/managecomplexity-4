@@ -14,7 +14,7 @@ Facilyn: "Is the energy or money to be used in this action derived from the most
 
 @fqem_source_explanation
 title: I need help understanding this check
-on-arrival: knwl_source_use = 1; knwl_last = "Energy/Money Source and Use" if knwl_source_use = 0
+on-display: knwl_last = "Energy/Money Source and Use" if knwl_source_use = 0; knwl_source_use = 1
 max-visits: 1
 order: 21
 tags: em_source

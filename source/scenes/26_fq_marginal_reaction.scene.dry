@@ -9,7 +9,7 @@ Facilyn: "Which action will provide the greatest return toward the goal for each
 
 @fqmr_explanation
 title: I need help understanding this check
-on-arrival: knwl_marginal_reaction = 1; knwl_last = "Marginal Reaction" if knwl_marginal_reaction = 0
+on-display: knwl_last = "Marginal Reaction" if knwl_marginal_reaction = 0; knwl_marginal_reaction = 1
 max-visits: 1
 order: 21
 tags: marginal_reaction

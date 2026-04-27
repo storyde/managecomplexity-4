@@ -1,6 +1,6 @@
 title: Filter Questions Result
 subtitle: Summary of your analysis
-on-arrival: fltr_result = "visited"; fltr_progress = 7 if fltr_progress < 7; knwl_gut_feel_last = 1; knwl_last = "Why Gut Feel is Last" if knwl_gut_feel_last = 0
+on-arrival: fltr_result = "visited"; fltr_progress = 7 if fltr_progress < 7
 go-to: 32_fq_revisit
 
 Facilyn: You’ve now run your decision through the checks. Let’s review what you found.

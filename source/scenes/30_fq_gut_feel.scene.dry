@@ -10,7 +10,7 @@ Facilyn: "How do we feel about this action now? Will it lead to the quality of l
 
 @fqgut_explanation
 title: I need help understanding this check
-on-arrival: knwl_gut_feel = 1; knwl_last = "Gut Feel" if knwl_gut_feel = 0
+on-display: knwl_last = "Gut Feel" if knwl_gut_feel = 0; knwl_gut_feel = 1; knwl_last = "Why Gut Feel is Last" if knwl_gut_feel_last = 0; knwl_gut_feel_last = 1
 max-visits: 1
 order: 21
 tags: gut_feel
