@@ -1,5 +1,5 @@
 title: Define decision-makers
-on-arrival: jrny_progress = 4 if jrny_progress < 4
+on-arrival: info_last = "Decision Makers" if info_decision_makers = 0; info_decision_makers = 1; display_jrny = 0; display_hctx = 1
 
 Facilyn: Nice.
 

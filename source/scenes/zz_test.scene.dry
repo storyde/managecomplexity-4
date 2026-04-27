@@ -1,25 +1,13 @@
 title: Test
 subtitle: Just a test choice
-order: 5
 is-special: true
-on-arrival: info_last = "Resource Base" if info_resource_base = 0; info_resource_base = 1
 new-page: true
-tags: root
 
-= Title
+= Test
 
-[+ info_resource_base +]
+<h2>Scene shortcuts</h2>
 
-[+ info_last +]
-
-Paper: {!<h1>Holistic Context:</h1><br><div contenteditable="true" data-quality="holtext" style="white-space: pre-wrap;" oninput ="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]{!</div>!}
-
-
-{!<textarea class="textarea" data-quality="test" placeholder="Write your custom answer." onchange="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ test +]{!</textarea>!}
-
-Image: sailboat.jpg
-
-<h2>Test heading</h2>
+Qualities will be missing using these links
 
 In-text link: {!<a href="#" onclick="dendryUI.dendryEngine.goToScene('33_framework_outro'); return false;">Scene Outro</a>!}
 

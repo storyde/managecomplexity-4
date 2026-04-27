@@ -1,9 +1,7 @@
 title: Tutorial
 subtitle: Instructions
-order: 2
 is-special: true
 new-page: true
-tags: root
 
 {!
 <article class="article article--tutorial" aria-labelledby="tutorial-top">

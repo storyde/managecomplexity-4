@@ -1,6 +1,6 @@
 title: Got it
 view-if: player = "one"
-on-arrival: jrny_progress = 4 if jrny_progress < 4
+on-arrival: info_last = "Decision Makers" if info_decision_makers = 0; info_decision_makers = 1; display_jrny = 0; display_hctx = 1
 tags: whole_u_mgmt
 new-page: true
 
@@ -15,15 +15,14 @@ Facilyn: Or should we expand the “whole” — include anyone you live with, d
 - #decision_makers
 
 @dmkrs_explanation
-title: Why involve everyone?
-on-display: info_last = "Decision Makers" if info_decision_makers = 0; info_decision_makers = 1
+title: What difference does it make?
 max-visits: 1
 order: 21
 tags: decision_makers
 
-Me: Why involve everyone?
+Me: What difference does it make?
 
-Facilyn: If you leave out people who are affected, you invite conflict — and the context stops being real for everyone else.
+Facilyn: If you leave out people who have veto power, you invite conflict.
 
 A faint whirring passes outside, then the wind rattles the teahouse sign again.
 

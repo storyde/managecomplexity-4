@@ -1,9 +1,7 @@
 title: Home
-subtitle: A practical introduction to Holistic Management
 on-arrival: display_jrny = 1
 is-special: true
 new-page: true
-tags: root
 
 {!
 <article class="article article--landing" aria-labelledby="home-top">

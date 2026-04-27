@@ -1,6 +1,6 @@
 title: Statement of Purpose
 subtitle: Defining what our organisation provides
-on-arrival: hctx_progress = 4 if hctx_progress < 4
+on-arrival: hctx_progress = 4 if hctx_progress < 4; info_last = "Stating our purpose" if info_holtext_org = 0; info_holtext_org = 1
 
 Facilyn: Next, we need your organisation’s Statement of Purpose.
 
@@ -10,7 +10,6 @@ Facilyn: In plain words—what is your organisation here to do?
 
 @stmp_explanation
 title: I am not sure what a Statement of Purpose is.
-on-display: info_last = "Holistic Context for Organisations" if info_holtext_org = 0; info_holtext_org = 1
 max-visits: 1
 order: 21
 tags: st_purpose
@@ -20,8 +19,6 @@ Me: I am not sure what a Statement of Purpose is.
 Facilyn: A Statement of Purpose captures the positive change your organisation creates. It's the "why" behind everything you do.
 
 Facilyn: For example, a hospital’s purpose isn’t “to make money from sick people.” It’s closer to: “to heal and restore health.”
-
-Facilyn: A factory’s purpose isn’t just “to make things.” It might be: “to create tools that improve people’s lives,” or “to transform raw materials into useful products.”
 
 Facilyn: Which purpose fits your organisation best?
 

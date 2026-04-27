@@ -7,7 +7,7 @@ Please give us <a href="#home-feedback">feedback</a> on the bugs 🐞 you found.
 
 [? if info_polycrisis = 1 or info_complexity = 1 or info_whole = 1 or info_decision_makers = 1 or info_resource_base = 1 or info_holtext = 1 or info_holtext_org = 1 or info_filters = 1 or info_filter_failure = 1 or info_cause_effect = 1 or info_weak_link = 1 or info_marginal_reaction = 1 or info_gross_profit = 1 or info_source_use = 1 or info_sustainability = 1 or info_gut_feel = 1 or info_gut_feel_last = 1 : <h1>Knowledge</h1> ?]
 
-[? if info_polycrisis = 1 : <details><summary>Polycrisis</summary><p>A polycrisis is a situation where several crises happen at once and interact so that each one makes the others worse.</p></details> ?]
+[? if info_polycrisis = 1 : <details><summary>Polycrisis</summary><p>A polycrisis is a situation where several crises happen at once and reinforce one another.</p></details> ?]
 
 [? if info_complexity = 1 : <details><summary>Complexity</summary><p>Complexity refers to self-organising systems that in contrast to machines we do not produce, but manage.</p></details> ?]
 
@@ -15,14 +15,14 @@ Please give us <a href="#home-feedback">feedback</a> on the bugs 🐞 you found.
 
 [? if info_decision_makers = 1 : <details><summary>Decision makers</summary><p>Anyone who makes day-to-day decisions, carries them out, or has veto power over them. Being inclusive prevents hidden constraints later.</p></details> ?]
 
-[? if info_resource_base = 1 : <details><summary>Resource base</summary><p>Everything you rely on to support your quality of life and plans. It includes physical resources (land, buildings, equipment) and human resources (people, partners, customers, neighbours, communities).</p></details> ?]
+[? if info_resource_base = 1 : <details><summary>Resource base</summary><p>Everything you rely on to support your quality of life and plans. It includes physical resources (land, buildings, equipment) and human resources (people, partners, customers, neighbours, communities). Monetary resources are considered separately.</p></details> ?]
 
 [? if info_holtext = 1 : <details><summary>Holistic context</summary><p>Your Holistic Context is your shared "north star" for decision-making. It describes:<br> • The quality of life you want<br> • The future resource base needed to sustain it</p></details> ?]
 
 
 <details><summary>Why create a Holistic Context before making plans?</summary><p>Because plans are only useful if they move you toward the life and landscape you actually want. The Holistic Context gives decision makers a shared direction, so day-to-day choices, long-term strategy, and problem-solving are all tested against the same picture.</p></details>
 
-[? if info_holtext_org = 1 and player = "org" : <details><summary>Why do organisations state their purpose before creating the Holistic Context?</summary><p>An organisation exists for a reason beyond the personal aims of the people in it. Stating that purpose first ensures the Holistic Context serves the organisation’s role as well as the needs of the people making decisions within it.</p></details> ?]
+[? if info_holtext_org = 1 and player = "org" : <details><summary>Why stating our purpose before creating the Holistic Context?</summary><p>An organisation exists for a reason beyond the personal aims of the people in it. Stating that purpose first ensures the Holistic Context serves the organisation’s role as well as the needs of the people making decisions within it.</p></details> ?]
 
 
 <details><summary>What is included in the Quality of Life part of a Holistic Context?</summary><p>It describes how you want life to be within the whole you are managing. It is about the lived experience you want to create, not just output or income. In practice, it points to things like meaningful work, good relationships, financial security, purpose, health, and the way you want to behave with one another.</p></details>

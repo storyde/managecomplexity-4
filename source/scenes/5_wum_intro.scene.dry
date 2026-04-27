@@ -1,5 +1,5 @@
 title: Yes, please
-on-departure: display_hctx = 1
+on-arrival: jrny_progress = 4 if jrny_progress < 4; info_last = "Whole Under Management" if info_whole = 0; info_whole = 1
 tags: start_frmwrk
 
 Me: Yes, please.
@@ -24,7 +24,7 @@ Paper: Resources
 
 Paper: Money
 
-Facilyn: A manageable whole has three essentials: <br> • The people making decisions <br> • The resources within reach <br> • And the money you have — or can generate
+Facilyn: A manageable whole has three essentials: <br> • The people making decisions <br> • The resources within reach <br> • And the money you have — or can generate.
 
 Facilyn: So before we talk about changing anything...
 
@@ -35,13 +35,12 @@ Facilyn: We define the whole you’re actually managing.
 - #whole_u_mgmt
 
 @wum_explanation
-title: Why do we define the "whole"?
-on-arrival: info_last = "Whole Under Management" if info_whole = 0; info_whole = 1
+title: Why defining the "whole"?
 max-visits: 1
 order: 21
 tags: whole_u_mgmt
 
-Me: Why do we define the "whole"?
+Me: Why defining the "whole"?
 
 Facilyn: We’re trained to think in parts. Departments. Issues. Boxes you can label.
 
