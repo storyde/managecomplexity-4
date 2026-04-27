@@ -73,19 +73,20 @@ tags: root
     </div>
 
     <div class="article-card" id="home-about" aria-labelledby="home-about-title">
-      <h2 id="home-about-title" class="article-rotating-headline">
-        <span class="article-rotating-prefix">Complexity is</span>
-        <span class="article-rotating-wordbox" aria-hidden="true">
-          <span class="article-rotating-word">wild</span>
-          <span class="article-rotating-word">alive</span>
-          <span class="article-rotating-word">emergent</span>
-          <span class="article-rotating-word">dynamic</span>
-          <span class="article-rotating-word">fluid</span>
+      <h2 id="home-about-title" class="article-rotating-headline" aria-label="Complexity is wild">
+        <span class="article-rotating-line" aria-hidden="true">
+          <span class="article-rotating-prefix">Complexity is</span>
+          <span class="article-rotating-wordbox">
+            <span class="article-rotating-word">wild</span>
+            <span class="article-rotating-word">dynamic</span>
+            <span class="article-rotating-word">emergent</span>
+            <span class="article-rotating-word">nonlinear</span>
+            <span class="article-rotating-word">generative</span>
+          </span>
         </span>
-        <span class="sr-only"> wild</span>
       </h2>
       <p>
-        Let’s aim for alignment.
+        Forget about control — let’s aim for alignment.
       </p>
       <p>
         This project is an interactive introduction to a new management framework: navigating complexity with a shared holistic context.
@@ -161,21 +162,13 @@ tags: root
     <div class="article-card article-card-wide" id="home-faq" aria-labelledby="home-faq-title">
       <h2 id="home-faq-title">FAQ</h2>
       <details>
-        <summary>Do I need to know Holistic Management already?</summary>
-        <p>No. The story is designed as a guided introduction. Use the Tutorial and the Info panel as your reference while you play.</p>
+        <summary>Do I need to know anything beforehand?</summary>
+        <p>No. The story is designed as a guided introduction. Use the Tutorial and the sidebars as your reference while you play.</p>
       </details>
       <details>
         <summary>Is this meant for individuals or organisations?</summary>
         <p>Both. The framework scales from personal decisions to teams and organisations, as long as the “whole” is defined clearly.</p>
       </details>
-      <div class="article-actions article-actions-compact">
-        <a class="article-link-btn" href="#home-top" aria-label="Back to the top of the homepage">
-          Back to top
-        </a>
-        <button class="article-link-btn" type="button" onclick="dendryUI.dendryEngine.goToScene('faq');" aria-label="Open the full FAQ scene">
-          Read the full FAQ
-        </button>
-      </div>
     </div>
 
     <div class="article-card article-card-wide" id="home-feedback" aria-labelledby="home-feedback-title">
@@ -187,6 +180,9 @@ tags: root
         <button class="article-link-btn" type="button" disabled aria-label="Leave feedback (form coming soon)">
           Leave feedback
         </button>
+        <a class="article-link-btn" href="#home-top" aria-label="Back to the top of the homepage">
+          Back to top
+        </a>
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ title: Progress
 <div class="progress-dashboard"> [? if display_jrny = 1 : [+ jrny_progress : qjrny_progress +] ?] [? if display_hctx = 1 : [+ hctx_progress : qhctx_progress +] ?] [? if display_fltr = 1 : [+ fltr_progress : qfltr_progress +] ?] </div>
 
 [? if jrny_progress > 2 : <div class="progress-latest progress-latest-achievement"><p><strong>Achievements:</strong></p><div class="progress-badges">[? if jrny_progress > 2 : <span class="progress-badge">Reached Teahouse</span> ?] [? if hctx_progress > 5 : <span class="progress-badge">Whole under Management</span> ?] [? if hctx_progress > 9 : <span class="progress-badge">Quality of life defind</span> ?] [? if hctx_progress > 12 : <span class="progress-badge">Holistic Context created</span> ?] [? if fltr_progress > 6 : <span class="progress-badge">Filter questions</span> ?] </div></div> ?]
-[? if knwl_last != 0 : <p class="progress-latest progress-latest-knowledge"><strong>Latest learning:</strong> [+ knwl_last +]</p> ?]
+[? if knwl_last != 0 : <p class="progress-latest progress-latest-info"><strong>Info added:</strong> [+ knwl_last +]</p> ?]
 [? if fltr_result = "visited" and jrny_progress < 10 : <p class="progress-note"><strong>Finalize Filter Questions:</strong><br>Revisit skipped filters or finalize your decision.</p> ?]
 
 [? if holtext != 0 : <h1>Holistic Context:</h1> ?]

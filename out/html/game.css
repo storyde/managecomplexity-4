@@ -1483,7 +1483,7 @@ details > :not(summary):last-child {
   border-left: 3px solid var(--accent-gold);
 }
 
-#progress .progress-latest-knowledge {
+#progress .progress-latest-info {
   border-left: 3px solid var(--accent-sky);
 }
 
@@ -1998,6 +1998,18 @@ ul.choices li:focus-visible {
   margin: 0 0 var(--space-md) 0;
 }
 
+#content .article details > :not(summary) {
+  margin: 0 var(--space-lg) var(--space-md);
+}
+
+#content .article details > summary + :not(summary) {
+  margin-top: var(--space-md);
+}
+
+#content .article details > :not(summary):last-child {
+  margin-bottom: var(--space-lg);
+}
+
 #content .article h1,
 #content .article h2,
 #content .article h3 {
@@ -2253,55 +2265,80 @@ ul.choices li:focus-visible {
   --headline-slot: 3s;
   --headline-duration: calc(var(--headline-words) * var(--headline-slot));
   --headline-word-width: 9.5ch;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: flex-start;
-  gap: 0.28em;
-  width: 100%;
+  display: block;
   line-height: 1.1;
   letter-spacing: -0.02em;
   text-align: left;
 }
 
+#content .article-rotating-line {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.28em;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+#content .article-rotating-prefix {
+  display: inline-block;
+  line-height: inherit;
+}
+
 #content .article-rotating-wordbox {
   position: relative;
-  display: inline-grid;
+  display: inline-block;
   flex: 0 0 var(--headline-word-width);
   width: var(--headline-word-width);
-  min-height: 1.15em;
+  height: 1.1em;
   overflow: hidden;
-  justify-items: start;
+  line-height: inherit;
   text-align: left;
+  vertical-align: bottom;
 }
 
 #content .article-rotating-word {
-  grid-area: 1 / 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
   display: inline-block;
   width: 0;
   overflow: hidden;
   white-space: nowrap;
+  color: #0f766e;
   background: linear-gradient(135deg, #dc2626 0%, #ea580c 22%, #ca8a04 42%, #0f766e 64%, #2563eb 82%, #7c3aed 100%);
   background-size: 140% 140%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.22), 0 0 18px rgba(37, 99, 235, 0.08);
   will-change: width;
   animation-name: homeHeadlineWord;
   animation-duration: var(--headline-duration);
   animation-timing-function: steps(10, end);
   animation-iteration-count: infinite;
+  line-height: inherit;
+  vertical-align: bottom;
 }
 
 .theme-dark #content .article-rotating-word {
+  color: #60a5fa;
   background: linear-gradient(135deg, #fb7185 0%, #fb923c 22%, #facc15 42%, #2dd4bf 64%, #60a5fa 82%, #a78bfa 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
   text-shadow: 0 0 18px rgba(96, 165, 250, 0.16);
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  #content .article-rotating-word {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .theme-dark #content .article-rotating-word {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 #content .article-rotating-word:nth-child(1) {
@@ -2483,8 +2520,11 @@ ul.choices li:focus-visible {
   }
 
   #content .article-rotating-headline {
-    justify-content: flex-start;
     text-align: left;
+  }
+
+  #content .article-rotating-line {
+    max-width: none;
   }
 
   #content .article-actions {
@@ -2505,8 +2545,9 @@ ul.choices li:focus-visible {
 
 @media (prefers-reduced-motion: reduce) {
   #content .article-rotating-wordbox {
+    flex-basis: auto;
     width: auto;
-    min-height: 0;
+    height: auto;
     overflow: visible;
   }
 
