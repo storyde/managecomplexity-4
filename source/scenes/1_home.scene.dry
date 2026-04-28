@@ -138,8 +138,7 @@ new-page: true
     <div class="article-card" id="home-about-us" aria-labelledby="home-about-us-title">
       <h2 id="home-about-us-title">About us</h2>
       <p>
-        We are a collective of learners, practitioners, facilitators, and builders who care about better management of complex
-        systems — not as an abstract idea, but as a daily practice.
+        We are a growing group of learners, practitioners, facilitators, and builders who care about better management of complex systems — not as an abstract idea, but as a daily practice.
       </p>
     </div>
 
@@ -161,7 +160,7 @@ new-page: true
       <h2 id="home-faq-title">FAQ</h2>
       <details>
         <summary>Do I need to know anything beforehand?</summary>
-        <p>No. The story is designed as a guided introduction. Use the Tutorial and the sidebars as your reference while you play.</p>
+        <p>No. The story is designed as a guided introduction. Read the Tutorial if you like and check the sidebars while you play.</p>
       </details>
       <details>
         <summary>Is this meant for individuals or organisations?</summary>

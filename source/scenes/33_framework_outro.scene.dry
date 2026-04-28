@@ -21,14 +21,13 @@ Facilyn: I really enjoyed our time together. But this is only the beginning. Whe
 @need_resources
 title: I need resources for continued learning
 tags: final_choices
+game-over: true
 
 Me: I need resources for continued learning.
 
-Facilyn: The Savory Institute offers extensive resources, training programs, and a global community of practitioners. Local Holistic Management groups exist in many regions. Books, online courses, and workshops can deepen your understanding.
+Facilyn: More resources will be added soon...
 
 Facilyn: Most importantly, practice using the framework regularly. Start with small decisions and work up to larger ones as you become more comfortable with the process.
-
-A librarian carries a stack of books past your table and pauses to steady the top one before it slides.
 
 @start_over
 title: I'd like to start the framework from the beginning

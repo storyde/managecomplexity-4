@@ -51,7 +51,7 @@ new-page: true
 
         <div class="article-card" id="tutorial-info" aria-labelledby="tutorial-info-title">
           <h3 id="tutorial-info-title">Info (right)</h3>
-          <p>Gives you access to FAQ, further information, theme toggle, and save/load.</p>
+          <p>Gives you access to additional information, theme toggle, and save/load.</p>
         </div>
       </div>
     </div>
@@ -61,14 +61,14 @@ new-page: true
       <ul class="article-badges">
         <li class="article-badge">
           <h3>1) Define the whole</h3>
-          <p>Clarify decision makers, your resource base, and money sources so the “system boundary” is real.</p>
+          <p>Clarify decision makers, your resource base and your money sources.</p>
         </li>
         <li class="article-badge">
-          <h3>2) Write your holistic context</h3>
+          <h3>2) Holistic context</h3>
           <p>Describe the quality of life you want and the future resource base needed to sustain it.</p>
         </li>
         <li class="article-badge">
-          <h3>3) Run the filter questions</h3>
+          <h3>3) Filter questions</h3>
           <p>Test actions against social, economic, and environmental consequences before you commit.</p>
         </li>
         <li class="article-badge">

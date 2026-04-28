@@ -24,9 +24,7 @@ new-page: true
     <div class="article-card" aria-labelledby="learning-events-embed-title">
       <h2 id="learning-events-embed-title">What will appear here</h2>
       <ul>
-        <li>Local and remote learning events</li>
         <li>Upcoming events and workshops</li>
-        <li>Calendar and registration embeds</li>
       </ul>
     </div>
   </div>
