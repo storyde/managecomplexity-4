@@ -1420,13 +1420,8 @@ details > :not(summary):last-child {
   color: var(--text-primary);
 }
 
-#progress .progress-dashboard {
-  display: grid;
-  gap: var(--space-md);
-  margin-bottom: var(--space-lg);
-}
-
-#progress .progress-track {
+.progress-track {
+  margin-bottom: var(--space-md);
   padding: var(--space-md);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
@@ -1434,12 +1429,12 @@ details > :not(summary):last-child {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-.theme-dark #progress .progress-track {
+.theme-dark .progress-track {
   background: rgba(26, 47, 61, 0.62);
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
 }
 
-#progress .progress-track-head {
+.progress-track-head {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -1449,56 +1444,56 @@ details > :not(summary):last-child {
   color: var(--text-primary);
 }
 
-#progress .progress-track-head span {
+.progress-track-head span {
   color: var(--text-muted);
   font-size: var(--font-size-xs);
 }
 
-#progress .progress-track-status {
+.progress-track-status {
   margin-top: var(--space-sm);
   font-size: var(--font-size-xs);
   color: var(--text-secondary);
 }
 
-#progress .progress-track-complete {
+.progress-track-complete {
   border-color: rgba(27, 158, 75, 0.35);
   box-shadow: 0 10px 26px rgba(27, 158, 75, 0.12);
   animation: progressTrackComplete 0.7s ease-out 1;
 }
 
-.theme-dark #progress .progress-track-complete {
+.theme-dark .progress-track-complete {
   border-color: rgba(27, 158, 75, 0.45);
   box-shadow: 0 12px 28px rgba(27, 158, 75, 0.18);
 }
 
-#progress .progress-note,
-#progress .progress-latest {
+.progress-note,
+.progress-latest {
   margin-bottom: var(--space-md);
   padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-md);
   background: rgba(var(--accent-sky-rgb), 0.08);
 }
 
-#progress .progress-latest-achievement {
+.progress-latest-achievement {
   border-left: 3px solid var(--accent-gold);
 }
 
-#progress .progress-latest-info {
+.progress-latest-info {
   border-left: 3px solid var(--accent-sky);
 }
 
-#progress .progress-badges {
+.progress-badges {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-sm);
   margin-bottom: var(--space-lg);
 }
 
-#progress .progress-badges:empty {
+.progress-badges:empty {
   display: none;
 }
 
-#progress .progress-badge {
+.progress-badge {
   display: inline-flex;
   align-items: center;
   min-height: 28px;

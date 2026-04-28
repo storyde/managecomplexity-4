@@ -27,13 +27,13 @@ Please give us <a href="#home-feedback">feedback</a> on the bugs 🐞 you found.
 
 [? if info_holtext = 1 and payer != "one" : <details><summary>Why create one shared Holistic Context?</summary><p>Because a whole cannot be managed well by people pulling in different directions. A shared Holistic Context helps the decision makers align around the same values, the same long-term outcomes, and the same standards for judging actions.</p></details> ?]
 
-[? if info_rsc_base = 1 : <details><summary>Future Resource Base</summary><p>The Future Resource Base describes the environment and behaviour needed to sustain your Quality of Life for the long term and for successors. It asks what must be true of your land, people, community, and finances if the life you want is to remain possible.</p></details> ?]
+[? if info_future_rsc_base = 1 : <details><summary>Future Resource Base</summary><p>The Future Resource Base describes the environment and behaviour needed to sustain your Quality of Life for the long term and for successors. It asks what must be true of your land, people, community, and finances if the life you want is to remain possible.</p></details> ?]
 
 [? if info_quality_life = 1 : <details><summary>Quality of Life</summary><p>A description of how you want your life to be within the whole you are managing. It is about the lived experience you want to create, covering things like meaningful work, good relationships, financial security, purpose, health, and the way you want to behave with one another.</p></details> ?]
 
 [? if info_stmt_purpose = 1 : <details><summary>Why stating our purpose?</summary><p>An organisation exists for a reason beyond the personal aims of the people in it. Stating that purpose first ensures the Holistic Context serves the organisation’s role as well as the needs of the people making decisions within it.</p></details> ?]
 
-[? if info_resource_base = 1 : <details><summary>Resource base</summary><p>Everything you rely on to support your quality of life and plans. It includes physical resources (land, buildings, equipment) and human resources (people, partners, customers, neighbours, communities). Monetary resources are considered separately.</p></details> ?]
+[? if info_resources = 1 : <details><summary>Resources</summary><p>Everything you rely on to support your quality of life and plans. It includes physical resources (land, buildings, equipment) and human resources (people, partners, customers, neighbours, communities). Monetary resources are considered separately.</p></details> ?]
 
 [? if info_decision_makers = 1 : <details><summary>Decision makers</summary><p>Anyone who makes day-to-day decisions, carries them out, or has veto power over them. Being inclusive prevents hidden constraints later.</p></details> ?]
 

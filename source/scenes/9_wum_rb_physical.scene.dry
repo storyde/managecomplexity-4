@@ -1,5 +1,5 @@
 title: Physical Resources
-on-arrival: hctx_progress = 1 if hctx_progress < 1; info_last = "Resource Base" if info_resource_base = 0; info_resource_base = 1
+on-arrival: hctx_progress = 1 if hctx_progress < 1; info_last = "Resources" if info_resources = 0; info_resources = 1
 
 [? if player != "one" : Facilyn: This framework works best when everyone you just named is in the room. Normally, this is the moment you’d call them over. ?]
 
