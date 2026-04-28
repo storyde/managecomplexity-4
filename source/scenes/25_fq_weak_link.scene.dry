@@ -1,6 +1,6 @@
 title: Weak Link Checks
 subtitle: Identifying Vulnerabilities
-on-arrival: fltr_progress = 1 if fltr_progress < 1
+on-arrival: fltr_progress = 1 if fltr_progress < 1; info_last = "Weak Link" if info_weak_link = 0; info_weak_link = 1
 go-to: social_weak_link
 
 Facilyn: The next checks help you find the vulnerability that could undo everything else.
@@ -36,7 +36,6 @@ Facilyn: It asks:"Does this action address the weakest link in the chain of prod
 
 @fqwl_explanation
 title: I need more clarification on weak links
-on-display: info_last = "Weak Link" if info_weak_link = 0; info_weak_link = 1
 max-visits: 1
 order: 21
 tags: weak_links
@@ -45,7 +44,7 @@ Me: I need more clarification on weak links.
 
 Facilyn: If you ignore a weak link, you get repeated setbacks — or quiet failure.
 
-Facilyn: Social weak links are people whose support you need, but whose attitudes might turn against you. Biological weak links are critical points in a life cycle. Financial weak links are bottlenecks in how value moves through your work.
+Facilyn: Social weak links are declining trust and support. Biological weak links are critical points in a life cycle. Financial weak links are bottlenecks in how value moves through your work.
 
 A security robot stops at the door, checks the lock, then points up at an open upstairs window with a look that says, “Really?”
 

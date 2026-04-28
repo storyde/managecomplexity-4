@@ -1,6 +1,6 @@
 title: Gut Feel Check
 subtitle: Values-Based Final Assessment
-on-arrival: fltr_progress = 6 if fltr_progress < 6
+on-arrival: fltr_progress = 6 if fltr_progress < 6; info_last = "Gut Feel" if info_gut_feel = 0; info_gut_feel = 1; 
 
 Facilyn: Once you’ve looked at all other aspects, it’s time for the gut feel check:
 
@@ -10,7 +10,6 @@ Facilyn: "How do we feel about this action now? Will it lead to the quality of l
 
 @fqgut_explanation
 title: I need help understanding this check
-on-display: info_last = "Gut Feel" if info_gut_feel = 0; info_gut_feel = 1; info_last = "Why Gut Feel is Last" if info_gut_feel_last = 0; info_gut_feel_last = 1
 max-visits: 1
 order: 21
 tags: gut_feel

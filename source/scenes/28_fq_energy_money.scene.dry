@@ -1,6 +1,6 @@
 title: Energy/Money Source Check
 subtitle: Sustainable Resource Management
-on-arrival: fltr_progress = 4 if fltr_progress < 4
+on-arrival: fltr_progress = 4 if fltr_progress < 4; info_last = "Energy/Money Source and Use" if info_source_use = 0; info_source_use = 1
 
 Facilyn: The next check applies to both energy and money. It has two parts.
 
@@ -14,7 +14,6 @@ Facilyn: "Is the energy or money to be used in this action derived from the most
 
 @fqem_source_explanation
 title: I need help understanding this check
-on-display: info_last = "Energy/Money Source and Use" if info_source_use = 0; info_source_use = 1
 max-visits: 1
 order: 21
 tags: em_source

@@ -9,7 +9,6 @@ Facilyn: "Which action will provide the greatest return toward the goal for each
 
 @fqmr_explanation
 title: I need help understanding this check
-on-display: info_last = "Marginal Reaction" if info_marginal_reaction = 0; info_marginal_reaction = 1
 max-visits: 1
 order: 21
 tags: marginal_reaction

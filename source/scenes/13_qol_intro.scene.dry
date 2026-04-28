@@ -1,5 +1,5 @@
 title: Quality of Life
-on-arrival: hctx_progress = 5 if hctx_progress < 5 and player = "org"; hctx_progress = 4 if hctx_progress < 4
+on-arrival: hctx_progress = 5 if hctx_progress < 5 and player = "org"; hctx_progress = 4 if hctx_progress < 4; info_last = "Quality of Life" if info_quality_life = 0; info_quality_life = 1
 
 Facilyn: Good
 

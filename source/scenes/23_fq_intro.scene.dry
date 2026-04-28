@@ -66,7 +66,7 @@ Facilyn: Perfect.
 
 @xmpl_environmental_decision
 title: An environmental or land management decision
-on-arrival: example_type = "An environmental or land management decision"
+on-arrival: example_type = "An environmental or land management decision"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
 go-to: xmpl_example_chosen
 tags: example_types
 

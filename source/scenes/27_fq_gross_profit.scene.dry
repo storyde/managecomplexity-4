@@ -1,7 +1,5 @@
 title: Gross Profit Analysis Check
-subtitle: Enterprise Selection
-on-arrival: fltr_progress = 3 if fltr_progress < 3
-
+on-arrival: fltr_progress = 3 if fltr_progress < 3; info_last = "Marginal Reaction versus Gross Profit" if info_gross_profit = 0; info_gross_profit = 1
 
 Facilyn: The gross profit analysis check helps you focus on the work that brings in the most, relative to its extra costs.
 
@@ -11,7 +9,6 @@ Facilyn: "Which enterprises contribute the most to covering the overheads of the
 
 @fqgp_explanation
 title: I need help understanding this check
-on-display: info_last = "Gross Profit" if info_gross_profit = 0; info_gross_profit = 1
 max-visits: 1
 order: 21
 tags: gross_profit

@@ -1,6 +1,6 @@
 title: Continue
 subtitle: Describe your future resource base
-on-arrival: hctx_progress = 11 if hctx_progress < 11
+on-arrival: hctx_progress = 11 if hctx_progress < 11; info_last = "Future Resource Base" if info_rsc_base = 0; info_rsc_base = 1
 
 Me: [+ complement +]
 
