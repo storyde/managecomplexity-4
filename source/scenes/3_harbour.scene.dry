@@ -6,7 +6,7 @@ Between crates, a child kneels in the dust, drawing with a stick.
 
 A vendor leans against his salt-stained booth and calls out:
 
-Vendor: One sip for a coin. Otherwise you walk on thirsty.
+Vendor: One coin, one sip! Don't walk thirsty!
 
 - #harbour
 
@@ -26,9 +26,12 @@ Headline3: The polycrisis is accelerating.
 - #vendor
 
 @pay_vendor
-title: Buy water
+title: One bottle, please
+on-arrival: bought_water = 1
 max-visits: 1
 tags: vendor
+
+Me: One bottle, please.
 
 You count out a few coins into the vendor’s palm. He drops them into a tin that’s almost empty.
 
@@ -37,12 +40,12 @@ The water tastes of metal, but it eases your throat.
 - #vendor
 
 @ask_policrisis  
-title: What does "polycrisis" mean?
+title: What does it mean, "polycrisis"?
 on-arrival: info_last = "Polycrisis" if info_polycrisis = 0; info_polycrisis = 1
 tags: vendor
 max-visits: 1
 
-Me: Sorry, what exactly is a polycrisis? 
+Me: What does it mean, "polycrisis"?
 
 The vendor squints at you, then gestures toward the dead power lines. 
 
@@ -56,24 +59,22 @@ He shrugs.
 
 Vendor: That's what they call a polycrisis. One mess feeding the next.
 
-For a moment, he studies you, as if trying to place you.
-
-Then he leans back against his booth again.
+He leans back against his booth again.
 
 - #vendor
 
 @ask_direction 
-title: Ask for the teahouse
+title: Do you know the way to the teahouse?
 on-arrival: know_way = 1; jrny_progress = 2 if jrny_progress < 2
 tags: vendor
 
-Me: Can you tell me how to get to the teahouse?
+Me: Do you know the way to the teahouse?
 
 Vendor: Follow the water to the long pier. You'll know the teahouse by the paper lanterns. They leave them out even during storms.
 
 You thank him, follow his gaze along the water, and set off.
 
-Between crates and moored boats, the child is still drawing in the dust.
+Between crates and moored boats, the child is still drawing on the ground.
 
 - #quay
 
@@ -92,7 +93,7 @@ Then a gust from the coming storm sweeps through the harbour. The lines smear in
 
 @way_teahouse
 title: Head on to the teahouse
-unavailable-subtitle: You don't know the way yet
+unavailable-subtitle: (You don't know the way yet)
 choose-if: know_way = 1 
 tags: harbour, quay
 

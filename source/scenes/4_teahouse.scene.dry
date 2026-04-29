@@ -17,56 +17,21 @@ Facilyn: You found it.
 
 She looks at you and smiles.
 
-Facilyn: I wasn’t entirely sure you would.
+You take a seat as she pours hot water into the cups.
 
-- #what_up_to
+- @settle_in
 
-@took_me_a_while
-title: Took me a while to find this place
-view-if: player = "one"
+@settle_in
+title: How have you been?
 max-visits: 1
-tags: what_up_to
 
-Me: Took me a while to find this place. 
+Me: How have you been?
 
-Facilyn exhales a soft laugh.
+She puts a teabag in her cup.
 
-Facilyn: The city buries its better corners. You have to want to arrive.
+Facilyn: I’ve been traveling a lot. Different cities. Different cultures. Same pattern.
 
-Facilyn: I’m glad you did.
-
-She gestures to the seat across from her.
-
-- #what_up_to
-
-@took_us_a_while
-title: Took us a while to find this place
-view-if: player != "one"
-max-visits: 1
-tags: what_up_to
-
-Me: Took us a while to find this place. 
-
-Facilyn exhales a soft laugh.
-
-Facilyn: The city buries its better corners. You have to want to arrive.
-
-Facilyn: I’m glad you did.
-
-She gestures to the seats across from her.
-
-- #what_up_to
-
-@what_up_to
-title: What have you been up to?
-max-visits: 1
-tags: what_up_to
-
-Me: What have you been up to?
-
-Facilyn: I’ve been traveling a lot since we last saw each other. Different cities. Different cultures. Same pattern.
-
-Facilyn: People trying. Really trying. But the problems multiply faster than the solutions.
+Facilyn: People trying really hard, but the problems multiply faster than the solutions.
 
 Facilyn wraps the string of her teabag once around her finger, thinking.
 
@@ -83,19 +48,19 @@ tags: human_made
 
 Me: That’s a bold statement, don’t you think?
 
-A corner of her mouth lifts.
-
 Facilyn: It is.
 
-She doesn’t defend herself immediately.
+Facilyn: But we didn’t set out to create cascading crises. No one wakes up thinking, “Today I’ll destabilize planetary systems.”
 
-Facilyn: We didn’t set out to create cascading crises. No one wakes up thinking, “Today I’ll destabilize planetary systems.”
+[? if bought_water = 1 : She points to the bottle you brought with you. ?]
 
-She places a bottle on the table between you.
+[? if bought_water != 1 : She lifts her cup slightly. ?]
 
 Facilyn: Reusable.
 
-She nods, genuinely approving.
+[? if bought_water = 1 : She nods, genuinely approving. ?]
+
+[? if bought_water != 1 : She taps the side of the cup with one finger. ?]
 
 Facilyn: Mined here. Molded there. Shipped across an ocean...
 
