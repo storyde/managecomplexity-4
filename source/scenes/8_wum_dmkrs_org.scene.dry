@@ -15,7 +15,7 @@ Facilyn: Try to be inclusive rather than exclusive.
 title: Farm owners, farm managers and staff.
 view-if: sector = "agriculture"
 on-arrival: decision_makers = "Farm owners, farm managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Farm owners, farm managers and staff.
@@ -24,7 +24,7 @@ Me: Farm owners, farm managers and staff.
 title: Cooperative members, staff and board of directors.
 view-if: sector = "agriculture"
 on-arrival: decision_makers = "Cooperative members, staff and board of directors."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Cooperative members, staff and board of directors.
@@ -33,7 +33,7 @@ Me: Cooperative members, staff and board of directors.
 title: Ranch owners, ranch managers and staff.
 view-if: sector = "agriculture"
 on-arrival: decision_makers = "Ranch owners, ranch managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Ranch owners, ranch managers and staff.
@@ -44,7 +44,7 @@ Me: Ranch owners, ranch managers and staff.
 title: Store owners, managers and staff.
 view-if: sector = "business"
 on-arrival: decision_makers = "Store owners, managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Store owners, managers and staff.
@@ -53,7 +53,7 @@ Me: Store owners, managers and staff.
 title: Insurance executives, underwriters and staff.
 view-if: sector = "business"
 on-arrival: decision_makers = "Insurance executives, underwriters and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Insurance executives, underwriters and staff.
@@ -62,7 +62,7 @@ Me: Insurance executives, underwriters and staff.
 title: Hotel owners, managers and staff.
 view-if: sector = "business"
 on-arrival: decision_makers = "Hotel owners, managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Hotel owners, managers and staff.
@@ -71,7 +71,7 @@ Me: Hotel owners, managers and staff.
 title: Company owners, managers and staff.
 view-if: sector = "business"
 on-arrival: decision_makers = "Company owners, managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Company owners, managers and staff.
@@ -82,7 +82,7 @@ Me: Company owners, managers and staff.
 title: Arts directors, curators and staff.
 view-if: sector = "culture"
 on-arrival: decision_makers = "Arts directors, curators and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Arts directors, curators and staff.
@@ -91,7 +91,7 @@ Me: Arts directors, curators and staff.
 title: Heritage conservators, board members and staff.
 view-if: sector = "culture"
 on-arrival: decision_makers = "Heritage conservators, board members and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Heritage conservators, board members and staff.
@@ -100,7 +100,7 @@ Me: Heritage conservators, board members and staff.
 title: Media board members, editors and journalists.
 view-if: sector = "culture"
 on-arrival: decision_makers = "Media board members, editors and journalists."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Media board members, editors and journalists.
@@ -111,7 +111,7 @@ Me: Media board members, editors and journalists.
 title: Kindergarten teachers and administrators.
 view-if: sector = "education"
 on-arrival: decision_makers = "Kindergarten teachers and administrators."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Kindergarten teachers and administrators.
@@ -120,7 +120,7 @@ Me: Kindergarten teachers and administrators.
 title: School administrators, teachers and the ministry of education.
 view-if: sector = "education"
 on-arrival: decision_makers = "School administrators, teachers and the ministry of education."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: School administrators, teachers and the ministry of education.
@@ -129,7 +129,7 @@ Me: School administrators, teachers and the ministry of education.
 title: University faculty and administration.
 view-if: sector = "education"
 on-arrival: decision_makers = "University faculty and administration."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: University faculty and administration.
@@ -140,7 +140,7 @@ Me: University faculty and administration.
 title: Factory managers, production supervisors and staff.
 view-if: sector = "industry"
 on-arrival: decision_makers = "Factory managers, production supervisors and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Factory managers, production supervisors and staff.
@@ -149,7 +149,7 @@ Me: Factory managers, production supervisors and staff.
 title: Construction managers, project supervisors and staff.
 view-if: sector = "industry"
 on-arrival: decision_makers = "Construction managers, project supervisors and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Construction managers, project supervisors and staff.
@@ -158,7 +158,7 @@ Me: Construction managers, project supervisors and staff.
 title: Logging supervisors, forest managers and staff.
 view-if: sector = "industry"
 on-arrival: decision_makers = "Logging supervisors, forest managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Logging supervisors, forest managers and staff.
@@ -169,7 +169,7 @@ Me: Logging supervisors, forest managers and staff.
 title: Service coordinators, board members and staff.
 view-if: sector = "nonprofit"
 on-arrival: decision_makers = "Service coordinators, board members and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Service coordinators, board members and staff.
@@ -178,7 +178,7 @@ Me: Service coordinators, board members and staff.
 title: Advocacy leaders, campaign managers and staff.
 view-if: sector = "nonprofit"
 on-arrival: decision_makers = "Advocacy leaders, campaign managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Advocacy leaders, campaign managers and staff.
@@ -187,7 +187,7 @@ Me: Advocacy leaders, campaign managers and staff.
 title: Environmental scientists and activists.
 view-if: sector = "nonprofit"
 on-arrival: decision_makers = "Environmental scientists and activists."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Environmental scientists and activists.
@@ -198,7 +198,7 @@ Me: Environmental scientists and activists.
 title: Public transport executives, operations managers and staff.
 view-if: sector = "publicservice"
 on-arrival: decision_makers = "Public transport executives, operations managers and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Public transport executives, operations managers and staff.
@@ -207,7 +207,7 @@ Me: Public transport executives, operations managers and staff.
 title: Hospital administrators and medical staff.
 view-if: sector = "publicservice"
 on-arrival: decision_makers = "Hospital administrators and medical staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Hospital administrators and medical staff.
@@ -216,7 +216,7 @@ Me: Hospital administrators and medical staff.
 title: Agency directors and department heads.
 view-if: sector = "publicservice"
 on-arrival: decision_makers = "Agency directors and department heads."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Agency directors and department heads.
@@ -225,7 +225,7 @@ Me: Agency directors and department heads.
 title: Parks managers, recreation coordinators and staff.
 view-if: sector = "publicservice"
 on-arrival: decision_makers = "Parks managers, recreation coordinators and staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Parks managers, recreation coordinators and staff.
@@ -236,7 +236,7 @@ Me: Parks managers, recreation coordinators and staff.
 title: Government officials and policy advisors.
 view-if: sector = "policymaking"
 on-arrival: decision_makers = "Government officials and policy advisors."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Government officials and policy advisors.
@@ -245,7 +245,7 @@ Me: Government officials and policy advisors.
 title: City council members and mayor.
 view-if: sector = "policymaking"
 on-arrival: decision_makers = "City council members and mayor."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: City council members and mayor.
@@ -254,7 +254,7 @@ Me: City council members and mayor.
 title: Ambassadors and diplomatic staff.
 view-if: sector = "policymaking"
 on-arrival: decision_makers = "Ambassadors and diplomatic staff."
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Ambassadors and diplomatic staff.
@@ -273,6 +273,6 @@ Me: Custom answer
 
 @dmkrs_org_custom_answer
 title: Save
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 
 Me: [+ decision_makers +]

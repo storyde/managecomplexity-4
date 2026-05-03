@@ -46,7 +46,7 @@ Facilyn: Exclude a real stakeholder, and you end up negotiating with a fire hydr
 title: Just me
 view-if: player = "one"
 on-arrival: decision_makers = "Me"
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Just me. I am making the decisions in my life.
@@ -57,7 +57,7 @@ Facilyn: Perfect. Then we treat you as the only decision-maker.
 title: Include more people
 view-if: player = "one"
 on-arrival: decision_makers = "Me and people I live or decide with"; player = "group"
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Let's include the people I live or decide with, and anyone with veto power.
@@ -84,7 +84,7 @@ title: Group members
 subtitle: and the people with veto power
 view-if: player = "group"
 on-arrival: decision_makers = "Group members and others with veto power"
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Group members and others with veto power.
@@ -95,7 +95,7 @@ Facilyn: Good. That gives us the decision makers for your whole under management
 title: Just us
 view-if: player = "group"
 on-arrival: decision_makers = "Us"
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 tags: decision_makers
 
 Me: Just us.
@@ -116,6 +116,6 @@ Me: Custom answer
 
 @dmkrs_custom_answer
 title: Save
-go-to: 9_wum_rb_physical
+go-to: 9_wum_physical_res
 
 Me: [+ decision_makers +]

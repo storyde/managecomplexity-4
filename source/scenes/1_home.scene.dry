@@ -159,6 +159,10 @@ new-page: true
     <div class="article-card article-card-wide" id="home-faq" aria-labelledby="home-faq-title">
       <h2 id="home-faq-title">FAQ</h2>
       <details>
+        <summary>Is this about the alignment-problem?</summary>
+        <p>Exactly. The alignment-problem is often discussed in relation to AI, but humans face it too: our actions can drift away from what we actually value. This framework helps bring decisions back into alignment with the whole we intend to serve.</p>
+      </details>
+      <details>
         <summary>Do I need to know anything beforehand?</summary>
         <p>No. The story is designed as a guided introduction. Read the Tutorial if you like and check the sidebars while you play.</p>
       </details>
