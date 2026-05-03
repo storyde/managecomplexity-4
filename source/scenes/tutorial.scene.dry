@@ -4,8 +4,8 @@ is-special: true
 new-page: true
 
 {!
-<article class="article article--tutorial" aria-labelledby="tutorial-top">
-  <div class="article-hero">
+<article class="article" aria-labelledby="tutorial-top">
+  <div class="article-hero article-hero--wide">
     <div class="article-hero-text">
       <p class="article-kicker">How to use the interface</p>
       <h1 id="tutorial-top">Tutorial</h1>

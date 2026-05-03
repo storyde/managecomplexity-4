@@ -3,7 +3,7 @@ title: Info
 # This scene contains information for the right sidebar. 
 
 **🚧 This story is still under development.** <br>
-Please give us <a href="#home-feedback">feedback</a> on the bugs 🐞 you found.
+Please give us <a href="#tally-open=Me8Y0g&tally-layout=modal&tally-width=650&tally-emoji-text=👋&tally-emoji-animation=wave&tally-auto-close=4000">feedback</a> on the bugs 🐞 you find.
 
 [? if info_last != 0 : <p class="progress-latest progress-latest-info"><strong>Info added:</strong> [+ info_last +]</p> ?]
 

@@ -32,6 +32,9 @@ new-page: true
         <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('credits');" aria-label="View credits">
           Credits
         </button>
+        <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('legal_notice');" aria-label="View legal notice">
+          Legal notice
+        </button>
         <button class="article-btn article-btn-ghost" type="button" onclick="dendryUI.dendryEngine.goToScene('zz_test');" aria-label="View test">
           Test
         </button>
@@ -48,7 +51,7 @@ new-page: true
         width="1200"
         height="800"
       >
-      <figcaption class="article-hero-caption"><strong>🚧 This story is still under development.</strong><br> Please give us <a href="#home-feedback">feedback</a> on the bugs 🐞 you found.</figcaption>
+      <figcaption class="article-hero-caption"><strong>🚧 This story is still under development.</strong><br> Please give us <a href="#tally-open=Me8Y0g&tally-layout=modal&tally-width=650&tally-emoji-text=👋&tally-emoji-animation=wave&tally-auto-close=4000">feedback</a> on the bugs 🐞 you find.</figcaption>
     </figure>
   </div>
 
@@ -138,7 +141,7 @@ new-page: true
     <div class="article-card" id="home-about-us" aria-labelledby="home-about-us-title">
       <h2 id="home-about-us-title">About us</h2>
       <p>
-        We are a growing group of learners, practitioners, facilitators, and builders who care about better management of complex systems — not as an abstract idea, but as a daily practice.
+        We are a growing group of learners who care about better management of complex systems — not as an abstract idea, but as a daily practice.
       </p>
     </div>
 
@@ -163,8 +166,8 @@ new-page: true
         <p>Exactly. The alignment-problem is often discussed in relation to AI, but humans face it too: our actions can drift away from what we actually value. This framework helps bring decisions back into alignment with the whole we intend to serve.</p>
       </details>
       <details>
-        <summary>Do I need to know anything beforehand?</summary>
-        <p>No. The story is designed as a guided introduction. Read the Tutorial if you like and check the sidebars while you play.</p>
+        <summary>Is this only for professional managers?</summary>
+        <p>No. We all manage our lives and our environment, regardless of our profession. This story is designed as a guided introduction, so no prior knowledge is needed.</p>
       </details>
       <details>
         <summary>Is this meant for individuals or organisations?</summary>
@@ -175,10 +178,10 @@ new-page: true
     <div class="article-card article-card-wide" id="home-feedback" aria-labelledby="home-feedback-title">
       <h2 id="home-feedback-title">Feedback</h2>
       <p>
-        Help us improve the learning experience. A feedback form will be added here soon.
+        Help us improve the learning experience.
       </p>
       <div class="article-actions article-actions-compact">
-        <button class="article-link-btn" type="button" disabled aria-label="Leave feedback (form coming soon)">
+        <button class="article-link-btn" type="button" aria-label="Leave feedback" data-tally-open="Me8Y0g" data-tally-layout="modal" data-tally-width="650" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" data-tally-auto-close="4000">
           Leave feedback
         </button>
         <a class="article-link-btn" href="#home-top" aria-label="Back to the top of the homepage">

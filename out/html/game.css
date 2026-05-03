@@ -2047,7 +2047,7 @@ ul.choices li:focus-visible {
   animation: articleReveal 0.5s ease both;
 }
 
-#content .article--tutorial .article-hero {
+#content .article-hero.article-hero--wide {
   grid-template-columns: 1fr;
 }
 
