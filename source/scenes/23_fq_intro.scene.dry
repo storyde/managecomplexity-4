@@ -9,163 +9,164 @@ She slides a new sheet of paper on the table.
 
 Facilyn: To use this holistic context, we’ll run decisions through seven testing questions. They filter out actions that look good today, but take you off course tomorrow.
 
-Facilyn: What kind of problem do you want to work through?
+Facilyn: What kind of problem do you want to work through as an example?
 
-- #example_types
+- #choose_prblm
 
-@xmpl_explanation
-title: How are the filter questions different from an ordinary pros-and-cons list?
+@prblm_explanation
+title: Are the filter questions
+subtitle: different from an ordinary pros-and-cons list?
 max-visits: 1
 order: 21
-tags: example_types
+tags: choose_prblm
 
-Me: How are the filter questions different from an ordinary pros-and-cons list?
+Me: Are the filter questions different from an ordinary pros-and-cons list?
 
-Facilyn: They are not just a list of advantages and disadvantages. They are a set of filters designed to reveal whether an action is socially, financially, and environmentally sound in both the short and long term, relative to your Holistic Context.
+Facilyn: The checks are not just a list of advantages and disadvantages. They are a set of filters designed to reveal whether an action is socially, financially, and environmentally sound in both the short and long term, relative to your Holistic Context.
 
-- #example_types
+- #choose_prblm
 
-@xmpl_custom
+@prblm_custom
 title: Custom answer
 order: 20
-tags: example_types
+tags: choose_prblm
 
 Me: Custom answer
 
-{!<textarea class="textarea" data-quality="example_type" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
+{!<textarea class="textarea" data-quality="prblm_type" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);"></textarea>!}
 
-- @xmpl_custom_answer
+- @prblm_chosen: Save
 
-@xmpl_custom_answer
+@prblm_custom_answer
 title: Save
-go-to: xmpl_example_chosen
+go-to: prblm_chosen
 
-Me: [+ example_type +]
+Me: [+ prblm_type +]
 
 Facilyn: Wonderful. 
 
-@xmpl_personal_decision
+@prblm_personal
 title: A personal decision
 view-if: player = "one"
-on-arrival: example_type = "A personal decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "A personal decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: A personal decision.
+Me: [+ prblm_type +]
 
 Facilyn: Excellent. 
 
-@xmpl_community_decision
+@prblm_community
 title: A decision regarding family, friends or community
 view-if: player = "group"
-on-arrival: example_type = "A decision regarding family, friends or community"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "A decision regarding family, friends or community"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: A decision regarding family, friends or community.
+Me: [+ prblm_type +]
 
 Facilyn: Perfect. 
 
-@xmpl_environmental_decision
+@prblm_environmental
 title: An environmental or land management decision
-on-arrival: example_type = "An environmental or land management decision"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "An environmental or land management decision"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: An environmental or land management decision.
+Me: [+ prblm_type +]
 
 Facilyn: Wonderful. This touches on land use, conservation, sustainability practices, or environmental impact.
 
-@xmpl_agricultural_decision
+@prblm_agricultural
 title: An agricultural decision
 view-if: sector = "agriculture"
-on-arrival: example_type = "An agricultural decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "An agricultural decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: An agricultural decision.
+Me: [+ prblm_type +]
 
 Facilyn: Great. This touches on crop selection, livestock management, equipment investment, or soil health practices.
 
-@xmpl_business_decision
+@prblm_business
 title: A business or work-related decision
 view-if: sector = "business"
-on-arrival: example_type = "A business or work-related decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "A business or work-related decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: A business or work-related decision.
+Me: [+ prblm_type +]
 
 Facilyn: An excellent choice. Business brings in money, people, resources — and long-term consequences.
 
-@xmpl_cultural_decision
+@prblm_cultural
 title: A cultural or creative decision
 view-if: sector = "culture"
-on-arrival: example_type = "A cultural or creative decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "A cultural or creative decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: A cultural or creative decision.
+Me: [+ prblm_type +]
 
 Facilyn: Intriguing. This touches on artistic projects, preservation of heritage, or community engagement through culture.
 
-@xmpl_educational_decision
+@prblm_educational
 title: An educational or academic decision
 view-if: sector = "education"
-on-arrival: example_type = "An educational or academic decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "An educational or academic decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: An educational or academic decision.
+Me: [+ prblm_type +]
 
 Facilyn: Important. This touches on curriculum changes, research funding, student welfare, or institutional partnerships.
 
-@xmpl_industrial_decision
+@prblm_industrial
 title: An industrial or manufacturing decision
 view-if: sector = "industry"
-on-arrival: example_type = "An industrial or manufacturing decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "An industrial or manufacturing decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: An industrial or manufacturing decision.
+Me: [+ prblm_type +]
 
 Facilyn: A solid choice. This touches on production methods, supply chain adjustments, safety protocols, or resource efficiency.
 
-@xmpl_nonprofit_decision
+@prblm_nonprofit
 title: A nonprofit or advocacy decision
 view-if: sector = "nonprofit"
-on-arrival: example_type = "A nonprofit or advocacy decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "A nonprofit or advocacy decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: A nonprofit or advocacy decision.
+Me: [+ prblm_type +]
 
 Facilyn: Noble. This touches on campaign strategies, donor relations, volunteer management, or mission alignment.
 
-@xmpl_public_service_decision
+@prblm_public_service
 title: A public service or infrastructure decision
 view-if: sector = "publicservice"
-on-arrival: example_type = "A public service or infrastructure decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "A public service or infrastructure decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: A public service or infrastructure decision.
+Me: [+ prblm_type +]
 
 Facilyn: Vital. This touches on service delivery, infrastructure maintenance, public health initiatives, or emergency response.
 
-@xmpl_policy_decision
+@prblm_policy
 title: A policymaking or governance decision
 view-if: sector = "policymaking"
-on-arrival: example_type = "A policymaking or governance decision"
-go-to: xmpl_example_chosen
-tags: example_types
+on-arrival: prblm_type = "A policymaking or governance decision"
+go-to: prblm_chosen
+tags: choose_prblm
 
-Me: A policymaking or governance decision.
+Me: [+ prblm_type +]
 
 Facilyn: Impactful. This could cover legislative changes, regulatory frameworks, international agreements, or budget allocations.
 
-@xmpl_example_chosen
-title: That is a good example
+@prblm_chosen
+title: Example decision
 go-to: 27_fq_cause_effect
 
 Facilyn: To choose your solution, you consider experience, experts' or friends' advice, and laws as always.  
