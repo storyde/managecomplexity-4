@@ -1,0 +1,190 @@
+title: Calm these dust storms
+tags: holtext_complete
+new-page: true
+on-arrival: example_type = "Calm the dust storms"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
+
+Me: I want to understand what is really driving these dust storms.
+
+Facilyn: A good place to start.
+
+Before she can continue, the teahouse door shudders inward and bangs shut again.
+
+A man in a sand-colored field coat stands there for a moment, breathing hard. Fine dust clings to his eyebrows and the seams of his sleeves. Under one arm he carries a weatherproof map tube. In the other hand is a cloth bundle gone dark at the corners.
+
+Facilyn: Neral. You made it in.
+
+Ranger Neral: Barely.
+
+He notices you, gives a short nod, and puts the bundle on the table. When he unwraps it, several gray grass stems roll onto the wood beside a dusting of black ash.
+
+Ranger Neral: Eastern flats. Fresh from the miracle reserve.
+
+Facilyn glances toward the window. Outside, the late light is copper-grey. A delivery drone passes low over the quay, then vanishes into a sheet of airborne dust.
+
+Facilyn: That storm is coming off the eastern flats.
+
+Ranger Neral: And the papers will blame heat, wind, or bad luck. They never blame the management plan.
+
+Facilyn: You work there?
+
+Ranger Neral: Senior ranger. Public tours, fire reports, erosion transects, all of it.
+
+He taps one of the stems. It clicks like brittle bone.
+
+Ranger Neral: No farming. No settlements. No managed herds. Pure rewilding. Protected more carefully than almost anywhere else in the region.
+
+Facilyn: Which is exactly why this is useful.
+
+She looks at you.
+
+Facilyn: If you want to choose a wise action later, do not begin by grabbing the first fix that sounds impressive. Begin by understanding the failure properly.
+
+- @duststorm_ask_why_fail: Ask why a protected reserve still throws dust
+- @duststorm_ask_stems: Pick up one of the gray stems
+- @duststorm_ask_fire: Ask about the ash and the burns
+- @duststorm_ask_rewilding: Ask why rewilding is too slow here
+- @duststorm_ask_root_cause: Ask what the real misunderstanding is
+- @duststorm_to_filters: I understand the problem better. Let me test a possible action.
+
+@duststorm_ask_why_fail
+title: Ask why a protected reserve still throws dust
+max-visits: 1
+
+Me: If the reserve is so protected, why is it still throwing dust into the harbour?
+
+Ranger Neral gives a tired smile.
+
+Ranger Neral: Because protected is not the same as functioning.
+
+Ranger Neral: Visitors see open space and call it wild. But on the transects I see more standing dead grass, wider bare spaces between plants, more capped ground after rain, and less new establishment every year.
+
+Facilyn: The reserve is trapped in a story that sounds wise but fits the wrong climate.
+
+Facilyn: In a humid environment, long rest can allow land to recover quickly. But the eastern flats are brittle. Rainfall is seasonal and unreliable, humidity is poorly distributed through the year, and old plant material breaks down slowly.
+
+Ranger Neral: From a distance it can still photograph well. Up close it is a weakening grassland.
+
+- @duststorm_ask_stems: Pick up one of the gray stems
+- @duststorm_ask_fire: Ask about the ash and the burns
+- @duststorm_ask_rewilding: Ask why rewilding is too slow here
+- @duststorm_ask_root_cause: Ask what the real misunderstanding is
+- @duststorm_to_filters: I understand the problem better. Let me test a possible action.
+
+@duststorm_ask_stems
+title: Pick up one of the gray stems
+max-visits: 1
+
+Me: What am I actually looking at here?
+
+You pick up one of the stems. It is so dry it weighs almost nothing. When you press it lightly between your fingers, it shatters and leaves pale fragments in your palm.
+
+Facilyn: That is oxidised grassland.
+
+Facilyn: In brittle country, dead grass often does not decay quickly from the bottom up the way people in humid regions expect. It stays upright, gray, and weathered. Sun, dry air, and time break it down chemically and physically from the top downward.
+
+Ranger Neral: The brochures call it natural senescence. On the ground it behaves more like a warning.
+
+Facilyn: Because much of the material remains standing instead of being returned to the soil surface, it does not protect the soil well enough. Growth points stay shaded. Plants weaken. Their centers die. Bare gaps widen.
+
+Ranger Neral brushes the fragments off your hand into the ash.
+
+Ranger Neral: And then the wind starts billing the harbour for our mistakes.
+
+- @duststorm_ask_why_fail: Ask why a protected reserve still throws dust
+- @duststorm_ask_fire: Ask about the ash and the burns
+- @duststorm_ask_rewilding: Ask why rewilding is too slow here
+- @duststorm_ask_root_cause: Ask what the real misunderstanding is
+- @duststorm_to_filters: I understand the problem better. Let me test a possible action.
+
+@duststorm_ask_fire
+title: Ask about the ash and the burns
+max-visits: 1
+
+Me: And the ash?
+
+Ranger Neral unclips the map tube and rolls out a reserve map far enough to show several black-marked blocks on the eastern flats.
+
+Ranger Neral: Burn zones. Last month's line.
+
+Ranger Neral: When the old gray material builds up, headquarters authorizes prescribed burns. The official language is always the same: reduce fuel load, stimulate fresh growth, restore vigor.
+
+Facilyn: Fire removes the symptom beautifully.
+
+Ranger Neral: For about five minutes.
+
+Facilyn: Then it burns litter, exposes soil, and leaves the surface open to sun, wind, raindrop impact, runoff, and evaporation. In a brittle environment, that is a dangerous bargain.
+
+Ranger Neral: After a burn, the reserve looks tidier in photographs. Then the next dust storm comes off the flats and blows the accounting into town.
+
+Facilyn: So the burn treats the visible symptom of old gray grass while making the deeper weakness worse.
+
+- @duststorm_ask_why_fail: Ask why a protected reserve still throws dust
+- @duststorm_ask_stems: Pick up one of the gray stems
+- @duststorm_ask_rewilding: Ask why rewilding is too slow here
+- @duststorm_ask_root_cause: Ask what the real misunderstanding is
+- @duststorm_to_filters: I understand the problem better. Let me test a possible action.
+
+@duststorm_ask_rewilding
+title: Ask why rewilding is too slow here
+max-visits: 1
+
+Me: If the reserve is left alone long enough, would it not eventually recover?
+
+Ranger Neral looks toward the dark window.
+
+Ranger Neral: Perhaps in a thousand years. Perhaps longer. The ministry never puts that part in bold print.
+
+Facilyn: That is the trouble with the word rewilding. People hear it and imagine a fast moral correction. But climate still governs the pace.
+
+Facilyn: In the eastern flats, biological decay is slow. Succession from bare soil is slow. If the ground stays exposed and the dead grass keeps oxidising upright, the land can decline on a timescale far beyond policy cycles, election cycles, or anyone's career.
+
+Ranger Neral: We call it patient management.
+
+He gives a dry half-shrug.
+
+Ranger Neral: Mostly we are being patient while the land keeps blowing away.
+
+- @duststorm_ask_why_fail: Ask why a protected reserve still throws dust
+- @duststorm_ask_stems: Pick up one of the gray stems
+- @duststorm_ask_fire: Ask about the ash and the burns
+- @duststorm_ask_root_cause: Ask what the real misunderstanding is
+- @duststorm_to_filters: I understand the problem better. Let me test a possible action.
+
+@duststorm_ask_root_cause
+title: Ask what the real misunderstanding is
+max-visits: 1
+
+Me: So what is the real misunderstanding?
+
+Facilyn folds the map closed with two fingers.
+
+Facilyn: That the eastern flats are failing because no one cares too little.
+
+Facilyn: In truth, they are failing because people are applying the wrong paradigm very carefully.
+
+Facilyn: The reserve is managed as if total rest and very long-term rewilding were enough. When that predictably disappoints, fire is used to clear the symptoms. But the root problem remains: the soil is not being kept covered, old grasses are oxidising instead of breaking down biologically, the water cycle is weakening, and recovery is too slow for this brittle climate.
+
+Ranger Neral: We know how to protect a boundary. We know how to ban things. We know how to write burn plans.
+
+He looks at the broken stem beside your cup.
+
+Ranger Neral: What we do not know how to do is make this dead grass break down biologically before the flats turn it into dust.
+
+- @duststorm_ask_why_fail: Ask why a protected reserve still throws dust
+- @duststorm_ask_stems: Pick up one of the gray stems
+- @duststorm_ask_fire: Ask about the ash and the burns
+- @duststorm_ask_rewilding: Ask why rewilding is too slow here
+- @duststorm_to_filters: I understand the problem better. Let me test a possible action.
+
+@duststorm_to_filters
+title: I understand the problem better. Let me test a possible action.
+go-to: 27_fq_cause_effect
+
+Me: I understand the problem better. Let me test a possible action.
+
+Ranger Neral gathers the stems back into the cloth, but a black smear of ash remains on the table between you.
+
+Facilyn: Good. Hold your preferred action lightly for a moment.
+
+Facilyn: First we ask the most important opening question: does it address the root cause, or only the dust in the air?
+

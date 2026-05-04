@@ -105,7 +105,7 @@ Me: Skip this check.
 @fqwl_financial_pass
 title: Yes, it addresses the weakest link
 on-arrival: wl_financial = "Passed"
-go-to: 26_fq_marginal_reaction; jumpScene if fltr_result = "visited"
+go-to: 29_fq_marginal_reaction; jumpScene if fltr_result = "visited"
 tags: financial_wl
 
 Me: Yes, it addresses the weakest link.
@@ -113,7 +113,7 @@ Me: Yes, it addresses the weakest link.
 @fqwl_financial_fail
 title: No, it does not address the weakest link
 on-arrival: wl_financial = "Failed"
-go-to: 26_fq_marginal_reaction; jumpScene if fltr_result = "visited"
+go-to: 29_fq_marginal_reaction; jumpScene if fltr_result = "visited"
 tags: financial_wl
 
 Me: No, it does not address the weakest link.
@@ -121,7 +121,7 @@ Me: No, it does not address the weakest link.
 @fqwl_financial_skip
 title: Skip this check
 on-arrival: wl_financial = "Skipped"
-go-to: 26_fq_marginal_reaction; jumpScene if fltr_result = "visited"
+go-to: 29_fq_marginal_reaction; jumpScene if fltr_result = "visited"
 tags: financial_wl
 
 Me: Skip this check.

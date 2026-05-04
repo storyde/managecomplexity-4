@@ -30,7 +30,7 @@ Someone outside tightens a loose sign bracket. The sign stops rattling for a mom
 @fqce_pass
 title: Yes, it addresses the root cause
 on-arrival: fltr_cause = "Passed"
-go-to: 25_fq_weak_link; jumpScene if fltr_result = "visited"
+go-to: 28_fq_weak_link; jumpScene if fltr_result = "visited"
 tags: cause_effect
 
 Me: Yes, it addresses the root cause.
@@ -40,7 +40,7 @@ Facilyn: Good. You’re aiming at the root, not just the visible symptoms.
 @fqce_fail
 title: No, it only treats symptoms
 on-arrival: fltr_cause = "Failed"
-go-to: 25_fq_weak_link; jumpScene if fltr_result = "visited"
+go-to: 28_fq_weak_link; jumpScene if fltr_result = "visited"
 tags: cause_effect
 
 Me: No, it only treats symptoms.
@@ -50,7 +50,7 @@ Facilyn: That matters. Treating symptoms can buy time, but the problem usually r
 @fqce_skip
 title: Not sure, let me review this check later
 on-arrival: fltr_cause = "Skipped"
-go-to: 25_fq_weak_link; jumpScene if fltr_result = "visited"
+go-to: 28_fq_weak_link; jumpScene if fltr_result = "visited"
 tags: cause_effect
 
 Me: Not sure, let me review this check later.
