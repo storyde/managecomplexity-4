@@ -27,7 +27,7 @@ Facilyn: Is the source renewable or internal — or is it limited, polluting, or
 @fqem_source_pass
 title: The source is appropriate
 on-arrival: em_source = "Passed"
-go-to: fqem_use_intro; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; fqem_use_intro
 tags: em_source
 
 Me: The source is appropriate.
@@ -37,7 +37,7 @@ Facilyn: Good. Using renewable, internal, or non-damaging sources builds resilie
 @fqem_source_issues
 title: There are issues with the source
 on-arrival: em_source = "Failed"
-go-to: fqem_use_intro; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; fqem_use_intro
 tags: em_source
 
 Me: There are issues with the source.
@@ -47,7 +47,7 @@ Facilyn: Noting this is important. Relying on finite or external sources with st
 @fqem_source_skip
 title: Skip source check
 on-arrival: em_source = "Skipped"
-go-to: fqem_use_intro; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; fqem_use_intro
 tags: em_source
 
 Me: Skip source check.
@@ -78,7 +78,7 @@ Facilyn: Is the use constructive — building capacity, keeping things cycling �
 @fqem_use_pass
 title: The use is appropriate
 on-arrival: em_use = "Passed"
-go-to: 32_fq_sustainability; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; 32_fq_sustainability
 tags: em_use
 
 Me: The use is appropriate.
@@ -88,7 +88,7 @@ Facilyn: Excellent. Investing in cyclical growth and in line with your holistic 
 @fqem_use_issues
 title: There are issues with the use
 on-arrival: em_use = "Failed"
-go-to: 32_fq_sustainability; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; 32_fq_sustainability
 tags: em_use
 
 Me: There are issues with the use.
@@ -98,7 +98,7 @@ Facilyn: Be cautious. Consumptive or addictive uses can drain resources without 
 @fqem_use_skip
 title: Skip use check
 on-arrival: em_use = "Skipped"
-go-to: 32_fq_sustainability; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; 32_fq_sustainability
 tags: em_use
 
 Me: Skip use check.

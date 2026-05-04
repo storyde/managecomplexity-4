@@ -1,7 +1,9 @@
 title: Revisit Filter Questions
-set-jump: 31_fq_result
+on-departure: filtered = 1
 
-Facilyn: If you skipped any checks, you can revisit them now. Otherwise, you can finalize your decision.
+[? if filtered != 1: Facilyn: If you skipped any checks, you can revisit them now. Otherwise, you can finalize your decision. ?]
+
+[? if filtered = 1: Facilyn: Any other checks you skipped? ?]
 
 - #revisit_skips
 

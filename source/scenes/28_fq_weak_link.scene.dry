@@ -53,7 +53,7 @@ A security robot stops at the door, checks the lock, then points up at an open u
 @fqwl_social_pass
 title: No, it won't create conflict
 on-arrival: wl_social = "Passed"
-go-to: biological_weak_link; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; biological_weak_link
 tags: social_wl
 
 Me: No, it won't create conflict.
@@ -61,7 +61,7 @@ Me: No, it won't create conflict.
 @fqwl_social_fail
 title: Yes, it could create conflict
 on-arrival: wl_social = "Failed"
-go-to: biological_weak_link; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; biological_weak_link
 tags: social_wl
 
 Me: Yes, it could create conflict.
@@ -69,7 +69,7 @@ Me: Yes, it could create conflict.
 @fqwl_social_skip
 title: Skip this check
 on-arrival: wl_social = "Skipped"
-go-to: biological_weak_link; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; biological_weak_link
 tags: social_wl
 
 Me: Skip this check.
@@ -79,7 +79,7 @@ Me: Skip this check.
 @fqwl_biological_pass
 title: Yes, it addresses the weakest point
 on-arrival: wl_biological = "Passed"
-go-to: financial_weak_link; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; financial_weak_link
 tags: biological_wl
 
 Me: Yes, it addresses the weakest point.
@@ -87,7 +87,7 @@ Me: Yes, it addresses the weakest point.
 @fqwl_biological_fail
 title: No, it does not address the weakest point
 on-arrival: wl_biological = "Failed"
-go-to: financial_weak_link; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; financial_weak_link
 tags: biological_wl
 
 Me: No, it does not address the weakest point.
@@ -95,7 +95,7 @@ Me: No, it does not address the weakest point.
 @fqwl_biological_skip
 title: Skip this check
 on-arrival: wl_biological = "Skipped"
-go-to: financial_weak_link; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; financial_weak_link
 tags: biological_wl
 
 Me: Skip this check.
@@ -105,7 +105,7 @@ Me: Skip this check.
 @fqwl_financial_pass
 title: Yes, it addresses the weakest link
 on-arrival: wl_financial = "Passed"
-go-to: 29_fq_marginal_reaction; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; 29_fq_marginal_reaction
 tags: financial_wl
 
 Me: Yes, it addresses the weakest link.
@@ -113,7 +113,7 @@ Me: Yes, it addresses the weakest link.
 @fqwl_financial_fail
 title: No, it does not address the weakest link
 on-arrival: wl_financial = "Failed"
-go-to: 29_fq_marginal_reaction; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; 29_fq_marginal_reaction
 tags: financial_wl
 
 Me: No, it does not address the weakest link.
@@ -121,7 +121,7 @@ Me: No, it does not address the weakest link.
 @fqwl_financial_skip
 title: Skip this check
 on-arrival: wl_financial = "Skipped"
-go-to: 29_fq_marginal_reaction; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result if filtered = 1; 29_fq_marginal_reaction
 tags: financial_wl
 
 Me: Skip this check.

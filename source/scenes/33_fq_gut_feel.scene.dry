@@ -25,7 +25,7 @@ Facilyn: Even if something “passes” the other questions, you might reject it
 @fqgut_pass
 title: It feels right
 on-arrival: fltr_gut = "Passed"
-go-to: 34_fq_result; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result
 tags: gut_feel
 
 Me: It feels right.
@@ -35,7 +35,7 @@ Facilyn: Great. If your decision failed other checks, but still feels right, you
 @fqgut_fail
 title: It feels wrong
 on-arrival: fltr_gut = "Failed"
-go-to: 34_fq_result; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result
 tags: gut_feel
 
 Me: It feels wrong.
@@ -45,7 +45,7 @@ Facilyn: Trust that feeling. Your intuition often catches what logic misses.
 @fqgut_mixed
 title: I have mixed feelings
 on-arrival: fltr_gut = "Skipped"
-go-to: 34_fq_result; jumpScene if fltr_result = "visited"
+go-to: 34_fq_result
 tags: gut_feel
 
 Me: I have mixed feelings.
