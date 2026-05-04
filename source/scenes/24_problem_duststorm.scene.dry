@@ -1,13 +1,13 @@
-title: Calm these dust storms
+title: How about calming these duststorms?
 tags: holtext_complete
 new-page: true
-on-arrival: example_type = "Calm the dust storms"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
+on-arrival: example_type = "How about calming these duststorms?"; info_last = "Dust storms" if info_dust_storms = 0; info_dust_storms = 1
 
-Me: I want to understand what is really driving these dust storms.
+Me: [+ example_type +]
 
-Facilyn: A good place to start.
+Facilyn: A good place to start. Do you have any idea what is really driving them?
 
-Before she can continue, the teahouse door shudders inward and bangs shut again.
+Before you can answer, the teahouse door shudders inward and bangs shut again.
 
 A man in a sand-colored field coat stands there for a moment, breathing hard. Fine dust clings to his eyebrows and the seams of his sleeves. Under one arm he carries a weatherproof map tube. In the other hand is a cloth bundle gone dark at the corners.
 

@@ -60,7 +60,7 @@ on-arrival: decision_makers = "Me and people I live or decide with"; player = "g
 go-to: 9_wum_physical_res
 tags: decision_makers
 
-Me: Let's include the people I live or decide with, and anyone with veto power.
+Me: Let's include the people I live or decide with.
 
 Facilyn: Great. We’ll treat all of you together as the decision-makers in your whole under management.
 
@@ -81,13 +81,13 @@ Facilyn: Try to be inclusive rather than exclusive.
 
 @dmkrs_group_and_veto
 title: Group members 
-subtitle: and the people with veto power
+subtitle: and others with veto power
 view-if: player = "group"
 on-arrival: decision_makers = "Group members and others with veto power"
 go-to: 9_wum_physical_res
 tags: decision_makers
 
-Me: Group members and others with veto power.
+Me: [+ decision_makers +]
 
 Facilyn: Good. That gives us the decision makers for your whole under management.
 

@@ -31,14 +31,8 @@ Facilyn: When everyone has ownership, they can commit to it.
 
 Paper: {!<h1>Holistic Context:</h1><br><div style="white-space: pre-wrap;" contenteditable="true" data-quality="holtext" oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.innerText);">!}[+ holtext +]</div>
 
-Facilyn: This becomes your North Star. Not a goal you “finish,” but a guide for daily decisions in a complex world — like the compass on the ships leaving this harbour.
+Facilyn: This becomes your North Star. Not a goal you “finish,” but a reference for your decisions in a complex world — like guides for the ships leaving this harbour.
 
 Facilyn: Let’s place it in the left sidebar, so you can keep it in view.
-
-She places a new sheet of paper on the table.
-
-Facilyn: To use this holistic context, we’ll run decisions through seven testing questions. They filter out actions that look good today, but take you off course tomorrow.
-
-Facilyn: What kind of problem do you want to work on?
 
 - #holtext_complete

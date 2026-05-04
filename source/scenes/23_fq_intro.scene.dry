@@ -1,13 +1,15 @@
-title: Continue to the Seven Context Checks
+title: Alright
 on-departure: display_fltr = 1
 tags: holtext_complete
 new-page: true
 
-Me: Continue to the Seven Context Checks.
+Me: Alright.
 
-Facilyn: In life, in business, in an agency — you’ll make plans, and you’ll face decisions.
+She slides a new sheet of paper on the table.
 
-Facilyn: What kind of decision would you like to work through?
+Facilyn: To use this holistic context, we’ll run decisions through seven testing questions. They filter out actions that look good today, but take you off course tomorrow.
+
+Facilyn: What kind of problem do you want to work through?
 
 - #example_types
 
@@ -20,7 +22,6 @@ tags: example_types
 Me: How are the filter questions different from an ordinary pros-and-cons list?
 
 Facilyn: They are not just a list of advantages and disadvantages. They are a set of filters designed to reveal whether an action is socially, financially, and environmentally sound in both the short and long term, relative to your Holistic Context.
-
 
 - #example_types
 
@@ -45,6 +46,7 @@ Facilyn: Wonderful.
 
 @xmpl_personal_decision
 title: A personal decision
+view-if: player = "one"
 on-arrival: example_type = "A personal decision"
 go-to: xmpl_example_chosen
 tags: example_types
