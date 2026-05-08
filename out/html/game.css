@@ -1933,37 +1933,38 @@ ul.choices li:focus-visible {
 /* Read Marker Styles */
 #read-marker {
   position: relative;
-  height: 8px;
+  min-height: 1.75em;
   margin: var(--space-xxl) 0;
-  background: linear-gradient(90deg, var(--accent-blue), transparent, transparent, var(--accent-blue));
-  border: none;
+  border: 0 !important;
   overflow: visible;
-  animation: markerPulse 4s ease-in-out infinite;
-  border-radius: 999px;
-  opacity: 0.55;
 }
 
 /* Read Marker label via pseudo-element */
 #read-marker::before {
-  content: "↓  New Content Below  ↓";
+  content: "⫘⫘⫘⫘⫘⫘⫘⫘ ↓  New Content Below  ↓ ⫘⫘⫘⫘⫘⫘⫘⫘";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: var(--font-family-display);
-  font-size: clamp(var(--font-size-xs), 3vw, var(--font-size-sm));
-  font-weight: 700;
-  letter-spacing: 0.12em;
+  font-weight: 650;
+  letter-spacing: 0.1em;
   color: var(--accent-rust);
   white-space: nowrap;
+  animation: markerPulse 3s ease-in-out infinite;
 }
 
-.theme-dark #read-marker::before {
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
-}
+@keyframes markerPulse {
+  0%, 100% {
+    opacity: 0.72;
+    transform: translate(-50%, -50%) scale(1);
+  }
 
-@keyframes markerPulse { 0%,100%{opacity:.7} 50%{opacity:.9} }
-@media (prefers-reduced-motion: reduce) { #read-marker { animation: none; } }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.03);
+  }
+}
+@media (prefers-reduced-motion: reduce) { #read-marker::before { animation: none; } }
 
 #content .article {
   display: flex;
