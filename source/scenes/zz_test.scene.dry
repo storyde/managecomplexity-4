@@ -5,6 +5,59 @@ new-page: true
 
 = Test
 
+AI text improver test:
+
+- @ai_test: Test ai
+
+@ai_test
+title: Test ai
+
+Me: Test ai
+
+{!<textarea id="test-ai-textarea" class="textarea" data-quality="test_ai" placeholder="Write your custom answer." oninput="window.dendryUI && window.dendryUI.dendryEngine && (window.dendryUI.dendryEngine.state.qualities[this.dataset.quality] = this.value);">!}[+ test_ai +]{!</textarea>!}
+
+
+- @ai_answer: Save
+
+@ai_answer
+title: Get answer
+on-display: {! (async function () {
+  var statusElement = document.getElementById('test-ai-status');
+  var outputElement = document.getElementById('test-ai-output');
+  var sourceText = (Q.test_ai || '').trim();
+  if (!statusElement || !outputElement) return;
+  if (!sourceText) {
+    statusElement.textContent = 'Please enter some text first.';
+    outputElement.textContent = '';
+    return;
+  }
+  statusElement.textContent = 'Improving text...';
+  outputElement.textContent = sourceText;
+  try {
+    var response = await fetch('/api/improve-text', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ text: sourceText })
+    });
+    var responseBody = await response.json();
+    if (!response.ok) throw new Error((responseBody && responseBody.error) || 'Unable to improve the text.');
+    Q.test_ai = (responseBody && responseBody.improvedText) || sourceText;
+    outputElement.textContent = Q.test_ai;
+    statusElement.textContent = 'Text improved.';
+  } catch (error) {
+    statusElement.textContent = (error && error.message) || 'Unable to improve the text right now.';
+  }
+})(); !}
+
+
+{!<div id="test-ai-status" aria-live="polite"></div>!}
+
+
+Paper: {!<div id="test-ai-output" style="white-space: pre-wrap;">!}[+ test_ai +]{!</div>!}
+
+
+
+
 <h2>Scene shortcuts</h2>
 
 Qualities will be missing using these links
