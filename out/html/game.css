@@ -1941,7 +1941,7 @@ ul.choices li:focus-visible {
 
 /* Read Marker label via pseudo-element */
 #read-marker::before {
-  content: "⫘⫘⫘⫘⫘⫘⫘⫘ ↓  New Content Below  ↓ ⫘⫘⫘⫘⫘⫘⫘⫘";
+  content: "〜〜〜〜〜〜〜〜 New Content Below 〜〜〜〜〜〜〜〜";
   position: absolute;
   top: 50%;
   left: 50%;
